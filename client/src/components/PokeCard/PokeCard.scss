@@ -1,21 +1,47 @@
 #container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 #pokeCard {
+  display: flex;
+  flex-direction: column;
   border: solid;
   border-radius: 5%;
   box-shadow: 10px 5px 5px black;
-  width: 50%;
+  width: 70vw;
+  min-width: 12rem;
+}
+.pokemonImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon {
+  width: 45vw;
+  min-width: 12rem;
 }
 .pokeName {
+  padding: 0 1rem 0;
+
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.stats {
+  background-color: green;
+  width: 90%;
+  border-radius: 5%;
+  margin-bottom: 1rem;
 }
