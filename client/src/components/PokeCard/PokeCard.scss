@@ -1,0 +1,21 @@
+#container {
+  display: flex;
+  justify-content: center;
+}
+#pokeCard {
+  border: solid;
+  border-radius: 5%;
+  box-shadow: 10px 5px 5px black;
+  width: 50%;
+}
+.pokeName {
+  p {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
