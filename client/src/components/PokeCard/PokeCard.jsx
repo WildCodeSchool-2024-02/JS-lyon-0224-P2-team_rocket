@@ -1,17 +1,22 @@
-import "./PokeCard.scss";
+import "./PokeCard.css";
 import PropTypes from "prop-types";
+import { useState } from "react";
 import Poketypes from "./pokeType";
 import TypeImg from "../../assets/typeImg";
+import ButtonNexPrev from "./ButtonNexPrev";
 
-let random = 0;
+// let random = 0;
 function PokeCard({ getPokemon, pokemons }) {
+  const [random, setRandom] = useState(0);
   function GetNewPoke() {
-    getPokemon();
-    random = parseInt(Math.random() * 100, 10);
+    if (pokemons.length < 2) {
+      getPokemon();
+    } else {
+      setRandom(parseInt(Math.random() * 100, 10));
+    }
   }
 
   let typeImgUrl = [];
-
   function poketype() {
     let count = 0;
     for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
@@ -29,6 +34,7 @@ function PokeCard({ getPokemon, pokemons }) {
   }
 
   poketype();
+
   return (
     <div id="container">
       <div id="pokeCard">
@@ -39,6 +45,7 @@ function PokeCard({ getPokemon, pokemons }) {
             alt={pokemons[random].name}
           />
         </div>
+        <ButtonNexPrev />
         <div className="pokeName">
           <h2>{pokemons[random].name}</h2>
           <p>#{pokemons[random].id}</p>
@@ -53,7 +60,7 @@ function PokeCard({ getPokemon, pokemons }) {
           </div>
         </div>
       </div>
-      <button type="button" onClick={GetNewPoke}>
+      <button className="button" type="button" onClick={GetNewPoke}>
         New Pokemon
       </button>
     </div>

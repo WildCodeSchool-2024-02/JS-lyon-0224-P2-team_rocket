@@ -31,15 +31,15 @@
 .pokeName {
   padding: 0 1rem 0;
 
-  p {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.pokeName p {
+  font-size: 1.5rem;
+}
+.pokeName h2 {
+  font-size: 1.5rem;
 }
 .center {
   display: flex;
@@ -101,4 +101,8 @@
 }
 .blueBack {
   background-image: url("../../assets/images/color/blue.png");
+}
+
+.button {
+  margin-top: 2rem;
 }

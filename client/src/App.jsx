@@ -13,6 +13,9 @@ function App() {
         setPokemons(response.data);
       });
   };
+  if (pokemons.length < 2) {
+    setTimeout(() => getPokemon(), 10);
+  }
 
   return (
     <main className="container">
