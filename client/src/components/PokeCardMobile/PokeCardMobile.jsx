@@ -1,14 +1,11 @@
 import PropTypes from "prop-types";
 
 import styles from "./PokeCardMobile.module.css";
+import Btn from "../../assets/images/button-PokeCardMobile.png";
 
 function PokeCardMobile({ pokemon }) {
   return (
-    <div
-      className={styles.containerInfo}
-      key={pokemon.id}
-      // style={{ border: "1px solid red", backgroundColor: "#35DC96" }}
-    >
+    <div className={styles.containerInfo} key={pokemon.id}>
       <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
       <div className={styles.pokeButton}>
         <h1>{pokemon.name}</h1>
@@ -16,19 +13,18 @@ function PokeCardMobile({ pokemon }) {
           type="button"
           style={{
             border: "none",
-            opacity: "0.40",
+            backgroundColor: "transparent",
+            padding: "0",
+
             height: "24px",
             width: "24px",
-            padding: " 0",
             borderRadius: "50%",
           }}
         >
           <img
-            src="./src/assets/images/Button-Pokedex-mobile.svg"
+            src={Btn}
             alt="button-fleche"
-            // style={{
-            //   borderRadius: "50%",
-            // }}
+            style={{ height: "24px", width: "24px" }}
           />
         </button>
       </div>
