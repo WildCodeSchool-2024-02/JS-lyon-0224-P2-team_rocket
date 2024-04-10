@@ -1,6 +1,7 @@
 import "./PokeCard.scss";
 import PropTypes from "prop-types";
-import iconGrass from "../../assets/images/types/Pokemon_Type_Icon_Poison.png";
+import Poketypes from "./pokeType";
+import TypeImg from "../../assets/typeImg";
 
 let random = 0;
 function PokeCard({ getPokemon, pokemons }) {
@@ -9,28 +10,16 @@ function PokeCard({ getPokemon, pokemons }) {
     random = parseInt(Math.random() * 100, 10);
   }
 
-  const typeImg = [
-    { id: "Plante", img: "Pokemon_Type_Icon_Grass.png" },
-    { bug: "Pokemon_Type_Icon_Bug.png" },
-    { id: "Dragon", img: "Pokemon_Type_Icon_Dragon.png" },
-    { id: "Electrique", img: "Pokemon_Type_Icon_Electric.png" },
-    { id: "Fée", img: "Pokemon_Type_Icon_Fairy.png" },
-    { id: "Combat", img: "Pokemon_Type_Icon_Fighting.png" },
-    {
-      id: "Poison",
-      img: iconGrass,
-    },
-  ];
   const typeImgUrl = [];
+
   function poketype() {
     let count = 0;
-
     for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
       const type = [];
       type[i] = pokemons[random].apiTypes[i].name;
-      for (let j = 0; j < typeImg.length; j += 1) {
-        if (type[i] === typeImg[j].id) {
-          typeImgUrl[count] = typeImg[j];
+      for (let j = 0; j < TypeImg.length; j += 1) {
+        if (type[i] === TypeImg[j].id) {
+          typeImgUrl[count] = TypeImg[j];
           count += 1;
         }
       }
@@ -53,9 +42,7 @@ function PokeCard({ getPokemon, pokemons }) {
           <h2>{pokemons[random].name}</h2>
           <p>#{pokemons[random].id}</p>
         </div>
-        <div className="types">
-          <img src={typeImgUrl[0].img} alt={typeImgUrl[0].id} />
-        </div>
+        <Poketypes typeImgUrl={typeImgUrl} />
         <div className="center">
           <div className="stats">
             <p>HP : {pokemons[random].stats.HP}</p>
@@ -73,6 +60,6 @@ function PokeCard({ getPokemon, pokemons }) {
 }
 PokeCard.propTypes = {
   getPokemon: PropTypes.func.isRequired,
-  pokemons: PropTypes.objectOf().isRequired,
+  pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
 };
 export default PokeCard;
