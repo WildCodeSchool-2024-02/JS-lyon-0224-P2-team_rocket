@@ -72,16 +72,16 @@
   background-color: rgba(249, 206, 208, 0.5);
 }
 .yellow {
-  background-color: rgba($color: #fffca5, $alpha: 0.5);
+  background-color: rgba(255, 252, 165, 0.5);
 }
 .blue {
-  background-color: rgba($color: #a1d5ff, $alpha: 0.4);
+  background-color: rgba(161, 213, 255, 0.4);
 }
 .green {
-  background-color: rgba($color: #6aff69, $alpha: 0.2);
+  background-color: rgba(106, 255, 105, 0.2);
 }
 .orange {
-  background-color: rgba($color: #ffa519, $alpha: 0.2);
+  background-color: rgba(255, 165, 25, 0.2);
 }
 
 .purpleBack {
