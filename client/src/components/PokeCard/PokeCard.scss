@@ -13,10 +13,15 @@
   width: 70vw;
   min-width: 12rem;
 }
-.pokemonImg {
+#pokemonImg {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5%;
 }
 .pokemon {
   width: 45vw;
@@ -48,4 +53,23 @@
 
 .typeImg {
   border-radius: 25%;
+}
+
+.purpleBack {
+  background-image: url("../../assets/images/color/purple.png");
+}
+.orangeBack {
+  background-image: url("../../assets/images/color/orange.png");
+}
+.pinkBack {
+  background-image: url("../../assets/images/color/pink.png");
+}
+.yellowBack {
+  background-image: url("../../assets/images/color/yellow.png");
+}
+.greenBack {
+  background-image: url("../../assets/images/color/green.png");
+}
+.blueBack {
+  background-image: url("../../assets/images/color/blue.png");
 }

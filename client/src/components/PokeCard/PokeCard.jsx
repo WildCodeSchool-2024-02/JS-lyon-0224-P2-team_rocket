@@ -27,11 +27,10 @@ function PokeCard({ getPokemon, pokemons }) {
   }
 
   poketype();
-
   return (
     <div id="container">
       <div id="pokeCard">
-        <div className="pokemonImg">
+        <div id="pokemonImg" className={typeImgUrl[0].backColor}>
           <img
             className="pokemon"
             src={pokemons[random].image}

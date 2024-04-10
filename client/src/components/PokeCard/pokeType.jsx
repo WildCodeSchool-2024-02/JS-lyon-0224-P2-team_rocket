@@ -3,11 +3,14 @@ import PropTypes from "prop-types";
 function Poketypes({ typeImgUrl }) {
   return (
     <div className="types">
-      <img
-        className="typeImg"
-        src={typeImgUrl[0].typeImg}
-        alt={typeImgUrl[0].id}
-      />
+      {typeImgUrl.map((type) => (
+        <img
+          key={type.id}
+          className="typeImg"
+          src={type.typeImg}
+          alt={type.id}
+        />
+      ))}
     </div>
   );
 }
