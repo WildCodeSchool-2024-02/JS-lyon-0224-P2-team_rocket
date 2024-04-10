@@ -10,19 +10,21 @@ function PokeCard({ getPokemon, pokemons }) {
     random = parseInt(Math.random() * 100, 10);
   }
 
-  const typeImgUrl = [];
+  let typeImgUrl = [];
 
   function poketype() {
     let count = 0;
     for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
       const type = [];
       type[i] = pokemons[random].apiTypes[i].name;
+
       for (let j = 0; j < TypeImg.length; j += 1) {
         if (type[i] === TypeImg[j].id) {
           typeImgUrl[count] = TypeImg[j];
           count += 1;
         }
       }
+      typeImgUrl = typeImgUrl.reverse();
     }
   }
 
@@ -43,11 +45,11 @@ function PokeCard({ getPokemon, pokemons }) {
         </div>
         <Poketypes typeImgUrl={typeImgUrl} />
         <div className="center">
-          <div className="stats">
-            <p>HP : {pokemons[random].stats.HP}</p>
-            <p>Attaque : {pokemons[random].stats.attack}</p>
-            <p>Defense : {pokemons[random].stats.defense}</p>
-            <p>Speed : {pokemons[random].stats.speed} </p>
+          <div id="stats" className={typeImgUrl[0].color}>
+            <p className="stat">HP : {pokemons[random].stats.HP}</p>
+            <p className="stat">Attaque : {pokemons[random].stats.attack}</p>
+            <p className="stat">Defense : {pokemons[random].stats.defense}</p>
+            <p className="stat">Speed : {pokemons[random].stats.speed} </p>
           </div>
         </div>
       </div>

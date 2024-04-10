@@ -10,22 +10,23 @@
   border: solid;
   border-radius: 5%;
   box-shadow: 10px 5px 5px black;
-  width: 70vw;
   min-width: 12rem;
+  min-height: 80vh;
+  max-width: 40rem;
 }
 #pokemonImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 8rem;
+  height: 40vh;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  border-radius: 5%;
+  background-size: 100% 100%;
+  border-radius: 7%;
 }
 .pokemon {
-  width: 45vw;
-  min-width: 12rem;
+  min-width: 15rem;
+  max-width: 25em;
 }
 .pokeName {
   padding: 0 1rem 0;
@@ -43,16 +44,44 @@
 .center {
   display: flex;
   justify-content: center;
+  height: 33vw;
+  align-items: center;
 }
-.stats {
-  background-color: green;
+#stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 90%;
+  height: 80%;
   border-radius: 5%;
   margin-bottom: 1rem;
 }
-
+.stat {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
 .typeImg {
   border-radius: 25%;
+  width: 25%;
+}
+
+.purple {
+  background-color: rgba(225, 108, 255, 0.5);
+}
+.pink {
+  background-color: rgba(249, 206, 208, 0.5);
+}
+.yellow {
+  background-color: rgba($color: #fffca5, $alpha: 0.5);
+}
+.blue {
+  background-color: rgba($color: #a1d5ff, $alpha: 0.4);
+}
+.green {
+  background-color: rgba($color: #6aff69, $alpha: 0.2);
+}
+.orange {
+  background-color: rgba($color: #ffa519, $alpha: 0.2);
 }
 
 .purpleBack {
