@@ -2,11 +2,11 @@ import "./PokeCard.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Poketypes from "./pokeType";
-import TypeImg from "../../assets/typeImg";
+import typeImg from "../../assets/typeImg";
 
 function PokeCard({ getPokemon, pokemons }) {
   const [random, setRandom] = useState(0);
-  function GetNewPoke() {
+  function getNewPoke() {
     if (pokemons.length < 2) {
       getPokemon();
     } else {
@@ -21,9 +21,9 @@ function PokeCard({ getPokemon, pokemons }) {
       const type = [];
       type[i] = pokemons[random].apiTypes[i].name;
 
-      for (let j = 0; j < TypeImg.length; j += 1) {
-        if (type[i] === TypeImg[j].id) {
-          typeImgUrl[count] = TypeImg[j];
+      for (let j = 0; j < typeImg.length; j += 1) {
+        if (type[i] === typeImg[j].id) {
+          typeImgUrl[count] = typeImg[j];
           count += 1;
         }
       }
@@ -75,7 +75,7 @@ function PokeCard({ getPokemon, pokemons }) {
           </div>
         </div>
       </div>
-      <button className="button" type="button" onClick={GetNewPoke}>
+      <button className="button" type="button" onClick={getNewPoke}>
         New Pokemon
       </button>
     </div>
