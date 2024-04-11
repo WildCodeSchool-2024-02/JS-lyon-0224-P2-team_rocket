@@ -1,4 +1,4 @@
-function burgerMenu() {
+function BurgerMenu() {
   return (
     <main>
       <nav>
@@ -12,4 +12,4 @@ function burgerMenu() {
   );
 }
 
-export default burgerMenu;
+export default BurgerMenu;
