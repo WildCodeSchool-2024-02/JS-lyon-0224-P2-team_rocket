@@ -1,41 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./PokedexCard.module.css";
 import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
 
+import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
+
 function PokedexCard({ pokemons }) {
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
-  const [startIndex, setStartIndex] = useState(0);
-  useEffect(() => {
-    if (pokemons.length > 0) {
-      setDisplayedPokemons(pokemons.slice(startIndex, startIndex + 6));
-    }
-  }, [startIndex, pokemons]);
 
-  function handlePrevious() {
-    if (startIndex - 6 >= 0) {
-      setStartIndex(startIndex - 6);
-    }
-  }
-
-  function handleNext() {
-    if (startIndex + 6 <= pokemons.length) {
-      setStartIndex(startIndex + 6);
-    }
-  }
   return (
-    <div className={styles.border}>
+
+    <div className={styles.pokedexCard}>
+
       {displayedPokemons.map((pokemon) => (
         <PokeCardMobile key={pokemon.id} pokemon={pokemon} />
       ))}
-      <div style={{ border: "2px purple solid" }}>
-        <button type="button" onClick={handlePrevious}>
-          Previous
-        </button>
-        <button type="button" onClick={handleNext}>
-          Next
-        </button>
-      </div>
+
+      <ButtonPokedexCard
+        pokemons={pokemons}
+        setDisplayedPokemons={setDisplayedPokemons}
+      />
     </div>
   );
 }
