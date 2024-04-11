@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
+import styles from "./ButtonPokedexCard.module.css";
 
 function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   const [startIndex, setStartIndex] = useState(0);
@@ -21,11 +22,11 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
     }
   }
   return (
-    <div style={{ border: "2px purple solid" }}>
-      <button type="button" onClick={handlePrevious}>
+    <div className={styles.container_btn}>
+      <button type="button" onClick={handlePrevious} id={styles.btn}>
         Previous
       </button>
-      <button type="button" onClick={handleNext}>
+      <button type="button" onClick={handleNext} id={styles.btn}>
         Next
       </button>
     </div>
