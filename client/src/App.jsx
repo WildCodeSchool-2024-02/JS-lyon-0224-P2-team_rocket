@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PokeCard from "./components/PokeCard/PokeCard";
@@ -34,11 +27,10 @@ function App() {
       ) : (
         <p>Lodading Pokemon</p>
       )}
-       <PokeCard getPokemon={getPokemon} pokemons={pokemons} />
-  <Navbar />
+      <PokeCard getPokemon={getPokemon} pokemons={pokemons} />
+      <Navbar />
     </main>
   );
-
 }
 
 export default App;
