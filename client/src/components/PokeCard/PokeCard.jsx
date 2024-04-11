@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import Poketypes from "./pokeType";
 import TypeImg from "../../assets/typeImg";
-import ButtonNexPrev from "./ButtonNexPrev";
 
-// let random = 0;
 function PokeCard({ getPokemon, pokemons }) {
   const [random, setRandom] = useState(0);
   function GetNewPoke() {
@@ -50,7 +48,7 @@ function PokeCard({ getPokemon, pokemons }) {
             src={typeImgUrl[0].cardBack}
           />
         </div>
-        <ButtonNexPrev />
+
         <div className="pokeName">
           <h2>{pokemons[random].name}</h2>
           <p>#{pokemons[random].id}</p>
