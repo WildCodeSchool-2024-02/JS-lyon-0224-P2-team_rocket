@@ -1,0 +1,24 @@
+.logo_mobile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+.logo {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 55px;
+}
+
+.pokeball {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 78px;
+}
+
+.menu_burger {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 40px;
+}
