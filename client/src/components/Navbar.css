@@ -1,0 +1,24 @@
+.Logomobile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+.Logo {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 55px;
+}
+
+.PokeBall {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 78px;
+}
+
+.MenuBurger {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 40px;
+}

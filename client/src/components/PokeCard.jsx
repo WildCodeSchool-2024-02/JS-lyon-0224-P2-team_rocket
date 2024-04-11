@@ -1,5 +1,5 @@
 function PokeCard() {
-    return <p>Coucou</p>;
-  }
-  
-  export default PokeCard;
+  return <p>Coucou</p>;
+}
+
+export default PokeCard;
