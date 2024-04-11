@@ -13,7 +13,6 @@ function PokeCardMobile({ pokemon }) {
           <img src={Btn} alt="button-fleche" className={styles.imgBtn} />
         </button>
       </div>
-
     </div>
   );
 }
