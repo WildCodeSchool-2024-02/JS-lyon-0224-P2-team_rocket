@@ -24,7 +24,9 @@ function PokedexCard({ pokemons }) {
     }
   }
   return (
+
     <div className={styles.pokedexCard}>
+
       {displayedPokemons.map((pokemon) => (
         <PokeCardMobile key={pokemon.id} pokemon={pokemon} />
       ))}

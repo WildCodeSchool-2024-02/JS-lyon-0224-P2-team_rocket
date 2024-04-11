@@ -1,11 +1,19 @@
-import "./App.css";
+
+
+
+
+
+
+
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import PokeCard from "./components/PokeCard";
+import PokeCard from "./components/PokeCard/PokeCard";
+import Poke from "./assets/poke";
 import PokedexCard from "./components/PokedexCard/PokedexCard";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState(Poke);
 
   const getPokemon = () => {
     axios
@@ -14,6 +22,7 @@ function App() {
         setPokemons(response.data);
       });
   };
+
   useEffect(() => {
     getPokemon();
   }, []);
@@ -25,8 +34,11 @@ function App() {
       ) : (
         <p>Lodading Pokemon</p>
       )}
+       <PokeCard getPokemon={getPokemon} pokemons={pokemons} />
+  <Navbar />
     </main>
   );
+
 }
 
 export default App;

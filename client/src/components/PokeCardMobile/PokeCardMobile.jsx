@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import styles from "./PokeCardMobile.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 
@@ -12,6 +13,7 @@ function PokeCardMobile({ pokemon }) {
           <img src={Btn} alt="button-fleche" className={styles.imgBtn} />
         </button>
       </div>
+
     </div>
   );
 }
