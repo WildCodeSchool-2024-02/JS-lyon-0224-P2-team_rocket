@@ -1,0 +1,12 @@
+.ButtonNextPrev {
+  display: flex;
+  justify-content: space-between;
+}
+.ButtonNextPrev button {
+  background-color: transparent;
+  border: none;
+}
+
+.imgButton {
+  height: 3rem;
+}
