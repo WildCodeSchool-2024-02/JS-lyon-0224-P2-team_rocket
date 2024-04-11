@@ -1,0 +1,14 @@
+.container_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#btn {
+  border: none;
+  border-radius: 30px;
+  width: 120px;
+  height: 26px;
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+}

@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import PokeCard from "./components/PokeCard/PokeCard";
 import Poke from "./assets/poke";
 import PokedexCard from "./components/PokedexCard/PokedexCard";
+
 import Navbar from "./components/Navbar";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
+
 
 function App() {
   const [pokemons, setPokemons] = useState(Poke);
@@ -30,7 +32,9 @@ function App() {
       )}
       <PokeCard getPokemon={getPokemon} pokemons={pokemons} />
       <Navbar />
+
       <BurgerMenu />
+
     </main>
   );
 }

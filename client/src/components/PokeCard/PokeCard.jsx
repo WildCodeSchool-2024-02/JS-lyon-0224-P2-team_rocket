@@ -2,13 +2,11 @@ import "./PokeCard.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Poketypes from "./pokeType";
-import TypeImg from "../../assets/typeImg";
-import ButtonNexPrev from "./ButtonNexPrev";
+import typeImg from "../../assets/typeImg";
 
-// let random = 0;
 function PokeCard({ getPokemon, pokemons }) {
   const [random, setRandom] = useState(0);
-  function GetNewPoke() {
+  function getNewPoke() {
     if (pokemons.length < 2) {
       getPokemon();
     } else {
@@ -23,9 +21,9 @@ function PokeCard({ getPokemon, pokemons }) {
       const type = [];
       type[i] = pokemons[random].apiTypes[i].name;
 
-      for (let j = 0; j < TypeImg.length; j += 1) {
-        if (type[i] === TypeImg[j].id) {
-          typeImgUrl[count] = TypeImg[j];
+      for (let j = 0; j < typeImg.length; j += 1) {
+        if (type[i] === typeImg[j].id) {
+          typeImgUrl[count] = typeImg[j];
           count += 1;
         }
       }
@@ -40,12 +38,17 @@ function PokeCard({ getPokemon, pokemons }) {
       <div id="pokeCard">
         <div id="pokemonImg" className={typeImgUrl[0].backColor}>
           <img
-            className="pokemon"
+            id="pokemon"
             src={pokemons[random].image}
             alt={pokemons[random].name}
           />
+          <img
+            className="typeSvg"
+            alt={typeImgUrl[0].id}
+            src={typeImgUrl[0].cardBack}
+          />
         </div>
-        <ButtonNexPrev />
+
         <div className="pokeName">
           <h2>{pokemons[random].name}</h2>
           <p>#{pokemons[random].id}</p>
@@ -53,14 +56,26 @@ function PokeCard({ getPokemon, pokemons }) {
         <Poketypes typeImgUrl={typeImgUrl} />
         <div className="center">
           <div id="stats" className={typeImgUrl[0].color}>
-            <p className="stat">HP : {pokemons[random].stats.HP}</p>
-            <p className="stat">Attaque : {pokemons[random].stats.attack}</p>
-            <p className="stat">Defense : {pokemons[random].stats.defense}</p>
-            <p className="stat">Speed : {pokemons[random].stats.speed} </p>
+            <span className="stat">
+              <h3>HP</h3>
+              <p>{pokemons[random].stats.HP}</p>
+            </span>
+            <span className="stat">
+              <h3>Attaque</h3>
+              <p>{pokemons[random].stats.attack}</p>
+            </span>
+            <span className="stat">
+              <h3>Defense</h3>
+              <p>{pokemons[random].stats.defense}</p>
+            </span>
+            <span className="stat">
+              <h3>Speed</h3>
+              <p>{pokemons[random].stats.speed} </p>
+            </span>
           </div>
         </div>
       </div>
-      <button className="button" type="button" onClick={GetNewPoke}>
+      <button className="button" type="button" onClick={getNewPoke}>
         New Pokemon
       </button>
     </div>

@@ -30,7 +30,7 @@ import rockSvg from "./images/back/rock.svg";
 import ghostSvg from "./images/back/ghost.svg";
 import normalSvg from "./images/back/normal.svg";
 
-const TypeImg = [
+const typeImg = [
   {
     id: "Plante",
     typeImg: typeGrass,
@@ -145,4 +145,4 @@ const TypeImg = [
   },
 ];
 
-export default TypeImg;
+export default typeImg;

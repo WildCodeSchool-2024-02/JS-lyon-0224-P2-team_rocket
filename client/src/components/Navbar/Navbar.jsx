@@ -1,6 +1,6 @@
-import Menu from "../assets/images/logomobile/bars-solid.svg";
-import Home from "../assets/images/logomobile/home-logo.svg";
-import pokeball from "../assets/images/logomobile/PokeBall.svg";
+import Menu from "../../assets/images/logomobile/bars-solid.svg";
+import Home from "../../assets/images/logomobile/home-logo.svg";
+import pokeball from "../../assets/images/logomobile/PokeBall.svg";
 import "./Navbar.css";
 
 function Navbar() {
