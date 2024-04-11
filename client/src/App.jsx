@@ -1,7 +1,6 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import PokeCard from "./components/PokeCard";
 import PokedexCard from "./components/PokedexCard/PokedexCard";
 
 function App() {

@@ -27,36 +27,6 @@ function PokedexCard({ pokemons }) {
     <div className={styles.border}>
       {displayedPokemons.map((pokemon) => (
         <PokeCardMobile key={pokemon.id} pokemon={pokemon} />
-        // <div
-        //   key={pokemon.id}
-        //   // style={{ border: "1px solid red", backgroundColor: "#35DC96" }}
-        // >
-        //   <img
-        //     src={pokemon.image}
-        //     alt={pokemon.name}
-        //     style={{ width: "100%" }}
-        //   />
-        //   <h1 className={styles.Blue}>{pokemon.name}</h1>
-        //   <button
-        //     type="button"
-        //     style={{
-        //       border: "none",
-        //       opacity: "0.40",
-        //       height: "24px",
-        //       width: "24px",
-        //       padding: " 0",
-        //       borderRadius: "50%",
-        //     }}
-        //   >
-        //     <img
-        //       src="./src/assets/images/Button-Pokedex-mobile.svg"
-        //       alt="button-fleche"
-        //       // style={{
-        //       //   borderRadius: "50%",
-        //       // }}
-        //     />
-        //   </button>
-        // </div>
       ))}
       <div style={{ border: "2px purple solid" }}>
         <button type="button" onClick={handlePrevious}>
@@ -67,25 +37,6 @@ function PokedexCard({ pokemons }) {
         </button>
       </div>
     </div>
-
-    // <>
-    //   <img
-    //     src={pokemons[index].image}
-    //     alt={pokemons[index].name}
-    //     style={{ width: "100%" }}
-    //   />
-    //   <h1 className={styles.Blue}>{pokemons[0].name}</h1>
-    // <button type="button">
-    //   <img
-    //     src="./src/assets/images/Button-PokedexCard-mobile.svg"
-    //     alt="button-fleche"
-    //   />
-    // </button>
-
-    //   {/* <button type="button" onClick={getPokemon}>
-    //     GetPokemon
-    //   </button> */}
-    // </>
   );
 }
 

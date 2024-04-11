@@ -2,10 +2,7 @@ import PropTypes from "prop-types";
 
 function PokeCardMobile({ pokemon }) {
   return (
-    <div
-      key={pokemon.id}
-      // style={{ border: "1px solid red", backgroundColor: "#35DC96" }}
-    >
+    <div key={pokemon.id}>
       <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
       <h1>{pokemon.name}</h1>
       <button
@@ -22,9 +19,6 @@ function PokeCardMobile({ pokemon }) {
         <img
           src="./src/assets/images/Button-Pokedex-mobile.svg"
           alt="button-fleche"
-          // style={{
-          //   borderRadius: "50%",
-          // }}
         />
       </button>
     </div>
