@@ -9,9 +9,7 @@ function PokedexCard({ pokemons }) {
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
 
   return (
-
     <div className={styles.pokedexCard}>
-
       {displayedPokemons.map((pokemon) => (
         <PokeCardMobile key={pokemon.id} pokemon={pokemon} />
       ))}
