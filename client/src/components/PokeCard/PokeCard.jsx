@@ -40,9 +40,14 @@ function PokeCard({ getPokemon, pokemons }) {
       <div id="pokeCard">
         <div id="pokemonImg" className={typeImgUrl[0].backColor}>
           <img
-            className="pokemon"
+            id="pokemon"
             src={pokemons[random].image}
             alt={pokemons[random].name}
+          />
+          <img
+            className="typeSvg"
+            alt={typeImgUrl[0].id}
+            src={typeImgUrl[0].cardBack}
           />
         </div>
         <ButtonNexPrev />
@@ -53,10 +58,22 @@ function PokeCard({ getPokemon, pokemons }) {
         <Poketypes typeImgUrl={typeImgUrl} />
         <div className="center">
           <div id="stats" className={typeImgUrl[0].color}>
-            <p className="stat">HP : {pokemons[random].stats.HP}</p>
-            <p className="stat">Attaque : {pokemons[random].stats.attack}</p>
-            <p className="stat">Defense : {pokemons[random].stats.defense}</p>
-            <p className="stat">Speed : {pokemons[random].stats.speed} </p>
+            <span className="stat">
+              <h3>HP</h3>
+              <p>{pokemons[random].stats.HP}</p>
+            </span>
+            <span className="stat">
+              <h3>Attaque</h3>
+              <p>{pokemons[random].stats.attack}</p>
+            </span>
+            <span className="stat">
+              <h3>Defense</h3>
+              <p>{pokemons[random].stats.defense}</p>
+            </span>
+            <span className="stat">
+              <h3>Speed</h3>
+              <p>{pokemons[random].stats.speed} </p>
+            </span>
           </div>
         </div>
       </div>
