@@ -8,10 +8,10 @@ function Navbar() {
     <main>
       <footer>
         <nav>
-          <div className="Logomobile">
-            <img src={Home} alt="logo-home" className="Logo" />
-            <img src={pokeball} alt="pokeball logo" className="PokeBall" />
-            <img src={Menu} alt="logo-menu-burger" className="MenuBurger" />
+          <div className="logo_mobile">
+            <img src={Home} alt="logo-home" className="logo" />
+            <img src={pokeball} alt="pokeball logo" className="pokeball" />
+            <img src={Menu} alt="logo-menu-burger" className="menu_burger" />
           </div>
         </nav>
       </footer>
