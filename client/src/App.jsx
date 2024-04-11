@@ -1,16 +1,10 @@
 
-
-
-
-
-
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PokeCard from "./components/PokeCard/PokeCard";
 import Poke from "./assets/poke";
 import PokedexCard from "./components/PokedexCard/PokedexCard";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [pokemons, setPokemons] = useState(Poke);
