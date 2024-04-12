@@ -4,6 +4,7 @@ import { useState } from "react";
 import Poketypes from "./pokeType";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
+import "../../App.css";
 
 function PokeCard({ getPokemon, pokemons }) {
   const [random, setRandom] = useState(0);

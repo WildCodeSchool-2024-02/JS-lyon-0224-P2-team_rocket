@@ -1,7 +1,9 @@
-:root {
-  --font-princpal: "Montserrat", sans-serif;
+#container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 #pokeCard {
   display: flex;
   flex-direction: column;
@@ -139,6 +141,12 @@
 
 .button {
   margin-top: 2rem;
+  border: none;
+  border-radius: 30px;
+  width: 120px;
+  height: 26px;
+  font-family: "Montserrat", sans-serif;
+  color: grey;
 }
 
 .grassSvg {
