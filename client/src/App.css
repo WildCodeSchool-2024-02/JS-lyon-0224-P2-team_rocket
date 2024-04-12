@@ -1,0 +1,14 @@
+:root {
+  --font-princpal: "Montserrat", sans-serif;
+}
+
+button {
+  font-family: var(--font-princpal);
+}
+
+h2 {
+  font-family: var(--font-princpal);
+}
+p {
+  font-family: var(--font-princpal);
+}

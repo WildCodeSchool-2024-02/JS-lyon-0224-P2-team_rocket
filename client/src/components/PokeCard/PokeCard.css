@@ -1,6 +1,3 @@
-:root {
-  --font-princpal: "Montserrat", sans-serif;
-}
 #container {
   display: flex;
   justify-content: center;
