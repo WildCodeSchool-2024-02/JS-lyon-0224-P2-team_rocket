@@ -1,12 +1,12 @@
-import "./PokeCard.css";
+import "./PokeCardMobile.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import Poketypes from "./pokeType";
+import Poketypes from "./PokeTypes";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
 import "../../App.css";
 
-function PokeCard({ getPokemon, pokemons }) {
+function PokeCardMobile({ getPokemon, pokemons }) {
   const [random, setRandom] = useState(0);
   function getNewPoke() {
     if (pokemons.length < 2) {
@@ -83,8 +83,8 @@ function PokeCard({ getPokemon, pokemons }) {
     </div>
   );
 }
-PokeCard.propTypes = {
+PokeCardMobile.propTypes = {
   getPokemon: PropTypes.func.isRequired,
   pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
 };
-export default PokeCard;
+export default PokeCardMobile;
