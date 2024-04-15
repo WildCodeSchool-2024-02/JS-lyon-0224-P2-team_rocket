@@ -36,3 +36,75 @@ h1 {
   height: 36px;
   width: 36px;
 }
+
+.normal {
+  background-color: var(--type-normal);
+}
+
+.combat {
+  background-color: var(--type-combat);
+}
+
+.vol {
+  background-color: var(--type-vol);
+}
+
+.poison {
+  background-color: var(--type-poison);
+}
+
+.sol {
+  background-color: var(--type-sol);
+}
+
+.roche {
+  background-color: var(--type-roche);
+}
+
+.insecte {
+  background-color: var(--type-insecte);
+}
+
+.spectre {
+  background-color: var(--type-spectre);
+}
+
+.acier {
+  background-color: var(--type-acier);
+}
+
+.feu {
+  background-color: var(--type-feu);
+}
+
+.eau {
+  background-color: var(--type-eau);
+}
+
+.plante {
+  background-color: var(--type-plante);
+}
+
+.électrik {
+  background-color: var(--type-électrik);
+}
+
+.psy {
+  background-color: var(--type-psy);
+}
+
+.glace {
+  background-color: var(--type-glace);
+}
+
+.dragon {
+  background-color: var(--type-dragon);
+}
+
+.ténèbres {
+  background-color: var(--type-ténèbres);
+}
+
+.fée {
+  background-color: var(--type-fée);
+}
