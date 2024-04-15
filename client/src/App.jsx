@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import PokeCard from "./components/PokeCard/PokeCard";
 import Poke from "./assets/poke";
-import PokedexCard from "./components/PokedexCard/PokedexCard";
+import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   return (
     <main className="container">
       {pokemons.length > 0 ? (
-        <PokedexCard pokemons={pokemons} setPokemons={setPokemons} />
+        <PokedexMobile pokemons={pokemons} setPokemons={setPokemons} />
       ) : (
         <p>Lodading Pokemon</p>
       )}

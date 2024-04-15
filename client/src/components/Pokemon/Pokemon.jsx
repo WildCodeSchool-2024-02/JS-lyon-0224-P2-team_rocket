@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-import styles from "./PokeCardMobile.module.css";
+import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 
-function PokeCardMobile({ pokemon }) {
+function Pokemon({ pokemon }) {
   return (
     <div className={styles.containerInfo} key={pokemon.id}>
       <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
@@ -17,9 +17,9 @@ function PokeCardMobile({ pokemon }) {
   );
 }
 
-export default PokeCardMobile;
+export default Pokemon;
 
-PokeCardMobile.propTypes = {
+Pokemon.propTypes = {
   pokemon: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
