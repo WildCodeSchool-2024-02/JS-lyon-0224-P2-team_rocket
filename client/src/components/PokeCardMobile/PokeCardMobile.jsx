@@ -1,28 +1,90 @@
+import "./PokeCardMobile.css";
 import PropTypes from "prop-types";
+import { useState } from "react";
+import Poketypes from "./PokeTypes";
+import typeImg from "../../assets/typeImg";
+import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
+import "../../App.css";
 
-import styles from "./PokeCardMobile.module.css";
-import Btn from "../../assets/images/button-PokeCardMobile.png";
+function PokeCardMobile({ getPokemon, pokemons }) {
+  const [random, setRandom] = useState(0);
+  function getNewPoke() {
+    if (pokemons.length < 2) {
+      getPokemon();
+    } else {
+      setRandom(parseInt(Math.random() * 100, 10));
+    }
+  }
 
-function PokeCardMobile({ pokemon }) {
+  let typeImgUrl = [];
+  function poketype() {
+    let count = 0;
+    for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
+      const type = [];
+      type[i] = pokemons[random].apiTypes[i].name;
+
+      for (let j = 0; j < typeImg.length; j += 1) {
+        if (type[i] === typeImg[j].id) {
+          typeImgUrl[count] = typeImg[j];
+          count += 1;
+        }
+      }
+      typeImgUrl = typeImgUrl.reverse();
+    }
+  }
+
+  poketype();
+
   return (
-    <div className={styles.containerInfo} key={pokemon.id}>
-      <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
-      <div className={styles.pokeInfo}>
-        <h1>{pokemon.name}</h1>
-        <button className={styles.btnPokecard} type="button">
-          <img src={Btn} alt="button-fleche" className={styles.imgBtn} />
-        </button>
+    <div id="container">
+      <div id="pokeCard">
+        <div id="pokemonImg" className={typeImgUrl[0].backColor}>
+          <img
+            id="pokemon"
+            src={pokemons[random].image}
+            alt={pokemons[random].name}
+          />
+          <img
+            className="typeSvg"
+            alt={typeImgUrl[0].id}
+            src={typeImgUrl[0].cardBack}
+          />
+        </div>
+        <ButtonNextPrev random={random} setRandom={setRandom} />
+        <div className="pokeName">
+          <h2>{pokemons[random].name}</h2>
+          <p>#{pokemons[random].id}</p>
+        </div>
+        <Poketypes typeImgUrl={typeImgUrl} />
+        <div className="center">
+          <div id="stats" className={typeImgUrl[0].color}>
+            <span className="stat">
+              <h3>HP</h3>
+              <p>{pokemons[random].stats.HP}</p>
+            </span>
+            <span className="stat">
+              <h3>Attaque</h3>
+              <p>{pokemons[random].stats.attack}</p>
+            </span>
+            <span className="stat">
+              <h3>Defense</h3>
+              <p>{pokemons[random].stats.defense}</p>
+            </span>
+            <span className="stat">
+              <h3>Speed</h3>
+              <p>{pokemons[random].stats.speed} </p>
+            </span>
+          </div>
+        </div>
       </div>
+      <button className="button" type="button" onClick={getNewPoke}>
+        New Pokemon
+      </button>
     </div>
   );
 }
-
-export default PokeCardMobile;
-
 PokeCardMobile.propTypes = {
-  pokemon: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-  }).isRequired,
+  getPokemon: PropTypes.func.isRequired,
+  pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
 };
+export default PokeCardMobile;
