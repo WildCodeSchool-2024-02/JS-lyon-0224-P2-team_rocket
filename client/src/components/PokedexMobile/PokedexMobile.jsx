@@ -1,17 +1,16 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./PokedexCard.module.css";
-import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
-
+import styles from "./PokedexMobile.module.css";
+import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
 
-function PokedexCard({ pokemons }) {
+function PokedexMobile({ pokemons }) {
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
 
   return (
     <div className={styles.pokedexCard}>
       {displayedPokemons.map((pokemon) => (
-        <PokeCardMobile key={pokemon.id} pokemon={pokemon} />
+        <Pokemon key={pokemon.id} pokemon={pokemon} />
       ))}
 
       <ButtonPokedexCard
@@ -22,7 +21,7 @@ function PokedexCard({ pokemons }) {
   );
 }
 
-PokedexCard.propTypes = {
+PokedexMobile.propTypes = {
   pokemons: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -32,4 +31,4 @@ PokedexCard.propTypes = {
   ).isRequired,
 };
 
-export default PokedexCard;
+export default PokedexMobile;
