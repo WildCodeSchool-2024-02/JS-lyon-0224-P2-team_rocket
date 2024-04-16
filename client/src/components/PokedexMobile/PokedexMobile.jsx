@@ -3,20 +3,52 @@ import PropTypes from "prop-types";
 import styles from "./PokedexMobile.module.css";
 import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
+import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
 
 function PokedexMobile({ pokemons }) {
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
 
-  return (
-    <div className={styles.pokedexCard}>
-      {displayedPokemons.map((pokemon) => (
-        <Pokemon key={pokemon.id} pokemon={pokemon} />
-      ))}
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
 
-      <ButtonPokedexCard
-        pokemons={pokemons}
-        setDisplayedPokemons={setDisplayedPokemons}
-      />
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+    setSelectedPokemon(null);
+  };
+
+  const searchPokemon = () => {
+    const foundPokemon = pokemons.find(
+      (pokemon) => pokemon.name.toLowerCase() === searchTerm
+    );
+    setSelectedPokemon(foundPokemon);
+  };
+
+  return (
+    <div>
+      <div className={styles.pokedexCard}>
+        {selectedPokemon ? (
+          <PokeCardMobile pokemons={[selectedPokemon]} />
+        ) : (
+          displayedPokemons.map((pokemon) => (
+            <Pokemon key={pokemon.id} pokemon={pokemon} />
+          ))
+        )}
+
+        <ButtonPokedexCard
+          pokemons={pokemons}
+          setDisplayedPokemons={setDisplayedPokemons}
+        />
+
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleInputChange}
+          placeholder="Search Pokemon..."
+        />
+        <button type="button" onClick={searchPokemon}>
+          Search
+        </button>
+      </div>
     </div>
   );
 }

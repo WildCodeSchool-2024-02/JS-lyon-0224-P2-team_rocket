@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
+// import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
 import Poke from "./assets/poke";
 import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 import Navbar from "./components/Navbar/Navbar";
@@ -28,7 +28,7 @@ function App() {
       ) : (
         <p>Lodading Pokemon</p>
       )}
-      <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} />
+      {/* <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} /> */}
       <SearchBar />
       <Navbar />
     </main>
