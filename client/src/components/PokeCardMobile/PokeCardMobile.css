@@ -11,17 +11,18 @@
   min-height: 80vh;
   max-width: 40rem;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 #pokemonImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44vh;
+  height: auto;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  border-bottom-left-radius: 100% 60%;
+  border-bottom-right-radius: 100% 60%;
 }
 #pokemon {
   position: absolute;
@@ -99,44 +100,116 @@
   padding-bottom: 0.2rem;
 }
 
-.purple {
-  background-color: rgba(225, 108, 255, 0.5);
-  color: white;
+.normal {
+  background-color: rgba(var(--normal), 0.4);
 }
-.pink {
-  background-color: rgba(249, 206, 208, 0.5);
+.combat {
+  background-color: rgba(var(--combat), 0.4);
 }
-.yellow {
-  background-color: rgba(255, 252, 165, 0.5);
+.vol {
+  background-color: rgba(var(--vol), 0.4);
 }
-.blue {
-  background-color: rgba(161, 213, 255, 0.4);
+.poison {
+  background-color: rgba(var(--poison), 0.4);
 }
-.green {
-  background-color: rgba(106, 255, 105, 0.2);
+.sol {
+  background-color: rgba(var(--sol), 0.4);
 }
-.orange {
-  background-color: rgba(255, 165, 25, 0.6);
-  color: white;
+.roche {
+  background-color: rgba(var(--roche), 0.4);
+}
+.insecte {
+  background-color: rgba(var(--insecte), 0.4);
+}
+.spectre {
+  background-color: rgba(var(--spectre), 0.4);
+}
+.acier {
+  background-color: rgba(var(--acier), 0.4);
+}
+.feu {
+  background-color: rgba(var(--feu), 0.4);
+}
+.eau {
+  background-color: rgba(var(--eau), 0.4);
+}
+.plante {
+  background-color: rgba(var(--plante), 0.4);
 }
 
-.purpleBack {
-  background-image: url("../../assets/images/color/purple.png");
+.elec {
+  background-color: rgba(var(--électrik), 0.4);
 }
-.orangeBack {
-  background-image: url("../../assets/images/color/orange.png");
+.psy {
+  background-color: rgba(var(--psy), 0.4);
 }
-.pinkBack {
-  background-image: url("../../assets/images/color/pink.png");
+.glace {
+  background-color: rgba(var(--glace), 0.4);
 }
-.yellowBack {
-  background-image: url("../../assets/images/color/yellow.png");
+.dragon {
+  background-color: rgba(var(--dragon), 0.4);
 }
-.greenBack {
-  background-image: url("../../assets/images/color/green.png");
+.tenebre {
+  background-color: rgba(var(--ténèbre), 0.4);
 }
-.blueBack {
-  background-image: url("../../assets/images/color/blue.png");
+.fee {
+  background-color: rgba(var(--fée), 0.4);
+}
+
+.normalBack {
+  background-color: var(--type-normal);
+}
+.combatBack {
+  background-color: var(--type-combat);
+}
+.volBack {
+  background-color: var(--type-vol);
+}
+.poisonBack {
+  background-color: var(--type-poison);
+}
+.solBack {
+  background-color: var(--type-sol);
+}
+.rocheBack {
+  background-color: var(--type-roche);
+}
+.insecteBack {
+  background-color: var(--type-insecte);
+}
+.spectreBack {
+  background-color: var(--type-spectre);
+}
+.acierBack {
+  background-color: var(--type-acier);
+}
+.feuBack {
+  background-color: var(--type-feu);
+}
+.eauBack {
+  background-color: var(--type-eau);
+}
+.planteBack {
+  background-color: var(--type-plante);
+}
+
+.elecBack {
+  background-color: var(--type-électrik);
+}
+.psyBack {
+  background-color: var(--type-psy);
+}
+.glaceBack {
+  background-color: var(--type-glace);
+}
+.dragonBack {
+  background-color: var(--type-dragon);
+}
+.tenebreBack {
+  background-color: var(--type-ténèbre);
+}
+.feeBack {
+  background-color: var(--type-fée);
 }
 
 .button {
@@ -145,10 +218,6 @@
   border-radius: 30px;
   width: 120px;
   height: 26px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-princpal);
   color: grey;
-}
-
-.grassSvg {
-  background-color: url("../../assets/images/back/grass.svg");
 }
