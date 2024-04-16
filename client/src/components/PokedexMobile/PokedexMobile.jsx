@@ -5,6 +5,7 @@ import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
 
 function PokedexMobile({ pokemons }) {
+  // console.log({ pokemons });
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
 
   return (
