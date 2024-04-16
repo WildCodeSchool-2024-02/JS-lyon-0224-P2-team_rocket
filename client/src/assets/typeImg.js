@@ -56,14 +56,14 @@ const typeImg = [
     id: "Électrik",
     typeImg: typeElec,
     color: "elec",
-    backColor: "elecBack",
+    backColor: "électrikBack",
     cardBack: electricSvg,
   },
   {
     id: "Fée",
     typeImg: typeFee,
     color: "fee",
-    backColor: "feeBack",
+    backColor: "féeBack",
     cardBack: fairySvg,
   },
   {

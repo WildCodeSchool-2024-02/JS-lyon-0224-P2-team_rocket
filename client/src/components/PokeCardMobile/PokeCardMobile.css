@@ -98,8 +98,26 @@
   align-items: center;
   padding-left: 1rem;
   padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  gap: 1rem;
 }
-
+.type {
+  border-radius: 100%;
+  background-color: white;
+  height: 1.6rem;
+}
+.typesDiv {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0.2rem;
+}
+.typesDiv p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  font-weight: 500;
+}
 .normal {
   background-color: rgba(var(--normal), 0.4);
 }
@@ -193,7 +211,7 @@
   background-color: var(--type-plante);
 }
 
-.elecBack {
+.électrikBack {
   background-color: var(--type-électrik);
 }
 .psyBack {
@@ -208,7 +226,7 @@
 .tenebreBack {
   background-color: var(--type-ténèbre);
 }
-.feeBack {
+.féeBack {
   background-color: var(--type-fée);
 }
 
