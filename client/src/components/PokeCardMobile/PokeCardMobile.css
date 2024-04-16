@@ -100,50 +100,116 @@
   padding-bottom: 0.2rem;
 }
 
-.purple {
-  background-color: rgba(171, 106, 200, 0.5);
-  color: white;
-}
-.pink {
-  background-color: rgb(251, 188, 252, 0.5);
-}
-.yellow {
-  background-color: rgb(249, 209, 0, 0.2);
-}
-.blue {
-  background-color: rgba(1, 118, 187, 0.5);
-}
-.green {
-  background-color: rgb(87, 192, 78, 0.3);
-}
-.orange {
-  background-color: rgba(255, 165, 25, 0.6);
-  color: white;
-}
 .normal {
-  background-color: rgba(245, 228, 199, 0.5);
+  background-color: rgba(var(--normal), 0.4);
+}
+.combat {
+  background-color: rgba(var(--combat), 0.4);
+}
+.vol {
+  background-color: rgba(var(--vol), 0.4);
+}
+.poison {
+  background-color: rgba(var(--poison), 0.4);
+}
+.sol {
+  background-color: rgba(var(--sol), 0.4);
+}
+.roche {
+  background-color: rgba(var(--roche), 0.4);
+}
+.insecte {
+  background-color: rgba(var(--insecte), 0.4);
+}
+.spectre {
+  background-color: rgba(var(--spectre), 0.4);
+}
+.acier {
+  background-color: rgba(var(--acier), 0.4);
+}
+.feu {
+  background-color: rgba(var(--feu), 0.4);
+}
+.eau {
+  background-color: rgba(var(--eau), 0.4);
+}
+.plante {
+  background-color: rgba(var(--plante), 0.4);
 }
 
-.purpleBack {
-  background-color: rgba(171, 106, 200, 1);
+.elec {
+  background-color: rgba(var(--électrik), 0.4);
 }
-.orangeBack {
-  background-color: #ffbf5b;
+.psy {
+  background-color: rgba(var(--psy), 0.4);
 }
-.pinkBack {
-  background-color: rgb(251, 188, 252, 1);
+.glace {
+  background-color: rgba(var(--glace), 0.4);
 }
-.yellowBack {
-  background-color: rgb(249, 209, 0, 0.8);
+.dragon {
+  background-color: rgba(var(--dragon), 0.4);
 }
-.greenBack {
-  background-color: rgb(87, 192, 78);
+.tenebre {
+  background-color: rgba(var(--ténèbre), 0.4);
 }
-.blueBack {
-  background-color: rgba(1, 118, 187, 1);
+.fee {
+  background-color: rgba(var(--fée), 0.4);
 }
+
 .normalBack {
-  background-color: rgb(246, 226, 193);
+  background-color: var(--type-normal);
+}
+.combatBack {
+  background-color: var(--type-combat);
+}
+.volBack {
+  background-color: var(--type-vol);
+}
+.poisonBack {
+  background-color: var(--type-poison);
+}
+.solBack {
+  background-color: var(--type-sol);
+}
+.rocheBack {
+  background-color: var(--type-roche);
+}
+.insecteBack {
+  background-color: var(--type-insecte);
+}
+.spectreBack {
+  background-color: var(--type-spectre);
+}
+.acierBack {
+  background-color: var(--type-acier);
+}
+.feuBack {
+  background-color: var(--type-feu);
+}
+.eauBack {
+  background-color: var(--type-eau);
+}
+.planteBack {
+  background-color: var(--type-plante);
+}
+
+.elecBack {
+  background-color: var(--type-électrik);
+}
+.psyBack {
+  background-color: var(--type-psy);
+}
+.glaceBack {
+  background-color: var(--type-glace);
+}
+.dragonBack {
+  background-color: var(--type-dragon);
+}
+.tenebreBack {
+  background-color: var(--type-ténèbre);
+}
+.feeBack {
+  background-color: var(--type-fée);
 }
 
 .button {
