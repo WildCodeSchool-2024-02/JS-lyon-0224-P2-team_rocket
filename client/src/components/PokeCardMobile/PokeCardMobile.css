@@ -11,17 +11,18 @@
   min-height: 80vh;
   max-width: 40rem;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 #pokemonImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44vh;
+  height: auto;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  border-bottom-left-radius: 100% 60%;
+  border-bottom-right-radius: 100% 60%;
 }
 #pokemon {
   position: absolute;
@@ -100,43 +101,49 @@
 }
 
 .purple {
-  background-color: rgba(225, 108, 255, 0.5);
+  background-color: rgba(171, 106, 200, 0.5);
   color: white;
 }
 .pink {
-  background-color: rgba(249, 206, 208, 0.5);
+  background-color: rgb(251, 188, 252, 0.5);
 }
 .yellow {
-  background-color: rgba(255, 252, 165, 0.5);
+  background-color: rgb(249, 209, 0, 0.2);
 }
 .blue {
-  background-color: rgba(161, 213, 255, 0.4);
+  background-color: rgba(1, 118, 187, 0.5);
 }
 .green {
-  background-color: rgba(106, 255, 105, 0.2);
+  background-color: rgb(87, 192, 78, 0.3);
 }
 .orange {
   background-color: rgba(255, 165, 25, 0.6);
   color: white;
 }
+.normal {
+  background-color: rgba(245, 228, 199, 0.5);
+}
 
 .purpleBack {
-  background-image: url("../../assets/images/color/purple.png");
+  background-color: rgba(171, 106, 200, 1);
 }
 .orangeBack {
-  background-image: url("../../assets/images/color/orange.png");
+  background-color: #ffbf5b;
 }
 .pinkBack {
-  background-image: url("../../assets/images/color/pink.png");
+  background-color: rgb(251, 188, 252, 1);
 }
 .yellowBack {
-  background-image: url("../../assets/images/color/yellow.png");
+  background-color: rgb(249, 209, 0, 0.8);
 }
 .greenBack {
-  background-image: url("../../assets/images/color/green.png");
+  background-color: rgb(87, 192, 78);
 }
 .blueBack {
-  background-image: url("../../assets/images/color/blue.png");
+  background-color: rgba(1, 118, 187, 1);
+}
+.normalBack {
+  background-color: rgb(246, 226, 193);
 }
 
 .button {
@@ -145,10 +152,6 @@
   border-radius: 30px;
   width: 120px;
   height: 26px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-princpal);
   color: grey;
-}
-
-.grassSvg {
-  background-color: url("../../assets/images/back/grass.svg");
 }
