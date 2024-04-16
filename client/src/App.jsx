@@ -4,6 +4,7 @@ import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
 import Poke from "./assets/poke";
 import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 import Navbar from "./components/Navbar/Navbar";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   const [pokemons, setPokemons] = useState(Poke);
@@ -28,6 +29,7 @@ function App() {
         <p>Lodading Pokemon</p>
       )}
       <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} />
+      <SearchBar />
       <Navbar />
     </main>
   );
