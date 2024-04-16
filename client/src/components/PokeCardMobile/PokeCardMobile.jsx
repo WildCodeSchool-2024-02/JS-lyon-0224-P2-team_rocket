@@ -6,10 +6,14 @@ import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
 import "../../App.css";
 
-function PokeCardMobile({ pokemons }) {
+function PokeCardMobile({ getPokemon, pokemons }) {
   const [random, setRandom] = useState(0);
   function getNewPoke() {
-    setRandom(parseInt(Math.random() * 100, 10));
+    if (pokemons.length < 2) {
+      getPokemon();
+    } else {
+      setRandom(parseInt(Math.random() * 100, 10));
+    }
   }
 
   let typeImgUrl = [];
@@ -79,6 +83,7 @@ function PokeCardMobile({ pokemons }) {
   );
 }
 PokeCardMobile.propTypes = {
+  getPokemon: PropTypes.func.isRequired,
   pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
 };
 export default PokeCardMobile;
