@@ -1,14 +1,26 @@
-import styles from "./SearchBar.module.css";
+// import styles from "./SearchBar.module.css";
+import PropTypes from "prop-types";
 
-function SearchBar() {
+function SearchBar({ searchTerm, handleInputChange, searchPokemon }) {
   return (
     <div>
-      <form className={styles.search}>
-        <input type="text" placeholder="Search Pokemon ..." />
-        <input type="submit" />
-      </form>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleInputChange}
+        placeholder="Search Pokemon..."
+      />
+      <button type="button" onClick={searchPokemon}>
+        Search
+      </button>
     </div>
   );
 }
 
 export default SearchBar;
+
+SearchBar.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  searchPokemon: PropTypes.func.isRequired,
+};

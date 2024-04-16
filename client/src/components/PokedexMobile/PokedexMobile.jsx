@@ -4,13 +4,13 @@ import styles from "./PokedexMobile.module.css";
 import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
 import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
+import SearchBar from "../SearchBar/SearchBar";
 
 function PokedexMobile({ pokemons }) {
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
 
-  const [searchTerm, setSearchTerm] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState(null);
-
+  const [searchTerm, setSearchTerm] = useState("");
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
     setSelectedPokemon(null);
@@ -38,16 +38,11 @@ function PokedexMobile({ pokemons }) {
           pokemons={pokemons}
           setDisplayedPokemons={setDisplayedPokemons}
         />
-
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleInputChange}
-          placeholder="Search Pokemon..."
+        <SearchBar
+          searchTerm={searchTerm}
+          handleInputChange={handleInputChange}
+          searchPokemon={searchPokemon}
         />
-        <button type="button" onClick={searchPokemon}>
-          Search
-        </button>
       </div>
     </div>
   );
