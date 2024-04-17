@@ -85,8 +85,8 @@ h1 {
   background-color: var(--type-plante);
 }
 
-.électrik {
-  background-color: var(--type-électrik);
+.electrik {
+  background-color: var(--type-electrik);
 }
 
 .psy {
@@ -101,10 +101,10 @@ h1 {
   background-color: var(--type-dragon);
 }
 
-.ténèbres {
-  background-color: var(--type-ténèbres);
+.tenebres {
+  background-color: var(--type-tenebres);
 }
 
-.fée {
-  background-color: var(--type-fée);
+.fee {
+  background-color: var(--type-fee);
 }

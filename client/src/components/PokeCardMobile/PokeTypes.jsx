@@ -1,21 +1,33 @@
 import PropTypes from "prop-types";
+import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 
-function Poketypes({ typeImgUrl }) {
+function Poketypes({ pokemons, random }) {
+  let type = [];
+  function typeArray() {
+    for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
+      type[i] = pokemons[random].apiTypes[i];
+    }
+  }
+  typeArray();
+  type = type.reverse();
+
   return (
     <div className="types">
-      {typeImgUrl.map((type) => (
-        <img
-          key={type.id}
-          className="typeImg"
-          src={type.typeImg}
-          alt={type.id}
-        />
+      {type.map((types) => (
+        <div
+          key={types.name}
+          className={`${noAccentAndToLower(types.name)}Back typesDiv`}
+        >
+          <img className="type" src={types.image} alt={types.name} />
+          <p>{types.name}</p>
+        </div>
       ))}
     </div>
   );
 }
-Poketypes.propTypes = {
-  typeImgUrl: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-};
 
+Poketypes.propTypes = {
+  random: PropTypes.number.isRequired,
+  pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
+};
 export default Poketypes;

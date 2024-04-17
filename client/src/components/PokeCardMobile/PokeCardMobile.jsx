@@ -34,7 +34,6 @@ function PokeCardMobile({ getPokemon, pokemons }) {
   }
 
   poketype();
-
   return (
     <div id="container">
       <div id="pokeCard">
@@ -55,7 +54,7 @@ function PokeCardMobile({ getPokemon, pokemons }) {
           <h2>{pokemons[random].name}</h2>
           <p>#{pokemons[random].id}</p>
         </div>
-        <Poketypes typeImgUrl={typeImgUrl} />
+        <Poketypes pokemons={pokemons} random={random} />
         <div className="center">
           <div id="stats" className={typeImgUrl[0].color}>
             <span className="stat">
