@@ -7,7 +7,6 @@ import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
 import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 import Navbar from "./components/Navbar/Navbar";
 
-// let pokemons = null;
 function getPokemon() {
   return axios
     .get("https://pokebuildapi.fr/api/v1/pokemon/limit/100")

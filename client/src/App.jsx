@@ -6,13 +6,13 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const pokemons = useRouteLoaderData("Appli");
-  const [currentLocation] = useState("/");
+  const [currentLocation, setCurrentLocation] = useState("/");
 
   return (
     <main className="container">
       {currentLocation === "/pokedex" && <PokedexMobile pokemons={pokemons} />}
       {currentLocation === "/" && <PokeCardMobile pokemons={pokemons} />}
-      <Navbar />
+      <Navbar setCurrentLocation={setCurrentLocation} />
     </main>
   );
 }
