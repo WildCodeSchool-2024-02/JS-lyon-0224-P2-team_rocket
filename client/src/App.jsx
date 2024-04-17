@@ -28,6 +28,7 @@ function App() {
         <p>Loading Pokemon</p>
       )}
       <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} />
+
       <Navbar />
     </main>
   );
