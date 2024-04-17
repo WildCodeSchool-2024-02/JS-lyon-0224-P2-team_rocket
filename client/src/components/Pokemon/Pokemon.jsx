@@ -6,6 +6,7 @@ import Btn from "../../assets/images/button-PokeCardMobile.png";
 function Pokemon({ pokemon }) {
   const lastType = pokemon.apiTypes.length - 1;
   const typePokemonClass = pokemon.apiTypes[lastType].name.toLowerCase();
+
   return (
     <div
       className={`${styles.containerInfo} ${styles[typePokemonClass]}`}

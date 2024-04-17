@@ -1,18 +1,17 @@
-// import styles from "./SearchBar.module.css";
 import PropTypes from "prop-types";
+import styles from "./SearchBar.module.css";
 
-function SearchBar({ searchTerm, handleInputChange, searchPokemon }) {
+function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
   return (
-    <div>
+    <div className={styles.search}>
       <input
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="Search Pokemon..."
+        onKeyDown={handleInputKeyDown}
+        placeholder="Search your Pokemon..."
+        className={styles.input_search_bar}
       />
-      <button type="button" onClick={searchPokemon}>
-        Search
-      </button>
     </div>
   );
 }
@@ -22,5 +21,5 @@ export default SearchBar;
 SearchBar.propTypes = {
   searchTerm: PropTypes.string.isRequired,
   handleInputChange: PropTypes.func.isRequired,
-  searchPokemon: PropTypes.func.isRequired,
+  handleInputKeyDown: PropTypes.func.isRequired,
 };

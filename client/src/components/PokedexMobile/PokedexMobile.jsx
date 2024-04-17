@@ -22,10 +22,19 @@ function PokedexMobile({ pokemons }) {
     );
     setSelectedPokemon(foundPokemon);
   };
-
+  const handleInputKeyDown = (event) => {
+    if (event.key === "Enter") {
+      searchPokemon();
+    }
+  };
   return (
     <div>
       <div className={styles.pokedexCard}>
+        <SearchBar
+          searchTerm={searchTerm}
+          handleInputChange={handleInputChange}
+          handleInputKeyDown={handleInputKeyDown}
+        />
         {selectedPokemon ? (
           <PokeCardMobile pokemons={[selectedPokemon]} />
         ) : (
@@ -37,11 +46,6 @@ function PokedexMobile({ pokemons }) {
         <ButtonPokedexCard
           pokemons={pokemons}
           setDisplayedPokemons={setDisplayedPokemons}
-        />
-        <SearchBar
-          searchTerm={searchTerm}
-          handleInputChange={handleInputChange}
-          searchPokemon={searchPokemon}
         />
       </div>
     </div>
