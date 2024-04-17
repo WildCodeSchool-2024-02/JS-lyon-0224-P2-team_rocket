@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-
+import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 
 function Pokemon({ pokemon }) {
   const lastType = pokemon.apiTypes.length - 1;
-  const typePokemonClass = pokemon.apiTypes[lastType].name.toLowerCase();
-
+  let typePokemonClass = pokemon.apiTypes[lastType].name;
+  typePokemonClass = noAccentAndToLower(typePokemonClass);
   return (
     <div
       className={`${styles.containerInfo} ${styles[typePokemonClass]}`}
