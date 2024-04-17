@@ -1,18 +1,16 @@
-import { useRouteLoaderData } from "react-router-dom";
+import { useRouteLoaderData, Outlet } from "react-router-dom";
 import { useState } from "react";
-import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
-import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const pokemons = useRouteLoaderData("Appli");
-  const [currentLocation, setCurrentLocation] = useState("/");
+  const pokemonsData = useRouteLoaderData("Appli");
+
+  const [pokemons, setPokemons] = useState(pokemonsData);
 
   return (
     <main className="container">
-      {currentLocation === "/pokedex" && <PokedexMobile pokemons={pokemons} />}
-      {currentLocation === "/" && <PokeCardMobile pokemons={pokemons} />}
-      <Navbar setCurrentLocation={setCurrentLocation} />
+      <Outlet context={[pokemons, setPokemons]} />
+      <Navbar />
     </main>
   );
 }

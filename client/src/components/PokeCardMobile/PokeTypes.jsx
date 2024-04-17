@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 
 function Poketypes({ pokemons, random }) {
   let type = [];
@@ -9,12 +10,13 @@ function Poketypes({ pokemons, random }) {
   }
   typeArray();
   type = type.reverse();
+
   return (
     <div className="types">
       {type.map((types) => (
         <div
           key={types.name}
-          className={`${types.name.toLowerCase()}Back typesDiv`}
+          className={`${noAccentAndToLower(types.name)}Back typesDiv`}
         >
           <img className="type" src={types.image} alt={types.name} />
           <p>{types.name}</p>

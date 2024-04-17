@@ -5,7 +5,6 @@ import axios from "axios";
 import App from "./App";
 import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
 import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
-import Navbar from "./components/Navbar/Navbar";
 
 function getPokemon() {
   return axios
@@ -22,22 +21,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: (
-          <>
-            <PokeCardMobile />
-            <Navbar />
-          </>
-        ),
+        element: <PokedexMobile />,
       },
 
       {
-        path: "/pokedex",
-        element: (
-          <>
-            <PokedexMobile />
-            <Navbar />
-          </>
-        ),
+        path: "/pokecard",
+        element: <PokeCardMobile />,
       },
     ],
   },

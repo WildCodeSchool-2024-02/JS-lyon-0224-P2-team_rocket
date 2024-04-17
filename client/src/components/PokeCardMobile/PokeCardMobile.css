@@ -156,7 +156,7 @@
 }
 
 .elec {
-  background-color: rgba(var(--électrik), 0.4);
+  background-color: rgba(var(--electrik), 0.4);
 }
 .psy {
   background-color: rgba(var(--psy), 0.4);
@@ -168,10 +168,10 @@
   background-color: rgba(var(--dragon), 0.4);
 }
 .tenebre {
-  background-color: rgba(var(--ténèbre), 0.4);
+  background-color: rgba(var(--tenebre), 0.4);
 }
 .fee {
-  background-color: rgba(var(--fée), 0.4);
+  background-color: rgba(var(--fee), 0.4);
 }
 
 .normalBack {
@@ -211,8 +211,8 @@
   background-color: var(--type-plante);
 }
 
-.électrikBack {
-  background-color: var(--type-électrik);
+.electrikBack {
+  background-color: var(--type-electrik);
 }
 .psyBack {
   background-color: var(--type-psy);
@@ -224,10 +224,10 @@
   background-color: var(--type-dragon);
 }
 .tenebreBack {
-  background-color: var(--type-ténèbre);
+  background-color: var(--type-tenebre);
 }
-.féeBack {
-  background-color: var(--type-fée);
+.feeBack {
+  background-color: var(--type-fee);
 }
 
 .button {
