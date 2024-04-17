@@ -56,7 +56,7 @@ const typeImg = [
     id: "Électrik",
     typeImg: typeElec,
     color: "elec",
-    backColor: "elecBack",
+    backColor: "electrikBack",
     cardBack: electricSvg,
   },
   {

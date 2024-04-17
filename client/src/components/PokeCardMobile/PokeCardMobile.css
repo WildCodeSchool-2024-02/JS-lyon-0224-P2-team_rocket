@@ -98,8 +98,26 @@
   align-items: center;
   padding-left: 1rem;
   padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  gap: 1rem;
 }
-
+.type {
+  border-radius: 100%;
+  background-color: white;
+  height: 1.6rem;
+}
+.typesDiv {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0.2rem;
+}
+.typesDiv p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  font-weight: 500;
+}
 .normal {
   background-color: rgba(var(--normal), 0.4);
 }
@@ -138,7 +156,7 @@
 }
 
 .elec {
-  background-color: rgba(var(--électrik), 0.4);
+  background-color: rgba(var(--electrik), 0.4);
 }
 .psy {
   background-color: rgba(var(--psy), 0.4);
@@ -150,10 +168,10 @@
   background-color: rgba(var(--dragon), 0.4);
 }
 .tenebre {
-  background-color: rgba(var(--ténèbre), 0.4);
+  background-color: rgba(var(--tenebre), 0.4);
 }
 .fee {
-  background-color: rgba(var(--fée), 0.4);
+  background-color: rgba(var(--fee), 0.4);
 }
 
 .normalBack {
@@ -193,8 +211,8 @@
   background-color: var(--type-plante);
 }
 
-.elecBack {
-  background-color: var(--type-électrik);
+.electrikBack {
+  background-color: var(--type-electrik);
 }
 .psyBack {
   background-color: var(--type-psy);
@@ -206,10 +224,10 @@
   background-color: var(--type-dragon);
 }
 .tenebreBack {
-  background-color: var(--type-ténèbre);
+  background-color: var(--type-tenebre);
 }
 .feeBack {
-  background-color: var(--type-fée);
+  background-color: var(--type-fee);
 }
 
 .button {
