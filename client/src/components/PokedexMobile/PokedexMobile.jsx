@@ -1,12 +1,13 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
+import { useOutletContext } from "react-router-dom";
 import styles from "./PokedexMobile.module.css";
 import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
 import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
 import SearchBar from "../SearchBar/SearchBar";
 
-function PokedexMobile({ pokemons }) {
+function PokedexMobile() {
+  const [pokemons] = useOutletContext();
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
 
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -51,15 +52,5 @@ function PokedexMobile({ pokemons }) {
     </div>
   );
 }
-
-PokedexMobile.propTypes = {
-  pokemons: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
 
 export default PokedexMobile;
