@@ -32,8 +32,9 @@ function App() {
       {/* {pokemons.length > 0 ? (
         <PokedexMobile pokemons={pokemons} setPokemons={setPokemons} />
       ) : (
-        <p>Lodading Pokemon</p>
+        <p>Loading Pokemon</p>
       )}
+
       <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} /> */}
       {/* <Navbar
         setCurrentLocation={setCurrentLocation}
@@ -46,6 +47,7 @@ function App() {
 
       {currentLocation === "/about" && <About />} */}
       <Outlet context={[pokemons, setPokemons]} />
+
       <Navbar />
 
       {/* <nav>

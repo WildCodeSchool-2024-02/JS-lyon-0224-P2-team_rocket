@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
-
+import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 
 function Pokemon({ pokemon }) {
+  const lastType = pokemon.apiTypes.length - 1;
+  let typePokemonClass = pokemon.apiTypes[lastType].name;
+  typePokemonClass = noAccentAndToLower(typePokemonClass);
   return (
-    <div className={styles.containerInfo} key={pokemon.id}>
+    <div
+      className={`${styles.containerInfo} ${styles[typePokemonClass]}`}
+      key={pokemon.id}
+    >
       <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
       <div className={styles.pokeInfo}>
         <h1>{pokemon.name}</h1>
@@ -24,5 +30,10 @@ Pokemon.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    apiTypes: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }).isRequired,
 };
