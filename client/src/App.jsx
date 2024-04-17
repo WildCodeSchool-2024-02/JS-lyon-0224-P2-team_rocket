@@ -25,7 +25,7 @@ function App() {
       {pokemons.length > 0 ? (
         <PokedexMobile pokemons={pokemons} setPokemons={setPokemons} />
       ) : (
-        <p>Lodading Pokemon</p>
+        <p>Loading Pokemon</p>
       )}
       <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} />
       <Navbar />
