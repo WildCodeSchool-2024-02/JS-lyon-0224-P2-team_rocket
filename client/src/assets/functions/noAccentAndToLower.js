@@ -1,13 +1,13 @@
 function noAccentAndToLower(string) {
   const stringLow = string.toLowerCase();
-  const ArrayLow = stringLow.split("");
+  const arrayLow = stringLow.split("");
   let result = "";
-  for (let i = 0; i < ArrayLow.length; i += 1) {
-    if (ArrayLow[i] === "é") {
-      ArrayLow[i] = "e";
+  for (let i = 0; i < arrayLow.length; i += 1) {
+    if (arrayLow[i] === "é" || arrayLow[i] === "è") {
+      arrayLow[i] = "e";
     }
   }
-  result = ArrayLow.join("");
+  result = arrayLow.join("");
   return result;
 }
 
