@@ -26,7 +26,7 @@ function App() {
   // }, []);
   const pokemonData = useLoaderData("Appli");
   const [pokemons, setPokemons] = useState(pokemonData);
-
+  const [random, setRandom] = useState(0);
   return (
     <main className="container">
       {/* {pokemons.length > 0 ? (
@@ -46,7 +46,7 @@ function App() {
       )}
 
       {currentLocation === "/about" && <About />} */}
-      <Outlet context={[pokemons, setPokemons]} />
+      <Outlet context={{ pokemons, setPokemons, random, setRandom }} />
 
       <Navbar />
 
