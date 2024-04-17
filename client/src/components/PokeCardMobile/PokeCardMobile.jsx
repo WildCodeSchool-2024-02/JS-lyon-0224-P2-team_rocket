@@ -10,8 +10,10 @@ function PokeCardMobile() {
   const [pokemons] = useOutletContext();
   const [random, setRandom] = useState(0);
   function getNewPoke() {
-    setRandom(parseInt(Math.random() * 100, 10));
-  }
+
+      setRandom(parseInt(Math.random() * 100, 10));
+    }
+  
 
   let typeImgUrl = [];
   function poketype() {

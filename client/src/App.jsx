@@ -10,6 +10,7 @@ function App() {
   return (
     <main className="container">
       <Outlet context={[pokemons, setPokemons]} />
+
       <Navbar />
     </main>
   );
