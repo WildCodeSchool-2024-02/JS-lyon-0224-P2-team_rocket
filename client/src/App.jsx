@@ -1,26 +1,31 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
-import Poke from "./assets/poke";
-import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
-// import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
+// import axios from "axios";
+// import { useState } from "react";
+import { useState } from "react";
+import { useLoaderData, Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+
+// import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
+// import Poke from "./assets/poke";
+// import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
+// import About from "./components/About/About";
 // import Pokemon from "./components/Pokemon/Pokemon";
 
 function App() {
-  const [pokemons, setPokemons] = useState(Poke);
-  const [currentLocation, setCurrentLocation] = useState("/");
-  const getPokemon = () => {
-    axios
-      .get("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
-      .then((response) => {
-        setPokemons(response.data);
-      });
-  };
+  // const [pokemons, setPokemons] = useState(Poke);
+  // const [currentLocation, setCurrentLocation] = useState("/");
+  // const getPokemon = () => {
+  //   axios
+  //     .get("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
+  //     .then((response) => {
+  //       setPokemons(response.data);
+  //     });
+  // };
 
-  useEffect(() => {
-    getPokemon();
-  }, []);
+  // useEffect(() => {
+  //   getPokemon();
+  // }, []);
+  const pokemonData = useLoaderData("Appli");
+  const [pokemons, setPokemons] = useState(pokemonData);
 
   return (
     <main className="container">
@@ -34,13 +39,16 @@ function App() {
         setCurrentLocation={setCurrentLocation}
         currentLocation={currentLocation}
       /> */}
-      {currentLocation === "/" && <PokedexMobile pokemons={pokemons} />}
+      {/* {currentLocation === "/" && <PokedexMobile pokemons={pokemons} />}
       {currentLocation === "/pokemon" && (
         <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} />
       )}
 
-      {currentLocation === "/about" && <About />}
-      <nav>
+      {currentLocation === "/about" && <About />} */}
+      <Outlet context={[pokemons, setPokemons]} />
+      <Navbar />
+
+      {/* <nav>
         <button onClick={() => setCurrentLocation("/")} type="button">
           PokeDexMobile
         </button>
@@ -52,7 +60,7 @@ function App() {
         <button onClick={() => setCurrentLocation("/pokemon")} type="button">
           Pokemon
         </button>
-      </nav>
+      </nav> */}
       <main>
         {/* {currentLocation === "/pokemon" && (
           <PokCardMobile getPokemon={getPokemon} pokemons={pokemons} />
