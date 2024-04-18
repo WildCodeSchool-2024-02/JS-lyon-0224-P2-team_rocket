@@ -1,0 +1,108 @@
+.containerInfo {
+  width: 160px;
+  height: 200px;
+  margin: 15px 10px;
+  box-shadow: 6px 9px 14px -8px #616161;
+  background-color: #35dc96;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pokeInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btnPokecard {
+  border: none;
+  padding: 0;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.imgBtn {
+  height: 36px;
+  width: 36px;
+}
+
+.normal {
+  background-color: var(--type-normal);
+}
+
+.combat {
+  background-color: var(--type-combat);
+}
+
+.vol {
+  background-color: var(--type-vol);
+}
+
+.poison {
+  background-color: var(--type-poison);
+}
+
+.sol {
+  background-color: var(--type-sol);
+}
+
+.roche {
+  background-color: var(--type-roche);
+}
+
+.insecte {
+  background-color: var(--type-insecte);
+}
+
+.spectre {
+  background-color: var(--type-spectre);
+}
+
+.acier {
+  background-color: var(--type-acier);
+}
+
+.feu {
+  background-color: var(--type-feu);
+}
+
+.eau {
+  background-color: var(--type-eau);
+}
+
+.plante {
+  background-color: var(--type-plante);
+}
+
+.electrik {
+  background-color: var(--type-electrik);
+}
+
+.psy {
+  background-color: var(--type-psy);
+}
+
+.glace {
+  background-color: var(--type-glace);
+}
+
+.dragon {
+  background-color: var(--type-dragon);
+}
+
+.tenebres {
+  background-color: var(--type-tenebre);
+}
+
+.fee {
+  background-color: var(--type-fee);
+}

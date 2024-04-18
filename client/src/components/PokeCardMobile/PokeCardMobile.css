@@ -1,0 +1,240 @@
+#container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#pokeCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 12rem;
+  min-height: 80vh;
+  max-width: 40rem;
+  width: 400px;
+  height: 800px;
+}
+#pokemonImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom-left-radius: 100% 60%;
+  border-bottom-right-radius: 100% 60%;
+}
+#pokemon {
+  position: absolute;
+  z-index: 3;
+  min-width: 15rem;
+  max-width: 19em;
+  max-height: 18rem;
+}
+.typeSvg {
+  position: relative;
+  z-index: 0;
+  min-width: 20rem;
+  max-width: 29em;
+  max-height: 20rem;
+}
+.pokeName {
+  padding: 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-princpal);
+}
+.pokeName p {
+  font-size: 2.5rem;
+  margin: 0;
+  padding-right: 2rem;
+}
+.pokeName h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+#stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  border-radius: 5%;
+  box-shadow: 6px 9px 14px -8px #616161;
+  font-family: var(--font-princpal);
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 1rem 2rem 1rem;
+}
+.stat p {
+  margin: 0;
+}
+.stat h3 {
+  margin: 0;
+}
+.typeImg {
+  border-radius: 25%;
+  height: 2.6rem;
+}
+.cardBack {
+  max-width: 25rem;
+  position: relative;
+  z-index: 2;
+  right: 75;
+}
+.types {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  gap: 1rem;
+}
+.type {
+  border-radius: 100%;
+  background-color: white;
+  height: 1.6rem;
+}
+.typesDiv {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0.2rem;
+}
+.typesDiv p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  font-weight: 500;
+}
+.normal {
+  background-color: rgba(var(--normal), 0.4);
+}
+.combat {
+  background-color: rgba(var(--combat), 0.4);
+}
+.vol {
+  background-color: rgba(var(--vol), 0.4);
+}
+.poison {
+  background-color: rgba(var(--poison), 0.4);
+}
+.sol {
+  background-color: rgba(var(--sol), 0.4);
+}
+.roche {
+  background-color: rgba(var(--roche), 0.4);
+}
+.insecte {
+  background-color: rgba(var(--insecte), 0.4);
+}
+.spectre {
+  background-color: rgba(var(--spectre), 0.4);
+}
+.acier {
+  background-color: rgba(var(--acier), 0.4);
+}
+.feu {
+  background-color: rgba(var(--feu), 0.4);
+}
+.eau {
+  background-color: rgba(var(--eau), 0.4);
+}
+.plante {
+  background-color: rgba(var(--plante), 0.4);
+}
+
+.elec {
+  background-color: rgba(var(--electrik), 0.4);
+}
+.psy {
+  background-color: rgba(var(--psy), 0.4);
+}
+.glace {
+  background-color: rgba(var(--glace), 0.4);
+}
+.dragon {
+  background-color: rgba(var(--dragon), 0.4);
+}
+.tenebres {
+  background-color: rgba(var(--tenebre), 0.4);
+}
+.fee {
+  background-color: rgba(var(--fee), 0.4);
+}
+
+.normalBack {
+  background-color: var(--type-normal);
+}
+.combatBack {
+  background-color: var(--type-combat);
+}
+.volBack {
+  background-color: var(--type-vol);
+}
+.poisonBack {
+  background-color: var(--type-poison);
+}
+.solBack {
+  background-color: var(--type-sol);
+}
+.rocheBack {
+  background-color: var(--type-roche);
+}
+.insecteBack {
+  background-color: var(--type-insecte);
+}
+.spectreBack {
+  background-color: var(--type-spectre);
+}
+.acierBack {
+  background-color: var(--type-acier);
+}
+.feuBack {
+  background-color: var(--type-feu);
+}
+.eauBack {
+  background-color: var(--type-eau);
+}
+.planteBack {
+  background-color: var(--type-plante);
+}
+
+.electrikBack {
+  background-color: var(--type-electrik);
+}
+.psyBack {
+  background-color: var(--type-psy);
+}
+.glaceBack {
+  background-color: var(--type-glace);
+}
+.dragonBack {
+  background-color: var(--type-dragon);
+}
+.tenebresBack {
+  background-color: var(--type-tenebre);
+}
+.feeBack {
+  background-color: var(--type-fee);
+}
+
+.button {
+  margin-top: 2rem;
+  border: none;
+  border-radius: 30px;
+  width: 120px;
+  height: 26px;
+  font-family: var(--font-princpal);
+  color: grey;
+}
