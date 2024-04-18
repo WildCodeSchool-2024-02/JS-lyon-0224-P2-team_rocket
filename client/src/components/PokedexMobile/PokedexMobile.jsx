@@ -3,14 +3,13 @@ import { useOutletContext } from "react-router-dom";
 import styles from "./PokedexMobile.module.css";
 import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
-import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
 import SearchBar from "../SearchBar/SearchBar";
 
 function PokedexMobile() {
-  const [pokemons] = useOutletContext();
+  const { pokemons } = useOutletContext();
+  const { setRandom } = useOutletContext();
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
-
-  const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [setSelectedPokemon] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -36,13 +35,10 @@ function PokedexMobile() {
           handleInputChange={handleInputChange}
           handleInputKeyDown={handleInputKeyDown}
         />
-        {selectedPokemon ? (
-          <PokeCardMobile pokemons={[selectedPokemon]} />
-        ) : (
-          displayedPokemons.map((pokemon) => (
-            <Pokemon key={pokemon.id} pokemon={pokemon} />
-          ))
-        )}
+
+        {displayedPokemons.map((pokemon) => (
+          <Pokemon key={pokemon.id} pokemon={pokemon} setRandom={setRandom} />
+        ))}
 
         <ButtonPokedexCard
           pokemons={pokemons}
