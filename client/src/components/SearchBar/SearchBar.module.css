@@ -1,0 +1,10 @@
+.input_search_bar {
+  width: 270px;
+  height: 28px;
+  border-radius: 25px;
+  background-color: rgb(235, 234, 235);
+  position: relative;
+  border: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}

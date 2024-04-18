@@ -3,7 +3,6 @@
 }
 
 .pokedexCard {
-  border: "4px green solid";
   margin: 0 auto;
   width: 400px;
   display: flex;

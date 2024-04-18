@@ -27,6 +27,8 @@ const router = createBrowserRouter([
       {
         path: "/pokecard",
         element: <PokeCardMobile />,
+        id: "Pokecard",
+        loader: () => getPokemon(),
       },
     ],
   },
