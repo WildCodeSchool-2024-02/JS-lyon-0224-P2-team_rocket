@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Menu from "../../assets/images/logomobile/bars-solid.svg";
 import pokeball from "../../assets/images/logomobile/PokeBall.svg";
 import Home from "../../assets/images/logomobile/home-logo.svg";
@@ -27,8 +28,12 @@ function Navbar() {
         </div>
       <nav>
         <div className="logo_mobile">
-          <img src={Home} alt="logo-home" className="logo" />
-          <img src={pokeball} alt="pokeball-logo" className="pokeball" />
+          <Link to="/">
+            <img src={Home} alt="logo-home" className="logo" />
+          </Link>
+          <Link to="/pokecard">
+            <img src={pokeball} alt="pokeball-logo" className="pokeball" />
+          </Link>
           <button className="BurgerButton" type="button" onClick={toggleMenu}>
             <img src={Menu} alt="Menuburger" className="menu_burger" />
           </button>

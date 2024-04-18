@@ -1,33 +1,16 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
-import Poke from "./assets/poke";
-import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
+import { useRouteLoaderData, Outlet } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const [pokemons, setPokemons] = useState(Poke);
+  const pokemonsData = useRouteLoaderData("Appli");
 
-  const getPokemon = () => {
-    axios
-      .get("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
-      .then((response) => {
-        setPokemons(response.data);
-      });
-  };
-
-  useEffect(() => {
-    getPokemon();
-  }, []);
+  const [pokemons, setPokemons] = useState(pokemonsData);
+  const [random, setRandom] = useState(0);
 
   return (
     <main className="container">
-      {pokemons.length > 0 ? (
-        <PokedexMobile pokemons={pokemons} setPokemons={setPokemons} />
-      ) : (
-        <p>Loading Pokemon</p>
-      )}
-      <PokeCardMobile getPokemon={getPokemon} pokemons={pokemons} />
+      <Outlet context={{ pokemons, setPokemons, random, setRandom }} />
       <Navbar />
     </main>
   );
