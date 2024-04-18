@@ -8,7 +8,7 @@ import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 
 function getPokemon() {
   return axios
-    .get("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
+    .get("https://pokebuildapi.fr/api/v1/pokemon/limit/252")
     .then((response) => response.data);
 }
 
@@ -27,6 +27,8 @@ const router = createBrowserRouter([
       {
         path: "/pokecard",
         element: <PokeCardMobile />,
+        id: "Pokecard",
+        loader: () => getPokemon(),
       },
     ],
   },
