@@ -61,11 +61,11 @@
 }
 
 .menuburger {
-  padding: 1vh;
+  padding: 2vh;
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 50%;
+  top: 42.9%;
 }
 
 .navsection {
