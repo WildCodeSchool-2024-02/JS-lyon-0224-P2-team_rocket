@@ -1,6 +1,5 @@
 import "./PokeCardMobile.css";
 import { useOutletContext } from "react-router-dom";
-
 import Poketypes from "./PokeTypes";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
