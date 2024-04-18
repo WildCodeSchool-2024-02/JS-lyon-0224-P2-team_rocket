@@ -1,12 +1,15 @@
 import "./PokeCardMobile.css";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useRouteLoaderData } from "react-router-dom";
+import { useState } from "react";
 import Poketypes from "./PokeTypes";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
+
 import "../../App.css";
 
 function PokeCardMobile() {
-  const { pokemons } = useOutletContext();
+  const pokemonsData = useRouteLoaderData("pokeCard");
+  const [pokemons] = useState(pokemonsData);
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
 

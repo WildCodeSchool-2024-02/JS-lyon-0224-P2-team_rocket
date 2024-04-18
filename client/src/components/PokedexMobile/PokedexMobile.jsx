@@ -1,26 +1,26 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import styles from "./PokedexMobile.module.css";
 import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
 import SearchBar from "../SearchBar/SearchBar";
 
 function PokedexMobile() {
+  const navigate = useNavigate();
   const { pokemons } = useOutletContext();
   const { setRandom } = useOutletContext();
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
-  const [setSelectedPokemon] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
-    setSelectedPokemon(null);
   };
 
   const searchPokemon = () => {
     const foundPokemon = pokemons.find(
       (pokemon) => pokemon.name.toLowerCase() === searchTerm
     );
-    setSelectedPokemon(foundPokemon);
+    setRandom(foundPokemon.id);
+    navigate("/pokecard");
   };
   const handleInputKeyDown = (event) => {
     if (event.key === "Enter") {
