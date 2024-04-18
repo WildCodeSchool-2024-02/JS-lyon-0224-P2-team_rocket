@@ -31,7 +31,7 @@
 
 .menu_items {
   list-style-type: none;
-  padding: 2vh 2vh;
+  padding: 3vh 2vh;
   margin: 0;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -56,6 +56,13 @@
 
 .menuburger {
   padding: 1vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 50vh;
+}
+
+.navsection {
   display: flex;
   justify-content: center;
   width: auto;
