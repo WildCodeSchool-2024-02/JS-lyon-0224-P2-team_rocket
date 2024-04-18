@@ -31,12 +31,18 @@
 
 .menu_items {
   list-style-type: none;
-  padding: 2vh 2vh;
+  padding: 0;
   margin: 0;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 3vh;
+  width: 380px;
+  height: 395px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .BurgerButton:hover .menu_items {
@@ -44,10 +50,10 @@
 }
 
 .menu_items li {
-  padding: 6vh 10vh;
+  font-family: var(--font-princpal);
+  font-size: 2rem;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .menu_items li:hover {
@@ -58,6 +64,17 @@
   padding: 1vh;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+}
+
+.navsection {
+  display: flex;
+  justify-content: center;
   width: auto;
   height: auto;
+}
+
+nav {
+  position: relative;
 }
