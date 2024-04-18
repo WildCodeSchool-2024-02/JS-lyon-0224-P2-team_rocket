@@ -1,8 +1,6 @@
 import "./PokeCardMobile.css";
-// import PropTypes from "prop-types";
-
 import { useOutletContext } from "react-router-dom";
-// import { useState } from "react";
+
 import Poketypes from "./PokeTypes";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
@@ -12,14 +10,6 @@ function PokeCardMobile() {
   const { pokemons } = useOutletContext();
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
-
-  // const pokemons = poke.pokemon;
-  // const random = rand.randoms;
-  // const setRandom = rand.setRandoms;
-
-  // const [random, setRandom] = useState(0);
-  // console.log({ pokemons });
-  // console.log({ random });
 
   function getNewPoke() {
     setRandom(parseInt(Math.random() * 100, 10));
@@ -91,6 +81,7 @@ function PokeCardMobile() {
     </div>
   );
 }
+
 // PokeCardMobile.propTypes = {
 //   getPokemon: PropTypes.func.isRequired,
 //   pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,

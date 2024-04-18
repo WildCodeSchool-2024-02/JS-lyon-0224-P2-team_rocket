@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import axios from "axios";
 import App from "./App";
-import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
-// import About from "./components/About/About";
 import PokeCardMobile from "./components/PokeCardMobile/PokeCardMobile";
+import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 
 function getPokemon() {
   return axios
@@ -25,14 +23,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <PokedexMobile />,
       },
+
       {
-        path: "/pokemon",
+        path: "/pokecard",
         element: <PokeCardMobile />,
       },
-      // {
-      //   path: "/about",
-      //   element: <About />,
-      // },
     ],
   },
 ]);

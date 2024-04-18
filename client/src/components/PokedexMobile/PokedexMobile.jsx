@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-// import PropTypes from "prop-types";
+
 import styles from "./PokedexMobile.module.css";
 import Pokemon from "../Pokemon/Pokemon";
 import ButtonPokedexCard from "../ButtonPokedexCard/ButtonPokedexCard";
@@ -8,7 +8,6 @@ import SearchBar from "../SearchBar/SearchBar";
 
 function PokedexMobile() {
   const { pokemons } = useOutletContext();
-  // const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
   // console.log({ pokemons });
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
@@ -59,15 +58,5 @@ function PokedexMobile() {
     </div>
   );
 }
-
-// PokedexMobile.propTypes = {
-//   pokemons: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       name: PropTypes.string.isRequired,
-//       image: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-// };
 
 export default PokedexMobile;

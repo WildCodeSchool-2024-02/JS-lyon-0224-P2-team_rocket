@@ -18,7 +18,7 @@ function Pokemon({ pokemon, setRandom }) {
       <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
       <div className={styles.pokeInfo}>
         <h1>{pokemon.name}</h1>
-        <Link to="/pokemon">
+        <Link to="/pokecard">
           <button
             className={styles.btnPokecard}
             type="button"
