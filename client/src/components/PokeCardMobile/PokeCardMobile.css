@@ -11,7 +11,7 @@
   min-height: 80vh;
   max-width: 40rem;
   width: 400px;
-  height: auto;
+  height: 800px;
 }
 #pokemonImg {
   display: flex;
