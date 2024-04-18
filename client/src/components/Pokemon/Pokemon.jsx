@@ -18,7 +18,6 @@ function Pokemon({ pokemon, setRandom }) {
       <div className={styles.pokeInfo}>
         <h1>{pokemon.name}</h1>
         <Link to="/pokecard">
-          gi
           <button
             className={styles.btnPokecard}
             type="button"
