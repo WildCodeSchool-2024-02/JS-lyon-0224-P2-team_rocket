@@ -12,11 +12,8 @@ function PokeCardMobile() {
 
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
-  function getNewPoke() {
-    setRandom(parseInt(Math.random() * 100, 10));
-  }
-
   let typeImgUrl = [];
+
   function poketype() {
     let count = 0;
     for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
@@ -76,9 +73,6 @@ function PokeCardMobile() {
           </div>
         </div>
       </div>
-      <button className="button" type="button" onClick={getNewPoke}>
-        New Pokemon
-      </button>
     </div>
   );
 }

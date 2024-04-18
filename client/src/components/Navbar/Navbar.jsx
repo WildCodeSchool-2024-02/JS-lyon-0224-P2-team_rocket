@@ -15,16 +15,18 @@ function Navbar() {
 
   return (
     <main>
+      <div className="navsection">
+          <section className="menuburger">
+            {isMenuOpen && (
+              <ul className="menu_items">
+                <li>PokeFight</li>
+                <li>PokeClicker</li>
+                <li>About us</li>
+              </ul>
+            )}
+          </section>
+        </div>
       <nav>
-        <section className="menuburger">
-          {isMenuOpen && (
-            <ul className="menu_items">
-              <li>PokeFight</li>
-              <li>PokeClicker</li>
-              <li>About us</li>
-            </ul>
-          )}
-        </section>
         <div className="logo_mobile">
           <Link to="/">
             <img src={Home} alt="logo-home" className="logo" />

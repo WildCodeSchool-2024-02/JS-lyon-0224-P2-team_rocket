@@ -8,7 +8,7 @@ import PokedexMobile from "./components/PokedexMobile/PokedexMobile";
 
 function getPokemon() {
   return axios
-    .get("https://pokebuildapi.fr/api/v1/pokemon/limit/252")
+    .get("https://pokebuildapi.fr/api/v1/pokemon/limit/251")
     .then((response) => response.data);
 }
 
