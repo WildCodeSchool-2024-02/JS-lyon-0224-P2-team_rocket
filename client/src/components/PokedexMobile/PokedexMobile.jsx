@@ -9,21 +9,18 @@ function PokedexMobile() {
   const { pokemons } = useOutletContext();
   const { setRandom } = useOutletContext();
   const navigate = useNavigate();
-  // console.log({ pokemons });
 
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
-    // setSelectedPokemon(null);
   };
 
   const searchPokemon = () => {
     const foundPokemon = pokemons.find(
       (pokemon) => pokemon.name.toLowerCase() === searchTerm
     );
-    setRandom(foundPokemon.id);
-    // console.log(foundPokemon);
+    setRandom(foundPokemon.id - 1);
   };
   const handleInputKeyDown = (event) => {
     if (event.key === "Enter") {
