@@ -166,7 +166,7 @@
 .dragon {
   background-color: rgba(var(--dragon), 0.4);
 }
-.tenebre {
+.tenebres {
   background-color: rgba(var(--tenebre), 0.4);
 }
 .fee {
@@ -222,7 +222,7 @@
 .dragonBack {
   background-color: var(--type-dragon);
 }
-.tenebreBack {
+.tenebresBack {
   background-color: var(--type-tenebre);
 }
 .feeBack {
