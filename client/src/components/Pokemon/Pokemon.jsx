@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-
 import { Link } from "react-router-dom";
 import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";

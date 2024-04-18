@@ -11,7 +11,6 @@ function App() {
   return (
     <main className="container">
       <Outlet context={{ pokemons, setPokemons, random, setRandom }} />
-
       <Navbar />
     </main>
   );

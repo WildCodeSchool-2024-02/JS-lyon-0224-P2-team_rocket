@@ -82,8 +82,4 @@ function PokeCardMobile() {
   );
 }
 
-// PokeCardMobile.propTypes = {
-//   getPokemon: PropTypes.func.isRequired,
-//   pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-// };
 export default PokeCardMobile;

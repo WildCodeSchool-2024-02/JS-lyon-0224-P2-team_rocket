@@ -9,9 +9,7 @@ import SearchBar from "../SearchBar/SearchBar";
 function PokedexMobile() {
   const { pokemons } = useOutletContext();
   const { setRandom } = useOutletContext();
-  // console.log({ pokemons });
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
-  // const [pokemons] = useOutletContext();
 
   const [setSelectedPokemon] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -39,13 +37,7 @@ function PokedexMobile() {
           handleInputChange={handleInputChange}
           handleInputKeyDown={handleInputKeyDown}
         />
-        {/* {selectedPokemon ? (
-          <PokeCardMobile pokemons={[selectedPokemon]} />
-        ) : (
-          displayedPokemons.map((pokemon) => (
-            <Pokemon key={pokemon.id} pokemon={pokemon} />
-          ))
-        )} */}
+
         {displayedPokemons.map((pokemon) => (
           <Pokemon key={pokemon.id} pokemon={pokemon} setRandom={setRandom} />
         ))}
