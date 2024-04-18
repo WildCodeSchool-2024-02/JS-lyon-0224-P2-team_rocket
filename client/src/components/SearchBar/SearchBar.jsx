@@ -9,7 +9,7 @@ function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
         value={searchTerm}
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
-        placeholder="Search your Pokemon..."
+        placeholder="🔎  Search your Pokemon..."
         className={styles.input_search_bar}
       />
     </div>
