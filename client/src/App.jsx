@@ -7,11 +7,14 @@ function App() {
 
   const [pokemons, setPokemons] = useState(pokemonsData);
   const [random, setRandom] = useState(0);
+  function getNewPoke() {
+    setRandom(parseInt(Math.random() * 100, 10));
+  }
 
   return (
     <main className="container">
       <Outlet context={{ pokemons, setPokemons, random, setRandom }} />
-      <Navbar />
+      <Navbar getNewPoke={getNewPoke()} />
     </main>
   );
 }
