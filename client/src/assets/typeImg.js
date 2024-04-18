@@ -29,6 +29,7 @@ import groundSvg from "./images/back/ground.svg";
 import rockSvg from "./images/back/rock.svg";
 import ghostSvg from "./images/back/ghost.svg";
 import normalSvg from "./images/back/normal.svg";
+import tenebreSvg from "./images/back/tenebre.png";
 
 const typeImg = [
   {
@@ -142,6 +143,12 @@ const typeImg = [
     color: "normal",
     backColor: "normalBack",
     cardBack: normalSvg,
+  },
+  {
+    id: "Ténèbre",
+    color: "tenebre",
+    backColor: "tenebreBack",
+    cardBack: tenebreSvg,
   },
 ];
 

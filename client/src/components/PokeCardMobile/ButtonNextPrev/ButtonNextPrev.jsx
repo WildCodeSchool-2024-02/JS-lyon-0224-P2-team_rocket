@@ -5,16 +5,16 @@ import btnPrev from "../../../assets/images/Btn-previous.png";
 
 function ButtonNextPrev({ random, setRandom }) {
   function handlePrev() {
-    if (random === 1) {
-      setRandom(99);
+    if (random === 0) {
+      setRandom(251);
     } else {
       setRandom(random - 1);
     }
   }
 
   function handleNext() {
-    if (random === 99) {
-      setRandom(1);
+    if (random === 251) {
+      setRandom(0);
     } else {
       setRandom(random + 1);
     }
