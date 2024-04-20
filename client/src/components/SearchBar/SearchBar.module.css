@@ -3,8 +3,18 @@
   height: 28px;
   border-radius: 25px;
   background-color: rgb(235, 234, 235);
-  position: relative;
   border: none;
   padding-left: 20px;
   margin-top: 5px;
+}
+
+.searchBarMobile {
+  border: 4px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBarDesktop {
+  border: 4px solid blue;
 }

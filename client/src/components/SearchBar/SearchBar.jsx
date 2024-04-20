@@ -2,8 +2,12 @@ import PropTypes from "prop-types";
 import styles from "./SearchBar.module.css";
 
 function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
+  const isMobile = window.innerWidth < 800;
+
   return (
-    <div className={styles.search}>
+    <div
+      className={isMobile ? styles.searchBarMobile : styles.searchBarDesktop}
+    >
       <input
         type="text"
         value={searchTerm}
