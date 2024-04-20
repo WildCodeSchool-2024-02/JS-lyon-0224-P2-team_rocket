@@ -1,21 +1,43 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 
 function Pokemon({ pokemon, setRandom }) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const lastType = pokemon.apiTypes.length - 1;
   let typePokemonClass = pokemon.apiTypes[lastType].name;
   typePokemonClass = noAccentAndToLower(typePokemonClass);
 
   return (
     <div
-      className={`${styles.containerInfo} ${styles[typePokemonClass]}`}
+      className={` ${
+        isMobile ? styles.containerInfo_Mobile : styles.containerInfo_Desktop
+      } ${styles[typePokemonClass]}`}
       key={pokemon.id}
     >
-      <img src={pokemon.image} alt={pokemon.name} style={{ width: "100%" }} />
-      <div className={styles.pokeInfo}>
+      <img
+        src={pokemon.image}
+        alt={pokemon.name}
+        className={isMobile ? styles.img_mobile : styles.img_desktop}
+      />
+      <div
+        className={isMobile ? styles.pokeInfo_mobile : styles.pokeInfo_desktop}
+      >
         <h1>{pokemon.name}</h1>
         <Link to="/pokecard">
           <button
