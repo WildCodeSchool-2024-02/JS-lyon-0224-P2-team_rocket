@@ -13,15 +13,19 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   }, [startIndex, pokemons, setDisplayedPokemons]);
 
   function handlePrevious() {
-    if (startIndex - 6 >= 0) {
-      setStartIndex(startIndex - 6);
+    let newIndex = startIndex - 6;
+    if (newIndex < 0) {
+      newIndex = Math.floor(pokemons.length / 6) * 6;
     }
+    setStartIndex(newIndex);
   }
 
   function handleNext() {
-    if (startIndex + 6 <= pokemons.length) {
-      setStartIndex(startIndex + 6);
+    let newIndex = startIndex + 6;
+    if (newIndex >= pokemons.length) {
+      newIndex = 0;
     }
+    setStartIndex(newIndex);
   }
   return (
     <div className={styles.container_btn}>
