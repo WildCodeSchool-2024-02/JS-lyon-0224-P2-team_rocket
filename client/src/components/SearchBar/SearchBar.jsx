@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./SearchBar.module.css";
 
 function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
-  const isMobile = window.innerWidth < 800;
+  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsmobile(window.innerWidth < 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
@@ -14,7 +27,11 @@ function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
         placeholder="🔎  Search your Pokemon..."
-        className={styles.input_search_bar}
+        className={
+          isMobile
+            ? styles.input_search_bar_mobile
+            : styles.input_search_bar_desktop
+        }
       />
     </div>
   );
