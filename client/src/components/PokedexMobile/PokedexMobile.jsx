@@ -32,12 +32,11 @@ function PokedexMobile() {
         {displayedPokemons.map((pokemon) => (
           <Pokemon key={pokemon.id} pokemon={pokemon} setRandom={setRandom} />
         ))}
-
-        <ButtonPokedexCard
-          pokemons={pokemons}
-          setDisplayedPokemons={setDisplayedPokemons}
-        />
       </div>
+      <ButtonPokedexCard
+        pokemons={pokemons}
+        setDisplayedPokemons={setDisplayedPokemons}
+      />
     </div>
   );
 }
