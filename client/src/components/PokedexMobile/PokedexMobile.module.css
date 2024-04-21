@@ -14,13 +14,11 @@
 
 .pokedexCard_desktop {
   margin: 0 auto;
-  /* width: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  align-items: center;
   align-content: center;
+  gap: 30px;
   height: 800px;
 }

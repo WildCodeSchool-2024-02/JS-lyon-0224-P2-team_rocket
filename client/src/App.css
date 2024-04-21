@@ -48,3 +48,7 @@ h2 {
 p {
   font-family: var(--font-princpal);
 }
+span {
+  font-family: var(--font-princpal);
+  text-decoration: none;
+}

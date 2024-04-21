@@ -8,7 +8,6 @@
   flex-direction: column;
 }
 .containerInfo_Desktop {
-  border: 4px solid purple;
   width: 350px;
   height: 210px;
   margin: 10px 10px;
@@ -33,14 +32,12 @@ h1 {
 }
 
 .pokeInfo_mobile {
-  border: 4px solid red;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
 
 .pokeInfo_desktop {
-  border: 4px solid aqua;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -48,7 +45,6 @@ h1 {
   align-items: flex-end;
 }
 .btnPokecard {
-  border: 4px solid blue;
   border: none;
   padding: 0;
   height: 36px;
@@ -58,7 +54,6 @@ h1 {
 }
 
 .imgBtn {
-  border: 4px solid green;
   height: 36px;
   width: 36px;
 }
