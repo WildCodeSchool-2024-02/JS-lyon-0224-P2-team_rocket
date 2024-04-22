@@ -4,6 +4,7 @@ import { useOutletContext, useRouteLoaderData } from "react-router-dom";
 import Poketypes from "./PokeTypes";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
+import StatsPoke from "../Stats/StatsPoke";
 import "../../App.css";
 
 function PokeCardMobile() {
@@ -53,24 +54,11 @@ function PokeCardMobile() {
         </div>
         <Poketypes pokemons={pokemons} random={random} />
         <div className="center">
-          <div id="stats" className={typeImgUrl[0].color}>
-            <span className="stat">
-              <h3>HP</h3>
-              <p>{pokemons[random].stats.HP}</p>
-            </span>
-            <span className="stat">
-              <h3>Attaque</h3>
-              <p>{pokemons[random].stats.attack}</p>
-            </span>
-            <span className="stat">
-              <h3>Defense</h3>
-              <p>{pokemons[random].stats.defense}</p>
-            </span>
-            <span className="stat">
-              <h3>Speed</h3>
-              <p>{pokemons[random].stats.speed} </p>
-            </span>
-          </div>
+          <StatsPoke
+            pokemons={pokemons}
+            random={random}
+            typeImgUrl={typeImgUrl}
+          />
         </div>
       </div>
     </div>
