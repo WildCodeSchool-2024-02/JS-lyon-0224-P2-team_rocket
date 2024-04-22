@@ -1,7 +1,13 @@
-import PropTypes from "prop-types";
+import { useOutletContext, useRouteLoaderData } from "react-router-dom";
+import { useState } from "react";
+import poketype from "../../assets/functions/poketypefunction";
 import styles from "./StatsPoke.module.css";
 
-function StatsPoke({ pokemons, random, typeImgUrl }) {
+function StatsPoke() {
+  const pokemonsData = useRouteLoaderData("Pokecard");
+  const [pokemons] = useState(pokemonsData);
+  const { random } = useOutletContext();
+  const typeImgUrl = poketype(pokemons, random);
   return (
     <div id={styles.stats} className={typeImgUrl[0].color}>
       <span className={styles.stat}>
@@ -25,9 +31,3 @@ function StatsPoke({ pokemons, random, typeImgUrl }) {
 }
 
 export default StatsPoke;
-
-StatsPoke.propTypes = {
-  random: PropTypes.number.isRequired,
-  pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-  typeImgUrl: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-};

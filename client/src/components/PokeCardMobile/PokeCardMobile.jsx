@@ -2,7 +2,7 @@ import "./PokeCardMobile.css";
 import { useState } from "react";
 import { useOutletContext, useRouteLoaderData } from "react-router-dom";
 import Poketypes from "./PokeTypes";
-import typeImg from "../../assets/typeImg";
+import poketype from "../../assets/functions/poketypefunction";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
 import StatsPoke from "../Stats/StatsPoke";
 import PokeName from "../PokeCard/PokeName";
@@ -11,28 +11,11 @@ import "../../App.css";
 function PokeCardMobile() {
   const pokemonsData = useRouteLoaderData("Pokecard");
   const [pokemons] = useState(pokemonsData);
-
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
-  let typeImgUrl = [];
 
-  function poketype() {
-    let count = 0;
-    for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
-      const type = [];
-      type[i] = pokemons[random].apiTypes[i].name;
+  const typeImgUrl = poketype(pokemons, random);
 
-      for (let j = 0; j < typeImg.length; j += 1) {
-        if (type[i] === typeImg[j].id) {
-          typeImgUrl[count] = typeImg[j];
-          count += 1;
-        }
-      }
-      typeImgUrl = typeImgUrl.reverse();
-    }
-  }
-
-  poketype();
   return (
     <div id="container">
       <div id="pokeCard">
