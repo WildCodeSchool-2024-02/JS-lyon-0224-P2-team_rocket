@@ -6,23 +6,42 @@ import BtnPrev from "../../assets/images/logo-btn/IconFlecheGauche.png";
 
 function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   const [startIndex, setStartIndex] = useState(0);
+  const [perPage, setPerPage] = useState(window.innerWidth < 800 ? 6 : 9);
+
   useEffect(() => {
     if (pokemons.length > 0) {
-      setDisplayedPokemons(pokemons.slice(startIndex, startIndex + 6));
+      setDisplayedPokemons(pokemons.slice(startIndex, startIndex + perPage));
     }
-  }, [startIndex, pokemons, setDisplayedPokemons]);
+  }, [startIndex, pokemons, setDisplayedPokemons, perPage]);
 
   function handlePrevious() {
-    if (startIndex - 6 >= 0) {
-      setStartIndex(startIndex - 6);
+    let newIndex = startIndex - perPage;
+    if (newIndex < 0) {
+      newIndex = Math.floor(pokemons.length / perPage) * perPage;
     }
+    setStartIndex(newIndex);
   }
 
   function handleNext() {
-    if (startIndex + 6 <= pokemons.length) {
-      setStartIndex(startIndex + 6);
+    let newIndex = startIndex + perPage;
+    if (newIndex >= pokemons.length) {
+      newIndex = 0;
     }
+    setStartIndex(newIndex);
   }
+
+  useEffect(() => {
+    // Mettre à jour perPage lorsque la largeur de l'écran change
+    const handleResize = () => {
+      setPerPage(window.innerWidth < 800 ? 6 : 9);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className={styles.container_btn}>
       <button type="button" onClick={handlePrevious} id={styles.btn}>

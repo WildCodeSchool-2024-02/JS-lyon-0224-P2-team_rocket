@@ -1,26 +1,49 @@
-.containerInfo {
+.containerInfo_Mobile {
   width: 160px;
   height: 200px;
   margin: 10px 10px;
   box-shadow: 6px 9px 14px -8px #616161;
-  background-color: #35dc96;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
 }
+.containerInfo_Desktop {
+  width: 350px;
+  height: 210px;
+  margin: 10px 10px;
+  box-shadow: 6px 9px 14px -8px #616161;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 
+.img_mobile {
+  width: 100%;
+}
+
+.img_desktop {
+  width: 54%;
+}
 h1 {
   font-size: 1.2rem;
   color: aliceblue;
   font-family: "Montserrat", sans-serif;
 }
 
-.pokeInfo {
+.pokeInfo_mobile {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
+.pokeInfo_desktop {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .btnPokecard {
   border: none;
   padding: 0;
