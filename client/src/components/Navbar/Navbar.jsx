@@ -34,10 +34,13 @@ function Navbar() {
       >
         <section className={styles.menuburger}>
           {isMenuOpen && (
-            <ul className={styles.menu_items}>
+            <ul className={isMobile ? styles.menu_items : styles.menu_desktop}>
               <li>PokeFight</li>
               <li>PokeClicker</li>
-              <li>About us</li>
+
+              <Link to="/about" className={styles.about_us}>
+                <li>About us</li>
+              </Link>
             </ul>
           )}
         </section>
@@ -53,25 +56,22 @@ function Navbar() {
         <Link to="/pokecard">
           <img src={pokeball} alt="pokeball-logo" className={styles.pokeball} />
         </Link>
-        <Link to="/about" className={styles.about_us}>
-          <button
-            className={styles.BurgerButton}
-            type="button"
-            onClick={toggleMenu}
-          >
-            <div>
-              {isMobile ? (
-                <img
-                  src={Menu}
-                  alt="Menuburger"
-                  className={styles.menu_burger}
-                />
-              ) : (
+
+        <button
+          className={styles.BurgerButton}
+          type="button"
+          onClick={toggleMenu}
+        >
+          <div>
+            {isMobile ? (
+              <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
+            ) : (
+              <Link to="/about">
                 <span className={styles.logo_text}>About us</span>
-              )}
-            </div>
-          </button>
-        </Link>
+              </Link>
+            )}
+          </div>
+        </button>
       </nav>
     </main>
   );
