@@ -1,3 +1,21 @@
 .container_about {
   background-color: aquamarine;
 }
+
+.jessie {
+  width: 350px;
+  height: 570px;
+  border: 2px solid red;
+}
+
+.james {
+  width: 350px;
+  height: 570px;
+  border: 2px solid red;
+}
+
+.miaouss {
+  width: 350px;
+  height: 570px;
+  border: 2px solid red;
+}
