@@ -5,8 +5,8 @@ import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   const pokemonsData = useRouteLoaderData("Appli");
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const [pokemons, setPokemons] = useState(pokemonsData);
   const [random, setRandom] = useState(0);
 
