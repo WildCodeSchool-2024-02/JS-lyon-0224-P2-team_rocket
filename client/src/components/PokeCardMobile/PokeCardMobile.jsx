@@ -5,6 +5,7 @@ import Poketypes from "./PokeTypes";
 import typeImg from "../../assets/typeImg";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
 import StatsPoke from "../Stats/StatsPoke";
+import PokeName from "../PokeCard/PokeName";
 import "../../App.css";
 
 function PokeCardMobile() {
@@ -48,10 +49,7 @@ function PokeCardMobile() {
           />
         </div>
         <ButtonNextPrev random={random} setRandom={setRandom} />
-        <div className="pokeName">
-          <h2>{pokemons[random].name}</h2>
-          <p>#{pokemons[random].id}</p>
-        </div>
+        <PokeName />
         <Poketypes pokemons={pokemons} random={random} />
         <div className="center">
           <StatsPoke
