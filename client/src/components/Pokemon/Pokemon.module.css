@@ -14,8 +14,11 @@
   box-shadow: 6px 9px 14px -8px #616161;
   border-radius: 30px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .img_mobile {
@@ -23,7 +26,9 @@
 }
 
 .img_desktop {
-  width: 54%;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
 }
 h1 {
   font-size: 1.2rem;
@@ -128,4 +133,10 @@ h1 {
 
 .fee {
   background-color: var(--type-fee);
+}
+
+.typeImage {
+  z-index: 1;
+  position: absolute;
+  width: 10%;
 }

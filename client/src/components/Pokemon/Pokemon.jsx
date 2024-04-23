@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
+import typeImg from "../../assets/typeImg";
 
 function Pokemon({ pokemon, setRandom }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
@@ -23,6 +24,10 @@ function Pokemon({ pokemon, setRandom }) {
   let typePokemonClass = pokemon.apiTypes[lastType].name;
   typePokemonClass = noAccentAndToLower(typePokemonClass);
 
+  const typeImage = typeImg.find(
+    (type) => noAccentAndToLower(type.id.toLowerCase()) === typePokemonClass
+  );
+
   return (
     <div
       className={` ${
@@ -35,6 +40,13 @@ function Pokemon({ pokemon, setRandom }) {
         alt={pokemon.name}
         className={isMobile ? styles.img_mobile : styles.img_desktop}
       />
+      {!isMobile && typeImage && (
+        <img
+          src={typeImage.cardBack}
+          alt={typeImage.id}
+          className={styles.typeImage}
+        />
+      )}
       <div
         className={isMobile ? styles.pokeInfo_mobile : styles.pokeInfo_desktop}
       >
