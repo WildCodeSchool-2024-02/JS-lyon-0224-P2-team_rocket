@@ -1,6 +1,7 @@
 @media screen and (min-width: 800px) {
   .pokeCard {
     display: flex;
+    border-radius: 30px;
   }
 
   .nameAndTypes {
@@ -12,5 +13,16 @@
   .pokeName {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .pokeName p {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-right: 2rem;
+    font-style: italic;
+  }
+  #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }

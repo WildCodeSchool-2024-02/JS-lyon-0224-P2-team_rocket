@@ -24,3 +24,23 @@
 .desktopColor {
   background-color: rgba(255, 255, 255, 0.6);
 }
+
+@media screen and (min-width: 800px) {
+  #stats {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .stat p {
+    font-style: italic;
+  }
+  .stat h3 {
+    font-style: italic;
+  }
+}

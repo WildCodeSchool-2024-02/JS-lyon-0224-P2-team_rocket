@@ -1,0 +1,6 @@
+#pokehome {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  height: 55vh;
+}

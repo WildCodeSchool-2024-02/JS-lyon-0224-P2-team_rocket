@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
 import PokeCard from "../PokeCard/PokeCard";
-import styles from "./PokeHome.module.css";
+import "./PokeHome.css";
 
 function Pokecard() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
@@ -19,9 +19,7 @@ function Pokecard() {
   }, []);
 
   return (
-    <div
-      className={isMobile ? styles.pokeHomemobile : styles.pokedexCard_desktop}
-    >
+    <div id="pokehome">
       {isMobile === true ? (
         <PokeCardMobile />
       ) : (
