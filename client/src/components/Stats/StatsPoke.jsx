@@ -1,15 +1,20 @@
 import { useOutletContext, useRouteLoaderData } from "react-router-dom";
+import PropTypes from "prop-types";
 import { useState } from "react";
 import poketype from "../../assets/functions/poketypefunction";
 import styles from "./StatsPoke.module.css";
 
-function StatsPoke() {
+function StatsPoke({ isMobile }) {
   const pokemonsData = useRouteLoaderData("Pokecard");
   const [pokemons] = useState(pokemonsData);
   const { random } = useOutletContext();
   const typeImgUrl = poketype(pokemons, random);
+
   return (
-    <div id={styles.stats} className={typeImgUrl[0].color}>
+    <div
+      id={styles.stats}
+      className={`${isMobile === true ? typeImgUrl[0].color : styles.desktopColor}`}
+    >
       <span className={styles.stat}>
         <h3>HP</h3>
         <p>{pokemons[random].stats.HP}</p>
@@ -31,3 +36,7 @@ function StatsPoke() {
 }
 
 export default StatsPoke;
+
+StatsPoke.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

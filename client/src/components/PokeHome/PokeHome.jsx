@@ -22,7 +22,11 @@ function Pokecard() {
     <div
       className={isMobile ? styles.pokeHomemobile : styles.pokedexCard_desktop}
     >
-      {isMobile === true ? <PokeCardMobile /> : <PokeCard />}
+      {isMobile === true ? (
+        <PokeCardMobile />
+      ) : (
+        <PokeCard isMobile={isMobile} />
+      )}
     </div>
   );
 }

@@ -1,0 +1,16 @@
+@media screen and (min-width: 800px) {
+  .pokeCard {
+    display: flex;
+  }
+
+  .nameAndTypes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pokeName {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

@@ -7,6 +7,7 @@ import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
 import StatsPoke from "../Stats/StatsPoke";
 import PokeName from "../PokeCard/PokeName";
 import "../../App.css";
+import CardImg from "../PokeCard/CardImg";
 
 function PokeCardMobile() {
   const pokemonsData = useRouteLoaderData("Pokecard");
@@ -20,16 +21,7 @@ function PokeCardMobile() {
     <div id="container">
       <div id="pokeCard">
         <div id="pokemonImg" className={typeImgUrl[0].backColor}>
-          <img
-            id="pokemon"
-            src={pokemons[random].image}
-            alt={pokemons[random].name}
-          />
-          <img
-            className="typeSvg"
-            alt={typeImgUrl[0].id}
-            src={typeImgUrl[0].cardBack}
-          />
+          <CardImg />
         </div>
         <ButtonNextPrev random={random} setRandom={setRandom} />
         <PokeName />
