@@ -5,6 +5,7 @@ import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 import typeImg from "../../assets/typeImg";
+import Poketypes from "../PokeCardMobile/PokeTypes";
 
 function Pokemon({ pokemon, setRandom }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
@@ -33,33 +34,72 @@ function Pokemon({ pokemon, setRandom }) {
       className={` ${
         isMobile ? styles.containerInfo_Mobile : styles.containerInfo_Desktop
       } ${styles[typePokemonClass]}`}
-      key={pokemon.id}
     >
+      {" "}
       <img
         src={pokemon.image}
         alt={pokemon.name}
         className={isMobile ? styles.img_mobile : styles.img_desktop}
       />
       {!isMobile && typeImage && (
-        <img
-          src={typeImage.cardBack}
-          alt={typeImage.id}
-          className={styles.typeImage}
-        />
+        <>
+          <img
+            src={typeImage.cardBack}
+            alt={typeImage.id}
+            className={styles.typeImage}
+          />
+          {/* <div className={styles.typesContainer}>
+            {pokemon.apiTypes.map((type) => (
+              <span key={pokemon.name} className={styles.type}>
+                {type.name}
+              </span>
+            ))}
+          </div> */}
+        </>
       )}
       <div
         className={isMobile ? styles.pokeInfo_mobile : styles.pokeInfo_desktop}
       >
+        {!isMobile && (
+          <>
+            <p
+              style={{
+                fontSize: "24px",
+                fontStyle: "italic",
+              }}
+            >
+              #{pokemon.id}
+            </p>
+            <Poketypes
+              pokemons={[{ apiTypes: pokemon.apiTypes }]}
+              random={0}
+              style={{ display: "none" }}
+            />
+          </>
+        )}
+
         <h1>{pokemon.name}</h1>
-        <Link to="/pokecard">
-          <button
-            className={styles.btnPokecard}
-            type="button"
-            onClick={() => setRandom(pokemon.id - 1)}
-          >
-            <img src={Btn} alt="button-fleche" className={styles.imgBtn} />
-          </button>
-        </Link>
+        <div className={isMobile ? styles.btn_mobile : styles.btn_desktop}>
+          <Link to="/pokecard">
+            <button
+              className={
+                isMobile
+                  ? styles.btnPokecard_mobile
+                  : styles.btnPokecard_desktop
+              }
+              type="button"
+              onClick={() => setRandom(pokemon.id - 1)}
+            >
+              <img
+                src={Btn}
+                alt="button-fleche"
+                className={
+                  isMobile ? styles.imgBtn_mobile : styles.imgBtn_desktop
+                }
+              />
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
