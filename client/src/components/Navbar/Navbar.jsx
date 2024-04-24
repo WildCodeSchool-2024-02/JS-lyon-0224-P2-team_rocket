@@ -26,7 +26,7 @@ function Navbar() {
   };
 
   return (
-    <main>
+    <div>
       <div
         className={
           isMobile ? styles.navsection_mobile : styles.navsection_desktop
@@ -73,7 +73,7 @@ function Navbar() {
           </button>
         </Link>
       </nav>
-    </main>
+    </div>
   );
 }
 
