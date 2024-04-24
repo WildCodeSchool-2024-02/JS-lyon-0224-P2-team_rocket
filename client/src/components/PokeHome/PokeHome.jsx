@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
+import { useOutletContext, useRouteLoaderData } from "react-router-dom";
 import PokeCardMobile from "../PokeCardMobile/PokeCardMobile";
 import PokeCard from "../PokeCard/PokeCard";
+import poketype from "../../assets/functions/poketypefunction";
 import "./PokeHome.css";
 
 function Pokecard() {
+  const pokemonsData = useRouteLoaderData("Pokecard");
+  const [pokemons] = useState(pokemonsData);
+  const { random } = useOutletContext();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+  const typeImgUrl = poketype(pokemons, random);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,12 +25,17 @@ function Pokecard() {
   }, []);
 
   return (
-    <div id="pokehome">
-      {isMobile === true ? (
-        <PokeCardMobile isMobile={isMobile} />
-      ) : (
-        <PokeCard isMobile={isMobile} />
-      )}
+    <div
+      id="pokehome"
+      className={`${isMobile === false ? typeImgUrl[0].backColor : ""}`}
+    >
+      <div className="whiteBack">
+        {isMobile === true ? (
+          <PokeCardMobile isMobile={isMobile} />
+        ) : (
+          <PokeCard isMobile={isMobile} />
+        )}
+      </div>
     </div>
   );
 }

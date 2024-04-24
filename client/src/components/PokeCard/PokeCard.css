@@ -2,9 +2,11 @@
   .pokeCard {
     display: flex;
     border-radius: 30px;
-    width: 60%;
+    width: 60vw;
     min-width: 700px;
     max-width: 750px;
+    min-height: 400px;
+    height: 50vh;
     box-shadow: 6px 9px 14px -8px #616161;
   }
 
