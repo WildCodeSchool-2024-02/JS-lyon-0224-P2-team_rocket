@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useOutletContext, useRouteLoaderData } from "react-router-dom";
 import PropTypes from "prop-types";
 import PokeName from "./PokeName";
-import Poketypes from "../PokeCardMobile/PokeTypes";
+import Poketypes from "../PokeCardMobile/PokeTypes/PokeTypes";
 import StatsPoke from "../Stats/StatsPoke";
 import CardImg from "./CardImg";
 import poketype from "../../assets/functions/poketypefunction";
