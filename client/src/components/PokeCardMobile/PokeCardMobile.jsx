@@ -1,13 +1,13 @@
 import "./PokeCardMobile.css";
 import { useState } from "react";
 import { useOutletContext, useRouteLoaderData } from "react-router-dom";
-import Poketypes from "./PokeTypes";
 import poketype from "../../assets/functions/poketypefunction";
 import ButtonNextPrev from "./ButtonNextPrev/ButtonNextPrev";
 import StatsPoke from "../Stats/StatsPoke";
 import PokeName from "../PokeCard/PokeName";
 import "../../App.css";
 import CardImg from "../PokeCard/CardImg";
+import Poketypes from "./PokeTypes/PokeTypes";
 
 function PokeCardMobile(isMobile) {
   const pokemonsData = useRouteLoaderData("Pokecard");

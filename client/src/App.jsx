@@ -7,9 +7,10 @@ function App() {
   const pokemonsData = useRouteLoaderData("Appli");
 
   const navigate = useNavigate();
+
   const [pokemons, setPokemons] = useState(pokemonsData);
   const [random, setRandom] = useState(0);
-
+  const [isPokedex, setIsPokedex] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -37,8 +38,11 @@ function App() {
         setRandom={setRandom}
         pokemons={pokemons}
         random={random}
+        isPokedex={isPokedex}
       />
-      <Outlet context={{ pokemons, setPokemons, random, setRandom }} />
+      <Outlet
+        context={{ pokemons, setPokemons, random, setRandom, setIsPokedex }}
+      />
       <Navbar />
     </main>
   );
