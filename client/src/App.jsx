@@ -35,6 +35,8 @@ function App() {
         handleInputChange={handleInputChange}
         handleInputKeyDown={handleInputKeyDown}
         setRandom={setRandom}
+        pokemons={pokemons}
+        random={random}
       />
       <Outlet context={{ pokemons, setPokemons, random, setRandom }} />
       <Navbar />

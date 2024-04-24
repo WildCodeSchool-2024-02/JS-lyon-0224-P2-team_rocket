@@ -22,10 +22,10 @@ function ButtonNextPrev({ random, setRandom }) {
 
   return (
     <div className={styles.ButtonNextPrev}>
-      <button type="button" onClick={handlePrev}>
+      <button id={styles.prev} type="button" onClick={handlePrev}>
         <img className={styles.imgButton} src={btnPrev} alt="Previous" />
       </button>
-      <button type="button" onClick={handleNext}>
+      <button id={styles.next} type="button" onClick={handleNext}>
         <img className={styles.imgButton} src={btnNext} alt="Next" />
       </button>
     </div>

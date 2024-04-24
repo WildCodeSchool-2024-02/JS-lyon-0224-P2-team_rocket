@@ -1,8 +1,14 @@
-import PropTypes from "prop-types";
+import { useState } from "react";
+import { useOutletContext, useRouteLoaderData } from "react-router-dom";
 import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 
-function Poketypes({ pokemons, random }) {
+function Poketypes() {
+  const pokemonsData = useRouteLoaderData("Pokecard");
+  const [pokemons] = useState(pokemonsData);
+  const { random } = useOutletContext();
+
   let type = [];
+
   function typeArray() {
     for (let i = 0; i < pokemons[random].apiTypes.length; i += 1) {
       type[i] = pokemons[random].apiTypes[i];
@@ -26,8 +32,4 @@ function Poketypes({ pokemons, random }) {
   );
 }
 
-Poketypes.propTypes = {
-  random: PropTypes.number.isRequired,
-  pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-};
 export default Poketypes;
