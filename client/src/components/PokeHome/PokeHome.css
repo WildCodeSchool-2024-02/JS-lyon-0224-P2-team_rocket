@@ -1,0 +1,21 @@
+#pokehome {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  #pokehome {
+    height: 70vh;
+    padding-top: 10vh;
+  }
+
+  .whiteBack {
+    background-color: white;
+    border-radius: 30px;
+    width: 60vw;
+    min-width: 700px;
+    max-width: 750px;
+    min-height: 400px;
+    height: 50vh;
+  }
+}

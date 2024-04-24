@@ -87,6 +87,7 @@
 
 nav {
   position: relative;
+  top: 20%;
 }
 a {
   text-decoration: none;
@@ -104,6 +105,7 @@ a {
     align-content: flex-start;
     align-items: center;
     padding: 0 60px;
+    background-color: white;
   }
   .about_us {
     margin-left: auto;

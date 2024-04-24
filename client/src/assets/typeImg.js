@@ -130,9 +130,9 @@ const typeImg = [
     cardBack: normalSvg,
   },
   {
-    id: "Ténèbre",
-    color: "tenebre",
-    backColor: "tenebreBack",
+    id: "Ténèbres",
+    color: "tenebres",
+    backColor: "tenebresBack",
     cardBack: tenebrePng,
   },
 ];
