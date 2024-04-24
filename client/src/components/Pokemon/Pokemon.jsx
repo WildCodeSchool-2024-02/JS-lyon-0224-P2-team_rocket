@@ -72,7 +72,6 @@ function Pokemon({ pokemon, setRandom }) {
 
         <div className={isMobile ? styles.btn_mobile : styles.btn_desktop}>
           {isMobile ? <h1>{pokemon.name}</h1> : null}
-
           <Link to="/pokecard">
             <button
               className={

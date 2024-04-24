@@ -71,25 +71,13 @@
   z-index: 2;
   right: 75;
 }
-/* .types {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  padding-bottom: 0.2rem;
-  padding-top: 0.3rem;
-  gap: 1rem;
-}
-.type {
-  border-radius: 100%;
-  background-color: white;
-  height: 1.6rem;
-} */
+
 .typesDiv {
   display: flex;
   align-items: center;
   border-radius: 30px;
   padding: 0.2rem;
-  border: 2px black solid;
+  border: 1px black solid;
   width: 110px;
 }
 .typesDiv p {
@@ -155,59 +143,59 @@
 }
 
 .normalBack {
-  background-color: var(--type-normal);
+  background-color: rgb(125, 127, 130);
 }
 .combatBack {
-  background-color: var(--type-combat);
+  background-color: rgb(181, 55, 71);
 }
 .volBack {
-  background-color: var(--type-vol);
+  background-color: rgb(125, 147, 194);
 }
 .poisonBack {
-  background-color: var(--type-poison);
+  background-color: rgb(164, 86, 188);
 }
 .solBack {
-  background-color: var(--type-sol);
+  background-color: rgb(189, 122, 68);
 }
 .rocheBack {
-  background-color: var(--type-roche);
+  background-color: rgb(163, 153, 111);
 }
 .insecteBack {
-  background-color: var(--type-insecte);
+  background-color: rgb(107, 154, 83);
 }
 .spectreBack {
-  background-color: var(--type-spectre);
+  background-color: rgb(83, 89, 152);
 }
 .acierBack {
-  background-color: var(--type-acier);
+  background-color: rgb(61, 120, 134);
 }
 .feuBack {
   background-color: #f8a54f;
 }
 .eauBack {
-  background-color: var(--type-eau);
+  background-color: rgb(99, 170, 233);
 }
 .planteBack {
-  background-color: var(--type-plante);
+  background-color: rgb(102, 169, 103);
 }
 
 .electrikBack {
-  background-color: var(--type-electrik);
+  background-color: rgb(247, 220, 45);
 }
 .psyBack {
-  background-color: var(--type-psy);
+  background-color: rgb(216, 110, 108);
 }
 .glaceBack {
-  background-color: var(--type-glace);
+  background-color: rgb(101, 175, 165);
 }
 .dragonBack {
-  background-color: var(--type-dragon);
+  background-color: rgb(3, 77, 133);
 }
 .tenebresBack {
   background-color: rgb(95, 96, 109);
 }
 .feeBack {
-  background-color: var(--type-fee);
+  background-color: rgb(235, 88, 220);
 }
 
 .button {

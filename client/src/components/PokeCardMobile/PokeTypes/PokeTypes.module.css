@@ -8,19 +8,15 @@
 }
 
 .types_desktop {
-  border: 2px black solid;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* width: 150px; */
-  /* padding-left: 1rem; */
   padding-bottom: 0.2rem;
   padding-top: 0.3rem;
   /* gap: 1rem; */
 }
 
 .type {
-  /* border: 2px black solid; */
   border-radius: 100%;
   background-color: white;
   height: 1.6rem;
