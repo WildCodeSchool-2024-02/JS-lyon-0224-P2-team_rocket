@@ -2,6 +2,7 @@
   .pokeCard {
     display: flex;
     border-radius: 30px;
+    width: 60%;
   }
 
   .nameAndTypes {
@@ -24,5 +25,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-left: 1rem;
+  }
+  #pokemonImg {
+    flex-direction: row-reverse;
+  }
+  #pokemon {
+    position: relative;
+    top: 10%;
+  }
+  .typeSvg {
+    left: 2%;
+  }
+  .types {
+    padding-top: 1rem;
   }
 }

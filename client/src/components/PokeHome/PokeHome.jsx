@@ -21,7 +21,7 @@ function Pokecard() {
   return (
     <div id="pokehome">
       {isMobile === true ? (
-        <PokeCardMobile />
+        <PokeCardMobile isMobile={isMobile} />
       ) : (
         <PokeCard isMobile={isMobile} />
       )}

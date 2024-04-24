@@ -13,9 +13,9 @@ function StatsPoke({ isMobile }) {
   return (
     <div
       id={styles.stats}
-      className={`${isMobile === true ? typeImgUrl[0].color : styles.desktopColor}`}
+      className={`${isMobile ? typeImgUrl[0].color : styles.desktopColor}`}
     >
-      <span className={styles.stat}>
+      <span id={styles.firstStat} className={styles.stat}>
         <h3>HP</h3>
         <p>{pokemons[random].stats.HP}</p>
       </span>
@@ -27,7 +27,7 @@ function StatsPoke({ isMobile }) {
         <h3>Defense</h3>
         <p>{pokemons[random].stats.defense}</p>
       </span>
-      <span className={styles.stat}>
+      <span id={styles.lastStat} className={styles.stat}>
         <h3>Speed</h3>
         <p>{pokemons[random].stats.speed} </p>
       </span>

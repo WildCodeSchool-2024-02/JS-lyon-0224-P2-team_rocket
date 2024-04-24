@@ -35,12 +35,18 @@
     justify-content: space-between;
     margin: 0;
     font-size: 1.2rem;
-    padding: 0.5rem;
+    padding: 0.5, 1, 0.5, 1rem;
   }
   .stat p {
     font-style: italic;
   }
   .stat h3 {
     font-style: italic;
+  }
+  #firstStat {
+    padding-top: 1rem;
+  }
+  #lastStat {
+    padding-bottom: 1rem;
   }
 }

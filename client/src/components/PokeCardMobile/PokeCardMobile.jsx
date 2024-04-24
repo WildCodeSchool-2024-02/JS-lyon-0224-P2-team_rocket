@@ -9,12 +9,11 @@ import PokeName from "../PokeCard/PokeName";
 import "../../App.css";
 import CardImg from "../PokeCard/CardImg";
 
-function PokeCardMobile() {
+function PokeCardMobile(isMobile) {
   const pokemonsData = useRouteLoaderData("Pokecard");
   const [pokemons] = useState(pokemonsData);
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
-
   const typeImgUrl = poketype(pokemons, random);
 
   return (
@@ -31,6 +30,7 @@ function PokeCardMobile() {
             pokemons={pokemons}
             random={random}
             typeImgUrl={typeImgUrl}
+            isMobile={isMobile}
           />
         </div>
       </div>
