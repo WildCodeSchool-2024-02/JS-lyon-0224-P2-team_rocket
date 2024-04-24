@@ -5,7 +5,7 @@ import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 import typeImg from "../../assets/typeImg";
-import Poketypes from "../PokeCardMobile/PokeTypes";
+import Poketypes from "../PokeCardMobile/PokeTypes/PokeTypes";
 
 function Pokemon({ pokemon, setRandom }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
@@ -42,20 +42,11 @@ function Pokemon({ pokemon, setRandom }) {
         className={isMobile ? styles.img_mobile : styles.img_desktop}
       />
       {!isMobile && typeImage && (
-        <>
-          <img
-            src={typeImage.cardBack}
-            alt={typeImage.id}
-            className={styles.typeImage}
-          />
-          {/* <div className={styles.typesContainer}>
-            {pokemon.apiTypes.map((type) => (
-              <span key={pokemon.name} className={styles.type}>
-                {type.name}
-              </span>
-            ))}
-          </div> */}
-        </>
+        <img
+          src={typeImage.cardBack}
+          alt={typeImage.id}
+          className={styles.typeImage}
+        />
       )}
       <div
         className={isMobile ? styles.pokeInfo_mobile : styles.pokeInfo_desktop}
@@ -70,16 +61,18 @@ function Pokemon({ pokemon, setRandom }) {
             >
               #{pokemon.id}
             </p>
+            <h1>{pokemon.name}</h1>
             <Poketypes
               pokemons={[{ apiTypes: pokemon.apiTypes }]}
               random={0}
-              style={{ display: "none" }}
+              isMobile={isMobile}
             />
           </>
         )}
 
-        <h1>{pokemon.name}</h1>
         <div className={isMobile ? styles.btn_mobile : styles.btn_desktop}>
+          {isMobile ? <h1>{pokemon.name}</h1> : null}
+
           <Link to="/pokecard">
             <button
               className={

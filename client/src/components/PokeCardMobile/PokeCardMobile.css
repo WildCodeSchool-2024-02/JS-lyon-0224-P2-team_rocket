@@ -71,7 +71,7 @@
   z-index: 2;
   right: 75;
 }
-.types {
+/* .types {
   display: flex;
   align-items: center;
   padding-left: 1rem;
@@ -83,15 +83,17 @@
   border-radius: 100%;
   background-color: white;
   height: 1.6rem;
-}
+} */
 .typesDiv {
   display: flex;
   align-items: center;
   border-radius: 30px;
   padding: 0.2rem;
+  border: 2px black solid;
+  width: 110px;
 }
 .typesDiv p {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   padding-right: 1rem;
   color: white;
   font-weight: 500;
@@ -180,7 +182,7 @@
   background-color: var(--type-acier);
 }
 .feuBack {
-  background-color: var(--type-feu);
+  background-color: #f8a54f;
 }
 .eauBack {
   background-color: var(--type-eau);
@@ -202,7 +204,7 @@
   background-color: var(--type-dragon);
 }
 .tenebresBack {
-  background-color: var(--type-tenebre);
+  background-color: rgb(95, 96, 109);
 }
 .feeBack {
   background-color: var(--type-fee);
