@@ -12,6 +12,8 @@
   max-width: 40rem;
   width: 400px;
   height: 800px;
+  border: 1px solid grey;
+  box-shadow: 6px 9px 14px -8px #616161;
 }
 #pokemonImg {
   display: flex;
@@ -77,7 +79,6 @@
   align-items: center;
   border-radius: 30px;
   padding: 0.2rem;
-  border: 1px black solid;
   width: 110px;
 }
 .typesDiv p {
