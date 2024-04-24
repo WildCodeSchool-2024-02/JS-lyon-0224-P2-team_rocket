@@ -1,6 +1,11 @@
 #pokehome {
   display: flex;
   justify-content: center;
-  padding-top: 10vh;
-  height: 55vh;
+}
+
+@media screen and (min-width: 800px) {
+  #pokehome {
+    height: 55vh;
+    padding-top: 10vh;
+  }
 }

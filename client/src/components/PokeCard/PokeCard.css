@@ -3,6 +3,9 @@
     display: flex;
     border-radius: 30px;
     width: 60%;
+    min-width: 700px;
+    max-width: 750px;
+    box-shadow: 6px 9px 14px -8px #616161;
   }
 
   .nameAndTypes {
@@ -32,10 +35,13 @@
   }
   #pokemon {
     position: relative;
-    top: 10%;
+    top: 20%;
+    right: 23%;
+    max-width: 60%;
+    min-width: none;
   }
   .typeSvg {
-    left: 2%;
+    max-width: 60%;
   }
   .types {
     padding-top: 1rem;

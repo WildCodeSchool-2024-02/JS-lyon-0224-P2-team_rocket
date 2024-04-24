@@ -13,7 +13,7 @@ function StatsPoke({ isMobile }) {
   return (
     <div
       id={styles.stats}
-      className={`${isMobile ? typeImgUrl[0].color : styles.desktopColor}`}
+      className={`${isMobile.isMobile === true ? typeImgUrl[0].color : styles.desktopColor}`}
     >
       <span id={styles.firstStat} className={styles.stat}>
         <h3>HP</h3>

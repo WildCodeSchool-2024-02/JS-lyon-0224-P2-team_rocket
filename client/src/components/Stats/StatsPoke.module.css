@@ -29,13 +29,15 @@
   #stats {
     margin-left: 1rem;
     margin-bottom: 0.5rem;
+    width: 80%;
+    height: 40%;
   }
   .stat {
     display: flex;
     justify-content: space-between;
     margin: 0;
     font-size: 1.2rem;
-    padding: 0.5, 1, 0.5, 1rem;
+    padding: 0rem 2rem 0rem;
   }
   .stat p {
     font-style: italic;
