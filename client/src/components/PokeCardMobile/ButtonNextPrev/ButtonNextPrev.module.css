@@ -10,3 +10,16 @@
 .imgButton {
   height: 3rem;
 }
+
+@media screen and (min-width: 800px) {
+  #next {
+    position: absolute;
+    left: 90%;
+    top: 50%;
+  }
+  #prev {
+    position: absolute;
+    top: 50%;
+    right: 90%;
+  }
+}
