@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import PropTypes, { arrayOf } from "prop-types";
 import styles from "./SearchBar.module.css";
+import poketype from "../../assets/functions/poketypefunction";
 
-function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
+function SearchBar({
+  searchTerm,
+  handleInputChange,
+  handleInputKeyDown,
+  pokemons,
+  random,
+}) {
   const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
+  const typeImgUrl = poketype(pokemons, random);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,7 +27,11 @@ function SearchBar({ searchTerm, handleInputChange, handleInputKeyDown }) {
 
   return (
     <div
-      className={isMobile ? styles.searchBarMobile : styles.searchBarDesktop}
+      className={
+        isMobile
+          ? styles.searchBarMobile
+          : `${styles.searchBarDesktop} ${typeImgUrl[0].backColor} `
+      }
     >
       <input
         type="text"
@@ -43,4 +55,6 @@ SearchBar.propTypes = {
   searchTerm: PropTypes.string.isRequired,
   handleInputChange: PropTypes.func.isRequired,
   handleInputKeyDown: PropTypes.func.isRequired,
+  random: PropTypes.number.isRequired,
+  pokemons: PropTypes.objectOf(arrayOf).isRequired,
 };
