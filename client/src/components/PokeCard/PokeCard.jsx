@@ -19,7 +19,7 @@ function PokeCard({ isMobile }) {
       <div id="text">
         <div className="nameAndTypes">
           <PokeName />
-          <Poketypes />
+          <Poketypes pokemons={pokemons} random={random} />
         </div>
         <StatsPoke isMobile={isMobile} />
       </div>
