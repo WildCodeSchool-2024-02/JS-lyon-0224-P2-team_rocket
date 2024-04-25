@@ -1,21 +1,37 @@
 .container_about {
   background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
 }
 
 .jessie {
   width: 350px;
   height: 570px;
   border: 2px solid red;
+  background-color: #fbbcfc;
+  border-radius: 28px;
 }
 
 .james {
   width: 350px;
   height: 570px;
   border: 2px solid red;
+  background-color: #dbd9dc;
+  border-radius: 28px;
 }
 
 .miaouss {
   width: 350px;
   height: 570px;
   border: 2px solid red;
+  background-color: #f5e4c7;
+  border-radius: 28px;
+  display: flex;
+}
+
+.miaousInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px 0 0 40px;
 }

@@ -16,7 +16,13 @@ function AboutUs() {
       </div>
 
       <div className={styles.miaouss}>
-        <img src={miaouss} alt="miaouss-team" style={{ width: "100%" }} />
+        <img src={miaouss} alt="miaouss-team" style={{ width: "80%" }} />
+        <div className={styles.miaousInfo}>
+          <p>Miaous</p>
+          <p>
+            <i>Alias Flakron</i>
+          </p>
+        </div>
       </div>
     </div>
   );
