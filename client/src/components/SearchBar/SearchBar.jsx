@@ -13,6 +13,7 @@ function SearchBar({
 }) {
   const typeImgUrl = poketype(pokemons, random);
   const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
+  // const [cardMobile, setCardMobile] = useState(true)
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,10 +26,13 @@ function SearchBar({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  let cardMobile = 0;
+  if (isMobile === true && isPokedex === false) {
+    cardMobile = true;
+  }
   return (
     <div
-      className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor}`}
+      className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
     >
       <input
         type="text"
