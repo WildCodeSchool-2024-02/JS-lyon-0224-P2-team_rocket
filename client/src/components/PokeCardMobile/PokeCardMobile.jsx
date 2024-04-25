@@ -24,7 +24,7 @@ function PokeCardMobile(isMobile) {
         </div>
         <ButtonNextPrev random={random} setRandom={setRandom} />
         <PokeName />
-        <Poketypes pokemons={pokemons} random={random} />
+        <Poketypes pokemons={pokemons} random={random} isMobile={isMobile} />
         <div className="center">
           <StatsPoke
             pokemons={pokemons}
