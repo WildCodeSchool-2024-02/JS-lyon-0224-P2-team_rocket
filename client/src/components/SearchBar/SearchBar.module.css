@@ -28,3 +28,7 @@
   align-items: flex-end;
   flex-direction: column;
 }
+
+.none {
+  display: none;
+}

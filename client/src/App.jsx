@@ -29,6 +29,7 @@ function App() {
       navigate("/Pokecard");
     }
   };
+
   return (
     <main className="container">
       <SearchBar
@@ -39,9 +40,17 @@ function App() {
         pokemons={pokemons}
         random={random}
         isPokedex={isPokedex}
+        setIsPokedex={setIsPokedex}
       />
       <Outlet
-        context={{ pokemons, setPokemons, random, setRandom, setIsPokedex }}
+        context={{
+          pokemons,
+          setPokemons,
+          random,
+          setRandom,
+          setIsPokedex,
+          isPokedex,
+        }}
       />
       <Navbar />
     </main>
