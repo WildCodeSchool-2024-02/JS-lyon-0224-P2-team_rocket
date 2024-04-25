@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  border: 2px solid red;
 }
 
 #btn {
@@ -36,7 +35,7 @@
   .btn_desktop {
     position: absolute;
     left: 90%;
-    top: 53%;
+    top: 54%;
     border: none;
     text-decoration: none;
     background-color: transparent;
