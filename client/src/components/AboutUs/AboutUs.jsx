@@ -3,22 +3,66 @@ import styles from "./AboutUs.module.css";
 import james from "../../assets/images/avatar/james.png";
 import jessie from "../../assets/images/avatar/jessie.png";
 import miaouss from "../../assets/images/avatar/miaouss.png";
+import elecBack from "../../assets/images/back/electric.svg";
+import elecRock from "../../assets/images/back/rock.svg";
+import fairy from "../../assets/images/back/fairy.svg";
 
 function AboutUs() {
   return (
     <div className={styles.container_about}>
       <div className={styles.jessie}>
-        <img src={jessie} alt="jessie-team" style={{ width: "100%" }} />
+        <img src={fairy} alt="icon-fairy" className={styles.img_fairy} />
+        <p className={styles.pStyleMiaous}>
+          <i style={{ marginTop: "20px" }}># 132</i>
+        </p>
+        <div className={styles.jessieInfo}>
+          <p className={styles.pStyle}>Jessie</p>
+          <p>
+            <i>Alias Anne-So</i>
+          </p>
+        </div>
+        <div style={{ display: "flex", flexDirection: "row-reverse" }}>
+          <img src={jessie} alt="jessie-team" style={{ width: "100%" }} />
+        </div>
       </div>
 
       <div className={styles.james}>
-        <img src={james} alt="james-team" style={{ width: "100%" }} />
+        <img src={elecRock} alt="icon-rock" className={styles.img_rock} />
+        <p className={styles.pStyleMiaous}>
+          {" "}
+          <i> # 056 </i>
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "row-reverse" }}>
+          <img
+            src={james}
+            alt="james-team"
+            style={{ width: "300px", zIndex: "4", marginRight: "40px" }}
+          />
+        </div>
+        <div className={styles.miaousInfo}>
+          <p className={styles.pStyle}>James</p>
+          <p>
+            <i>Alias Joris</i>
+          </p>
+        </div>
       </div>
 
       <div className={styles.miaouss}>
-        <img src={miaouss} alt="miaouss-team" style={{ width: "80%" }} />
+        <img src={elecBack} alt="icon-elec" className={styles.img_elec} />
+        <p className={styles.pStyleMiaous}>
+          {" "}
+          <i> # 001 </i>
+        </p>
+        <div style={{ display: "flex" }}>
+          <img
+            src={miaouss}
+            alt="miaouss-team"
+            style={{ width: "80%", zIndex: "3" }}
+          />
+        </div>
         <div className={styles.miaousInfo}>
-          <p>Miaous</p>
+          <p className={styles.pStyle}>Miaous</p>
           <p>
             <i>Alias Flakron</i>
           </p>
