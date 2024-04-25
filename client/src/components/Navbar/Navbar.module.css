@@ -95,20 +95,22 @@ a {
 
 @media (min-width: 800px) {
   .navsection {
-    /* border: 4px red solid; */
     border-bottom: 1px solid black;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: center;
-    padding: 0 60px;
+    padding: 0;
     background-color: white;
   }
   .about_us {
     margin-left: auto;
     margin-right: 40px;
+  }
+  .logo_text {
+    padding-left: 40px;
   }
 }

@@ -11,6 +11,7 @@ function Pokecard() {
   const [pokemons] = useState(pokemonsData);
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
+  const { setIsPokedex } = useOutletContext();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const typeImgUrl = poketype(pokemons, random);
 
@@ -25,7 +26,7 @@ function Pokecard() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  setIsPokedex(false);
   return (
     <div
       id="pokehome"
