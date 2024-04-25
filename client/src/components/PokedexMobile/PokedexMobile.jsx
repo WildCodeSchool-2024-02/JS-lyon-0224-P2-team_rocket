@@ -8,10 +8,13 @@ function PokedexMobile() {
   const { pokemons } = useOutletContext();
   const { setRandom } = useOutletContext();
   const { random } = useOutletContext();
-
+  const { setIsPokedex } = useOutletContext();
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
+  useEffect(() => {
+    setIsPokedex(true);
+  }, [setIsPokedex]);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 800);
@@ -23,6 +26,7 @@ function PokedexMobile() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <div>
       <div
