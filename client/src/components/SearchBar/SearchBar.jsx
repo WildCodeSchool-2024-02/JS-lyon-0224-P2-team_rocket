@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PropTypes, { arrayOf } from "prop-types";
+import PropTypes from "prop-types";
 import styles from "./SearchBar.module.css";
 import poketype from "../../assets/functions/poketypefunction";
 
@@ -9,6 +9,7 @@ function SearchBar({
   handleInputKeyDown,
   pokemons,
   random,
+  isPokedex,
 }) {
   const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
   const typeImgUrl = poketype(pokemons, random);
@@ -24,14 +25,9 @@ function SearchBar({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   return (
     <div
-      className={
-        isMobile
-          ? styles.searchBarMobile
-          : `${styles.searchBarDesktop} ${typeImgUrl[0].backColor} `
-      }
+      className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor}`}
     >
       <input
         type="text"
@@ -56,5 +52,6 @@ SearchBar.propTypes = {
   handleInputChange: PropTypes.func.isRequired,
   handleInputKeyDown: PropTypes.func.isRequired,
   random: PropTypes.number.isRequired,
-  pokemons: PropTypes.objectOf(arrayOf).isRequired,
+  pokemons: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.any)).isRequired,
+  isPokedex: PropTypes.bool.isRequired,
 };

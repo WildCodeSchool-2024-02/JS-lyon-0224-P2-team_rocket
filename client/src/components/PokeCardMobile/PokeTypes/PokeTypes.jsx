@@ -1,9 +1,10 @@
-import PropTypes from "prop-types";
+import PropTypes, { bool } from "prop-types";
 import noAccentAndToLower from "../../../assets/functions/noAccentAndToLower";
 import styles from "./PokeTypes.module.css";
 
 function Poketypes({ pokemons, random, isMobile }) {
   const currentPokemon = pokemons[random];
+
   return (
     <div className={isMobile ? styles.types_mobile : styles.types_desktop}>
       {currentPokemon.apiTypes.map((type) => (
@@ -21,6 +22,6 @@ function Poketypes({ pokemons, random, isMobile }) {
 Poketypes.propTypes = {
   random: PropTypes.number.isRequired,
   pokemons: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-  isMobile: PropTypes.bool.isRequired,
+  isMobile: PropTypes.objectOf(bool).isRequired,
 };
 export default Poketypes;
