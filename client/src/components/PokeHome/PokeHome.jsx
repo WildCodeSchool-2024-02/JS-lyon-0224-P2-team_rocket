@@ -13,15 +13,16 @@ function Pokecard() {
   const { setRandom } = useOutletContext();
   const { setIsPokedex } = useOutletContext();
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const typeImgUrl = poketype(pokemons, random);
 
   useEffect(() => {
     setIsPokedex(false);
   }, [setIsPokedex]);
+  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
+
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsmobile(window.innerWidth < 800);
     };
 
     window.addEventListener("resize", handleResize);
@@ -37,10 +38,10 @@ function Pokecard() {
     >
       <div className="whiteBack">
         {isMobile === true ? (
-          <PokeCardMobile isMobile={isMobile} />
+          <PokeCardMobile />
         ) : (
           <>
-            <PokeCard isMobile={isMobile} />
+            <PokeCard />
             <ButtonNextPrev random={random} setRandom={setRandom} />
           </>
         )}

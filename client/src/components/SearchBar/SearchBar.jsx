@@ -11,8 +11,8 @@ function SearchBar({
   random,
   isPokedex,
 }) {
-  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
   const typeImgUrl = poketype(pokemons, random);
+  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,6 +25,7 @@ function SearchBar({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <div
       className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor}`}
@@ -52,6 +53,6 @@ SearchBar.propTypes = {
   handleInputChange: PropTypes.func.isRequired,
   handleInputKeyDown: PropTypes.func.isRequired,
   random: PropTypes.number.isRequired,
-  pokemons: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.any)).isRequired,
+  pokemons: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   isPokedex: PropTypes.bool.isRequired,
 };
