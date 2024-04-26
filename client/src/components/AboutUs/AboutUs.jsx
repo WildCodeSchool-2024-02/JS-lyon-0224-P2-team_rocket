@@ -25,25 +25,6 @@ function AboutUs() {
           <img src={jessie} alt="jessie-team" className={styles.jessieImage} />
         </div>
       </div>
-
-      <div className={styles.james}>
-        <img src={elecRock} alt="icon-rock" className={styles.img_rock} />
-        <p className={styles.pStyleMiaous}>
-          {" "}
-          <i> # 056 </i>
-        </p>
-
-        <div style={{ display: "flex", flexDirection: "row-reverse" }}>
-          <img src={james} alt="james-team" className={styles.jamesDesktop} />
-        </div>
-        <div className={styles.miaousInfo}>
-          <p className={styles.pStyle}>James</p>
-          <p>
-            <i>Alias Joris</i>
-          </p>
-        </div>
-      </div>
-
       <div className={styles.miaouss}>
         <img src={elecBack} alt="icon-elec" className={styles.img_elec} />
         <p className={styles.pStyleMiaous}>
@@ -54,13 +35,31 @@ function AboutUs() {
           <img
             src={miaouss}
             alt="miaouss-team"
-            style={{ width: "80%", zIndex: "3" }}
+            className={styles.miaousImage}
           />
         </div>
         <div className={styles.miaousInfo}>
           <p className={styles.pStyle}>Miaous</p>
           <p>
             <i>Alias Flakron</i>
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.james}>
+        <img src={elecRock} alt="icon-rock" className={styles.img_rock} />
+        <p className={styles.pStyleMiaous}>
+          {" "}
+          <i style={{ marginTop: "10px" }}> # 056 </i>
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "row-reverse" }}>
+          <img src={james} alt="james-team" className={styles.jamesDesktop} />
+        </div>
+        <div className={styles.miaousInfo}>
+          <p className={styles.pStyle}>James</p>
+          <p>
+            <i>Alias Joris</i>
           </p>
         </div>
       </div>
