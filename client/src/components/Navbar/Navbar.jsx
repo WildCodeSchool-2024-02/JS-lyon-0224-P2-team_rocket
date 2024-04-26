@@ -52,7 +52,7 @@ function Navbar() {
           )}
 
           <button
-            className={styles.BurgerButton}
+            className={styles.burgerButton}
             type="button"
             onClick={toggleMenu}
           >

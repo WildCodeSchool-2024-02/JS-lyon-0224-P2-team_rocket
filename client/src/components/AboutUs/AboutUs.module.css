@@ -110,36 +110,18 @@
   }
 
   .james {
-    /* width: 30%;
-    height: 30%;
-    height: 210px;
-    min-width: 210px;
-    max-width: 210px; */
-
     height: 210px;
     display: flex;
     align-items: flex-start;
     flex-direction: row;
   }
   .miaouss {
-    /* width: 30%;
-    height: 30%;
-    height: 210px;
-    min-width: 210px;
-    max-width: 210px; */
-
     height: 210px;
     display: flex;
     align-items: flex-start;
     flex-direction: row;
   }
   .jessie {
-    /* width: 30%;
-    height: 30%;
-    height: 210px;
-    min-width: 210px;
-    max-width: 210px; */
-
     height: 210px;
     display: flex;
     align-items: flex-start;
