@@ -35,8 +35,8 @@
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 3vh;
-  width: 380px;
-  height: 395px;
+  width: 400px;
+  height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -65,9 +65,9 @@
   padding: 2vh;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 49%;
-  margin-left: 118px;
+  position: relative;
+  top: -420px;
+  /* margin-left: 118px; */
 }
 
 .navsection {
@@ -88,8 +88,8 @@
 }
 
 nav {
-  position: relative;
-  top: 20%;
+  position: absolute;
+  top: 90%;
 }
 a {
   text-decoration: none;
