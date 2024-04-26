@@ -88,8 +88,8 @@
 }
 
 nav {
-  position: absolute;
-  top: 90%;
+  position: relative;
+  top: 20%;
 }
 a {
   text-decoration: none;
@@ -138,5 +138,6 @@ a {
     display: flex;
     justify-content: center;
     width: 100vw;
+    min-width: 400px;
   }
 }

@@ -13,7 +13,6 @@ function SearchBar({
 }) {
   const typeImgUrl = poketype(pokemons, random);
   const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
-  // const [cardMobile, setCardMobile] = useState(true)
 
   useEffect(() => {
     const handleResize = () => {
