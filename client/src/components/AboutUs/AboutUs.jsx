@@ -1,5 +1,6 @@
+import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 import styles from "./AboutUs.module.css";
-
 import james from "../../assets/images/avatar/james.png";
 import jessie from "../../assets/images/avatar/jessie.png";
 import miaouss from "../../assets/images/avatar/miaouss.png";
@@ -8,6 +9,10 @@ import elecRock from "../../assets/images/back/rock.svg";
 import fairy from "../../assets/images/back/fairy.svg";
 
 function AboutUs() {
+  const { setIsPokedex } = useOutletContext();
+  useEffect(() => {
+    setIsPokedex(true);
+  }, [setIsPokedex]);
   return (
     <div className={styles.container_about}>
       <div className={styles.jessie}>
