@@ -56,21 +56,24 @@ function Navbar() {
         <Link to="/pokecard">
           <img src={pokeball} alt="pokeball-logo" className={styles.pokeball} />
         </Link>
+        {isMobile ? (
+          <span className={styles.none}>none</span>
+        ) : (
+          <Link to="/about">
+            <span className={styles.logo_ab}>About us</span>
+          </Link>
+        )}
 
         <button
           className={styles.BurgerButton}
           type="button"
           onClick={toggleMenu}
         >
-          <div>
-            {isMobile ? (
-              <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
-            ) : (
-              <Link to="/about">
-                <span className={styles.logo_text}>About us</span>
-              </Link>
-            )}
-          </div>
+          {isMobile ? (
+            <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
+          ) : (
+            <span className={styles.none}>none</span>
+          )}
         </button>
       </nav>
     </div>
