@@ -3,6 +3,7 @@
   justify-content: space-around;
   height: 1000px;
   align-items: center;
+  min-width: 400px;
 }
 
 .jessie {
@@ -73,12 +74,73 @@
   width: 130px;
   height: 130px;
   position: absolute;
-  /* top: 420px;
-  right: 740px; */
 }
 .img_fairy {
   margin-top: 20px;
   width: 130px;
   height: 130px;
   position: absolute;
+}
+.jamesDesktop {
+  width: 300px;
+  z-index: 4;
+  margin-right: 40px;
+}
+.jessisDesktop {
+  width: 100%;
+}
+
+.jessieImage {
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .container_about {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 800px;
+    align-items: center;
+  }
+
+  .james {
+    width: 33%;
+    height: 33%;
+    min-width: 200px;
+  }
+  .miaouss {
+    width: 33%;
+    height: 33%;
+    min-width: 200px;
+  }
+  .jessie {
+    width: 33%;
+    height: 33%;
+    min-width: 200px;
+  }
+
+  .jamesDesktop {
+    width: 80%;
+    height: 80%;
+  }
+  .jessisDesktop {
+    width: 90%;
+  }
+
+  .pStyleMiaous {
+    width: 180px;
+    font-size: 1rem;
+  }
+
+  .jessieInfo {
+    display: none;
+  }
+
+  .miaousInfo {
+    display: none;
+  }
+  .jessieImage {
+    width: 100%;
+    z-index: 4;
+  }
 }
