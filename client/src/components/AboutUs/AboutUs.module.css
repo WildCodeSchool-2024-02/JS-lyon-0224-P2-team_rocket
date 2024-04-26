@@ -1,12 +1,13 @@
 .container_about {
   display: flex;
   justify-content: space-around;
-  height: 1000px;
   align-items: center;
   min-width: 400px;
+  margin-top: 20px;
 }
 
 .jessie {
+  min-width: 350px;
   width: 350px;
   height: 570px;
   background-color: #fbbcfc;
@@ -18,6 +19,7 @@
 }
 
 .james {
+  min-width: 350px;
   width: 350px;
   height: 570px;
   background-color: #dbd9dc;
@@ -30,15 +32,16 @@
 }
 
 .miaouss {
+  min-width: 350px;
   width: 350px;
   height: 570px;
   background-color: #f5e4c7;
   border-radius: 28px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-evenly;
   z-index: 4;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: space-around;
 }
 
 .miaousInfo {
@@ -90,33 +93,42 @@
   width: 100%;
 }
 
-.jessieImage {
-  width: 100%;
+.miaousImage {
+  width: 280px;
+  z-index: 3;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 800px) {
   .container_about {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
-    height: 800px;
+    height: 760px;
     align-items: center;
+    margin-top: 0px;
   }
 
   .james {
-    width: 33%;
-    height: 33%;
-    min-width: 200px;
+    width: 30%;
+    height: 30%;
+    height: 210px;
+    min-width: 210px;
+    max-width: 210px;
   }
   .miaouss {
-    width: 33%;
-    height: 33%;
-    min-width: 200px;
+    width: 30%;
+    height: 30%;
+    height: 210px;
+    min-width: 210px;
+    max-width: 210px;
   }
   .jessie {
-    width: 33%;
-    height: 33%;
-    min-width: 200px;
+    width: 30%;
+    height: 30%;
+    height: 210px;
+    min-width: 210px;
+    max-width: 210px;
   }
 
   .jamesDesktop {
@@ -124,7 +136,7 @@
     height: 80%;
   }
   .jessisDesktop {
-    width: 90%;
+    width: 80%;
   }
 
   .pStyleMiaous {
@@ -140,7 +152,11 @@
     display: none;
   }
   .jessieImage {
-    width: 100%;
+    width: 80%;
     z-index: 4;
+  }
+  .miaousImage {
+    width: 60%;
+    margin-left: 10px;
   }
 }
