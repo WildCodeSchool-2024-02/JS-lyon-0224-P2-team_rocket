@@ -27,7 +27,7 @@ function AboutUs() {
           </p>
         </div>
         <div style={{ display: "flex", flexDirection: "row-reverse" }}>
-          <img src={jessie} alt="jessie-team" style={{ width: "100%" }} />
+          <img src={jessie} alt="jessie-team" className={styles.jessieImage} />
         </div>
       </div>
 
@@ -39,11 +39,7 @@ function AboutUs() {
         </p>
 
         <div style={{ display: "flex", flexDirection: "row-reverse" }}>
-          <img
-            src={james}
-            alt="james-team"
-            style={{ width: "300px", zIndex: "4", marginRight: "40px" }}
-          />
+          <img src={james} alt="james-team" className={styles.jamesDesktop} />
         </div>
         <div className={styles.miaousInfo}>
           <p className={styles.pStyle}>James</p>
