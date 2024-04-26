@@ -18,7 +18,7 @@ function AboutUs() {
       <div className={styles.jessie}>
         <img src={fairy} alt="icon-fairy" className={styles.img_fairy} />
         <p className={styles.pStyleMiaous}>
-          <i style={{ marginTop: "20px" }}># 132</i>
+          <i style={{ marginTop: "20px", marginLeft: "15px" }}># 132</i>
         </p>
         <div className={styles.jessieInfo}>
           <p className={styles.pStyle}>Jessie</p>
@@ -34,7 +34,7 @@ function AboutUs() {
         <img src={elecBack} alt="icon-elec" className={styles.img_elec} />
         <p className={styles.pStyleMiaous}>
           {" "}
-          <i> # 001 </i>
+          <i style={{ marginTop: "10px", marginLeft: "15px" }}> # 001 </i>
         </p>
         <div style={{ display: "flex" }}>
           <img
@@ -55,7 +55,7 @@ function AboutUs() {
         <img src={elecRock} alt="icon-rock" className={styles.img_rock} />
         <p className={styles.pStyleMiaous}>
           {" "}
-          <i style={{ marginTop: "10px" }}> # 056 </i>
+          <i style={{ marginTop: "10px", marginLeft: "15px" }}> # 056 </i>
         </p>
 
         <div style={{ display: "flex", flexDirection: "row-reverse" }}>
