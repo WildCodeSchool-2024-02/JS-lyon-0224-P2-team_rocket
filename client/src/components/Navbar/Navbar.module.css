@@ -13,13 +13,11 @@
 
 .pokeball {
   height: 70px;
-  padding: 0 2.5vh 0 2.5vh;
   width: 78px;
 }
 
 .menu_burger {
   height: 70px;
-  padding: 0 2.5vh 0 2.5vh;
   width: 40px;
 }
 .BurgerButton {
@@ -68,14 +66,15 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 42.9%;
+  top: 49%;
+  margin-left: 118px;
 }
 
 .navsection {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 .logo_text {
@@ -107,7 +106,6 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    width: 99.5vw;
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
@@ -115,6 +113,7 @@ a {
     padding: 0;
     background-color: white;
     justify-content: flex-start;
+    width: 100vw;
   }
   .about_us {
     margin-left: auto;
@@ -122,6 +121,7 @@ a {
   }
   .logo_text {
     padding-left: 40px;
+    padding-right: 20px;
   }
   .leftbox {
     display: flex;
@@ -130,5 +130,13 @@ a {
   .logo_ab {
     position: relative;
     left: 67vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav_mobileStyle {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
   }
 }

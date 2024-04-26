@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding-left: 1rem;
+    min-width: 255px;
   }
   #pokemonImg {
     flex-direction: row-reverse;
