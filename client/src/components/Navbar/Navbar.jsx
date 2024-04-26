@@ -27,24 +27,6 @@ function Navbar() {
 
   return (
     <div>
-      <div
-        className={
-          isMobile ? styles.navsection_mobile : styles.navsection_desktop
-        }
-      >
-        <section className={styles.menuburger}>
-          {isMenuOpen && (
-            <ul className={isMobile ? styles.menu_items : styles.menu_desktop}>
-              <li>PokeFight</li>
-              <li>PokeClicker</li>
-
-              <Link to="/about" className={styles.about_us}>
-                <li>About us</li>
-              </Link>
-            </ul>
-          )}
-        </section>
-      </div>
       <div className={styles.nav_mobileStyle}>
         <nav className={styles.navsection}>
           <Link to="/">
@@ -75,7 +57,13 @@ function Navbar() {
             onClick={toggleMenu}
           >
             {isMobile ? (
-              <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
+              <Link to="/about">
+                <img
+                  src={Menu}
+                  alt="Menuburger"
+                  className={styles.menu_burger}
+                />
+              </Link>
             ) : (
               <span className={styles.none}>none</span>
             )}

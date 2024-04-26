@@ -138,5 +138,6 @@ a {
     display: flex;
     justify-content: center;
     width: 100vw;
+    min-width: 400px;
   }
 }
