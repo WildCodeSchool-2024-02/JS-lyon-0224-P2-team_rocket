@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import styles from "./ButtonPokedexCard.module.css";
 import BtnNext from "../../assets/images/logo-btn/IconFlecheDroite.png";
+import BtnPrevious from "../../assets/images/logo-btn/IconFlecheGauche.png";
 import BtnN from "../../assets/images/Btn-next.png";
 import BtnP from "../../assets/images/Btn-previous.png";
 
@@ -46,6 +47,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
     <div className={styles.container_btn}>
       {isMobile ? (
         <button type="button" onClick={handlePrevious} id={styles.btn}>
+          <img src={BtnPrevious} alt="icon-btn" />
           Prev
         </button>
       ) : (

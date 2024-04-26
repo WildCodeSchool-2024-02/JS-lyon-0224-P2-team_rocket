@@ -11,9 +11,10 @@
   min-height: 80vh;
   max-width: 40rem;
   width: 400px;
-  height: 800px;
+  height: 790px;
   border: 1px solid grey;
-  box-shadow: 6px 9px 14px -8px #616161;
+  margin-bottom: 10px;
+  border-radius: 15px;
 }
 #pokemonImg {
   display: flex;
@@ -25,6 +26,8 @@
   background-position: center;
   border-bottom-left-radius: 100% 60%;
   border-bottom-right-radius: 100% 60%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 #pokemon {
   position: absolute;

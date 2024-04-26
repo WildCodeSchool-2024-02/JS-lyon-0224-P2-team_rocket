@@ -45,37 +45,43 @@ function Navbar() {
           )}
         </section>
       </div>
-      <nav className={styles.navsection}>
-        <Link to="/">
-          {isMobile ? (
-            <img src={Home} alt="logo-home" className={styles.logo} />
-          ) : (
-            <span className={styles.logo_text}>Pokedex</span>
-          )}
-        </Link>
-        <Link to="/pokecard">
-          <img src={pokeball} alt="pokeball-logo" className={styles.pokeball} />
-        </Link>
-        {isMobile ? (
-          <span className={styles.none}>none</span>
-        ) : (
-          <Link to="/about">
-            <span className={styles.logo_ab}>About us</span>
+      <div className={styles.nav_mobileStyle}>
+        <nav className={styles.navsection}>
+          <Link to="/">
+            {isMobile ? (
+              <img src={Home} alt="logo-home" className={styles.logo} />
+            ) : (
+              <span className={styles.logo_text}>Pokedex</span>
+            )}
           </Link>
-        )}
-
-        <button
-          className={styles.BurgerButton}
-          type="button"
-          onClick={toggleMenu}
-        >
+          <Link to="/pokecard">
+            <img
+              src={pokeball}
+              alt="pokeball-logo"
+              className={styles.pokeball}
+            />
+          </Link>
           {isMobile ? (
-            <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
-          ) : (
             <span className={styles.none}>none</span>
+          ) : (
+            <Link to="/about">
+              <span className={styles.logo_ab}>About us</span>
+            </Link>
           )}
-        </button>
-      </nav>
+
+          <button
+            className={styles.BurgerButton}
+            type="button"
+            onClick={toggleMenu}
+          >
+            {isMobile ? (
+              <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
+            ) : (
+              <span className={styles.none}>none</span>
+            )}
+          </button>
+        </nav>
+      </div>
     </div>
   );
 }
