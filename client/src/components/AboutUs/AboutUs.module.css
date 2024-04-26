@@ -38,11 +38,7 @@
   background-color: #f5e4c7;
   border-radius: 28px;
   display: flex;
-  /* flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-evenly; */
   z-index: 4;
-
   flex-direction: column-reverse;
   align-items: flex-end;
   justify-content: space-around;
@@ -98,7 +94,6 @@
 }
 
 .miaousImage {
-  /* width: 80%; */
   width: 280px;
   z-index: 3;
   margin-right: 20px;
@@ -107,9 +102,9 @@
 @media screen and (max-width: 800px) {
   .container_about {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
-    height: 770px;
+    height: 760px;
     align-items: center;
     margin-top: 0px;
   }
