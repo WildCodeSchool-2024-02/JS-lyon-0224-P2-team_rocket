@@ -46,16 +46,22 @@ function Navbar() {
         </section>
       </div>
       <nav className={styles.navsection}>
-        <Link to="/">
-          {isMobile ? (
-            <img src={Home} alt="logo-home" className={styles.logo} />
-          ) : (
-            <span className={styles.logo_text}>Pokedex</span>
-          )}
-        </Link>
-        <Link to="/pokecard">
-          <img src={pokeball} alt="pokeball-logo" className={styles.pokeball} />
-        </Link>
+        <div className={styles.leftbox}>
+          <Link to="/">
+            {isMobile ? (
+              <img src={Home} alt="logo-home" className={styles.logo} />
+            ) : (
+              <span className={styles.logo_text}>Pokedex</span>
+            )}
+          </Link>
+          <Link to="/pokecard">
+            <img
+              src={pokeball}
+              alt="pokeball-logo"
+              className={styles.pokeball}
+            />
+          </Link>
+        </div>
 
         <button
           className={styles.BurgerButton}
@@ -67,7 +73,7 @@ function Navbar() {
               <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
             ) : (
               <Link to="/about">
-                <span className={styles.logo_text}>About us</span>
+                <span className={styles.logo_ab}>About us</span>
               </Link>
             )}
           </div>
