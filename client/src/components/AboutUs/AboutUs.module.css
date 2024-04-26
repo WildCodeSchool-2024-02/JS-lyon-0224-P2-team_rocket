@@ -110,29 +110,44 @@
   }
 
   .james {
-    width: 30%;
+    /* width: 30%;
     height: 30%;
     height: 210px;
     min-width: 210px;
-    max-width: 210px;
+    max-width: 210px; */
+
+    height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
   }
   .miaouss {
-    width: 30%;
+    /* width: 30%;
     height: 30%;
     height: 210px;
     min-width: 210px;
-    max-width: 210px;
+    max-width: 210px; */
+
+    height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
   }
   .jessie {
-    width: 30%;
+    /* width: 30%;
     height: 30%;
     height: 210px;
     min-width: 210px;
-    max-width: 210px;
+    max-width: 210px; */
+
+    height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
   }
 
   .jamesDesktop {
-    width: 80%;
+    width: 76%;
     height: 80%;
   }
   .jessisDesktop {
@@ -152,11 +167,22 @@
     display: none;
   }
   .jessieImage {
-    width: 80%;
+    width: 87%;
     z-index: 4;
   }
   .miaousImage {
     width: 60%;
     margin-left: 10px;
+  }
+  .img_rock {
+    right: 50%;
+  }
+
+  .img_elec {
+    left: 50%;
+  }
+
+  .img_fairy {
+    right: 50%;
   }
 }
