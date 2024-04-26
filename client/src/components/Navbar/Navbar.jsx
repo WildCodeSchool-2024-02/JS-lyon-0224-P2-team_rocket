@@ -46,37 +46,34 @@ function Navbar() {
         </section>
       </div>
       <nav className={styles.navsection}>
-        <div className={styles.leftbox}>
-          <Link to="/">
-            {isMobile ? (
-              <img src={Home} alt="logo-home" className={styles.logo} />
-            ) : (
-              <span className={styles.logo_text}>Pokedex</span>
-            )}
+        <Link to="/">
+          {isMobile ? (
+            <img src={Home} alt="logo-home" className={styles.logo} />
+          ) : (
+            <span className={styles.logo_text}>Pokedex</span>
+          )}
+        </Link>
+        <Link to="/pokecard">
+          <img src={pokeball} alt="pokeball-logo" className={styles.pokeball} />
+        </Link>
+        {isMobile ? (
+          <span className={styles.none}>none</span>
+        ) : (
+          <Link to="/about">
+            <span className={styles.logo_ab}>About us</span>
           </Link>
-          <Link to="/pokecard">
-            <img
-              src={pokeball}
-              alt="pokeball-logo"
-              className={styles.pokeball}
-            />
-          </Link>
-        </div>
+        )}
 
         <button
           className={styles.BurgerButton}
           type="button"
           onClick={toggleMenu}
         >
-          <div>
-            {isMobile ? (
-              <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
-            ) : (
-              <Link to="/about">
-                <span className={styles.logo_ab}>About us</span>
-              </Link>
-            )}
-          </div>
+          {isMobile ? (
+            <img src={Menu} alt="Menuburger" className={styles.menu_burger} />
+          ) : (
+            <span className={styles.none}>none</span>
+          )}
         </button>
       </nav>
     </div>
