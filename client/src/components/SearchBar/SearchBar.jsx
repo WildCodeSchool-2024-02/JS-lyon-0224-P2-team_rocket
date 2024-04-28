@@ -36,28 +36,26 @@ function SearchBar({
   }
 
   return (
-    <>
-      <div
-        className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
-      >
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleInputChange}
-          onKeyDown={handleInputKeyDown}
-          placeholder="🔎  Search your Pokemon..."
-          className={
-            isMobile
-              ? styles.input_search_bar_mobile
-              : styles.input_search_bar_desktop
-          }
-        />
-      </div>
-
+    <div
+      className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
+    >
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleInputChange}
+        onKeyDown={handleInputKeyDown}
+        placeholder="🔎  Search your Pokemon..."
+        className={
+          isMobile
+            ? styles.input_search_bar_mobile
+            : styles.input_search_bar_desktop
+        }
+      />
       <ul className={searchTerm.length < 1 ? styles.none : styles.suggest}>
         {pokematch.slice(0, 3).map((pokemon) => (
           <li key={pokemon.id}>
             <button
+              className={styles.suggestButton}
               type="button"
               onClick={() => {
                 setRandom(pokemon.id - 1);
@@ -65,12 +63,12 @@ function SearchBar({
                 setSearchTerm("");
               }}
             >
-              {pokemon.name}
+              {pokemon.name.toLowerCase()}
             </button>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
