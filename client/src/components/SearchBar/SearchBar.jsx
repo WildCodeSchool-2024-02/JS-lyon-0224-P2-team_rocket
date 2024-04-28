@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./SearchBar.module.css";
 import poketype from "../../assets/functions/poketypefunction";
@@ -10,7 +11,11 @@ function SearchBar({
   pokemons,
   random,
   isPokedex,
+  pokematch,
+  setRandom,
+  setSearchTerm,
 }) {
+  const navigate = useNavigate();
   const typeImgUrl = poketype(pokemons, random);
   const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
 
@@ -29,23 +34,43 @@ function SearchBar({
   if (isMobile === true && isPokedex === false) {
     cardMobile = true;
   }
+
   return (
-    <div
-      className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
-    >
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={handleInputChange}
-        onKeyDown={handleInputKeyDown}
-        placeholder="🔎  Search your Pokemon..."
-        className={
-          isMobile
-            ? styles.input_search_bar_mobile
-            : styles.input_search_bar_desktop
-        }
-      />
-    </div>
+    <>
+      <div
+        className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
+      >
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleInputChange}
+          onKeyDown={handleInputKeyDown}
+          placeholder="🔎  Search your Pokemon..."
+          className={
+            isMobile
+              ? styles.input_search_bar_mobile
+              : styles.input_search_bar_desktop
+          }
+        />
+      </div>
+
+      <ul className={searchTerm.length < 1 ? styles.none : styles.suggest}>
+        {pokematch.slice(0, 3).map((pokemon) => (
+          <li key={pokemon.id}>
+            <button
+              type="button"
+              onClick={() => {
+                setRandom(pokemon.id - 1);
+                navigate("/Pokecard");
+                setSearchTerm("");
+              }}
+            >
+              {pokemon.name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
@@ -58,4 +83,7 @@ SearchBar.propTypes = {
   random: PropTypes.number.isRequired,
   pokemons: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   isPokedex: PropTypes.bool.isRequired,
+  pokematch: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
+  setRandom: PropTypes.func.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
 };
