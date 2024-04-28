@@ -51,7 +51,9 @@ function SearchBar({
             : styles.input_search_bar_desktop
         }
       />
-      <ul className={searchTerm.length < 1 ? styles.none : styles.suggest}>
+      <ul
+        className={`${pokematch.length < 1 ? styles.none : styles.suggest} ${searchTerm.length < 1 ? styles.none : styles.suggest}`}
+      >
         {pokematch.slice(0, 3).map((pokemon) => (
           <li key={pokemon.id}>
             <button

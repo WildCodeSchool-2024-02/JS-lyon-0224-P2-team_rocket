@@ -53,7 +53,6 @@ function App() {
         isPokedex={isPokedex}
         setIsPokedex={setIsPokedex}
         setSearchTerm={setSearchTerm}
-        searchPokemon={searchPokemon}
         pokematch={pokematch}
       />
       <Outlet

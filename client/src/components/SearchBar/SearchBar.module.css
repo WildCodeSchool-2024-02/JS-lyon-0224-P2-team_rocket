@@ -51,7 +51,7 @@ li {
 ul {
   position: absolute;
   z-index: 5;
-  top: 4.5%;
+  top: 44px;
   padding-left: 20px;
   min-height: 28px;
   display: flex;
@@ -78,6 +78,6 @@ ul {
   ul {
     position: absolute;
     z-index: 5;
-    top: 15.5%;
+    top: 140px;
   }
 }
