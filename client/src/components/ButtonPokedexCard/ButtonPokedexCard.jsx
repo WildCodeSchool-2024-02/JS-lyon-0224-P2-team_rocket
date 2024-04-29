@@ -9,7 +9,7 @@ import useScreenWidth from "../../hooks/useScreenWidth";
 
 function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   const [startIndex, setStartIndex] = useState(0);
-  const [perPage] = useState(window.innerWidth < 800 ? 6 : 9);
+  const [perPage] = useState(9);
   const isMobile = useScreenWidth();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   }, [startIndex, pokemons, setDisplayedPokemons, perPage]);
 
   function handlePrevious() {
-    let newIndex = startIndex - perPage;
+    let newIndex = startIndex - (isMobile ? 6 : 9);
     if (newIndex < 0) {
       newIndex = Math.floor(pokemons.length / perPage) * perPage;
     }
@@ -27,7 +27,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   }
 
   function handleNext() {
-    let newIndex = startIndex + perPage;
+    let newIndex = startIndex + (isMobile ? 6 : 9);
     if (newIndex >= pokemons.length) {
       newIndex = 0;
     }

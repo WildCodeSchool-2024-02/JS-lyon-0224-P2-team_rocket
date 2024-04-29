@@ -11,6 +11,7 @@ function PokedexMobile() {
   const { random } = useOutletContext();
   const { setIsPokedex } = useOutletContext();
   const [displayedPokemons, setDisplayedPokemons] = useState([]);
+
   const isMobile = useScreenWidth();
 
   useEffect(() => {
