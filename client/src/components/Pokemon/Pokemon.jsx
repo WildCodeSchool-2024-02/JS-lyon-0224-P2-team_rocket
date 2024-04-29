@@ -1,26 +1,15 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import noAccentAndToLower from "../../assets/functions/noAccentAndToLower";
 import styles from "./Pokemon.module.css";
 import Btn from "../../assets/images/button-PokeCardMobile.png";
 import typeImg from "../../assets/typeImg";
 import Poketypes from "../PokeCardMobile/PokeTypes/PokeTypes";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function Pokemon({ pokemon, setRandom }) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+  const isMobile = useScreenWidth();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   const lastType = pokemon.apiTypes.length - 1;
   let typePokemonClass = pokemon.apiTypes[lastType].name;
   typePokemonClass = noAccentAndToLower(typePokemonClass);

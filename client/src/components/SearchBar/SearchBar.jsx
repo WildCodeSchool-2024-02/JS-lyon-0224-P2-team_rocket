@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./SearchBar.module.css";
 import poketype from "../../assets/functions/poketypefunction";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function SearchBar({
   searchTerm,
@@ -17,19 +17,7 @@ function SearchBar({
 }) {
   const navigate = useNavigate();
   const typeImgUrl = poketype(pokemons, random);
-  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsmobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const isMobile = useScreenWidth();
   let cardMobile = 0;
   if (isMobile === true && isPokedex === false) {
     cardMobile = true;

@@ -1,23 +1,12 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import noAccentAndToLower from "../../../assets/functions/noAccentAndToLower";
 import styles from "./PokeTypes.module.css";
+import useScreenWidth from "../../../hooks/useScreenWidth";
 
 function Poketypes({ pokemons, random }) {
   const currentPokemon = pokemons[random];
-  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsmobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const isMobile = useScreenWidth();
 
   return (
     <div className={isMobile ? styles.types_mobile : styles.types_desktop}>

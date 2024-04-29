@@ -1,24 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../../assets/images/logomobile/bars-solid.svg";
 import pokeball from "../../assets/images/logomobile/PokeBall.svg";
 import Home from "../../assets/images/logomobile/home-logo.svg";
 import styles from "./Navbar.module.css";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function Navbar() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const isMobile = useScreenWidth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

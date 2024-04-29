@@ -5,11 +5,13 @@ import BtnNext from "../../assets/images/logo-btn/IconFlecheDroite.png";
 import BtnPrevious from "../../assets/images/logo-btn/IconFlecheGauche.png";
 import BtnN from "../../assets/images/Btn-next.png";
 import BtnP from "../../assets/images/Btn-previous.png";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   const [startIndex, setStartIndex] = useState(0);
-  const [perPage, setPerPage] = useState(window.innerWidth < 800 ? 6 : 9);
-  const isMobile = window.innerWidth < 800;
+  const [perPage] = useState(window.innerWidth < 800 ? 6 : 9);
+  const isMobile = useScreenWidth();
+
   useEffect(() => {
     if (pokemons.length > 0) {
       setDisplayedPokemons(pokemons.slice(startIndex, startIndex + perPage));
@@ -31,18 +33,6 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
     }
     setStartIndex(newIndex);
   }
-
-  useEffect(() => {
-    const handleResize = () => {
-      setPerPage(window.innerWidth < 800 ? 6 : 9);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div className={styles.container_btn}>
       {isMobile === true ? (
