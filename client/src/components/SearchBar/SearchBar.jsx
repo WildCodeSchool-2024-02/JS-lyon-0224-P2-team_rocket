@@ -44,7 +44,7 @@ function SearchBar({
         value={searchTerm}
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
-        placeholder="🔎  Search your Pokemon..."
+        placeholder="🔎  Cherchez votre Pokémon ..."
         className={
           isMobile
             ? styles.input_search_bar_mobile
