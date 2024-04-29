@@ -17,7 +17,6 @@ function Pokemon({ pokemon, setRandom }) {
   const typeImage = typeImg.find(
     (type) => noAccentAndToLower(type.id.toLowerCase()) === typePokemonClass
   );
-
   return (
     <div
       className={` ${
@@ -32,7 +31,7 @@ function Pokemon({ pokemon, setRandom }) {
         alt={pokemon.name}
         className={isMobile === true ? styles.img_mobile : styles.img_desktop}
       />
-      {isMobile === false && (
+      {isMobile === false && typeImage !== undefined && (
         <img
           src={typeImage.cardBack}
           alt={typeImage.id}
