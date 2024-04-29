@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import noAccentAndToLower from "../../../assets/functions/noAccentAndToLower";
 import styles from "./PokeTypes.module.css";

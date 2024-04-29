@@ -32,7 +32,7 @@ function Pokemon({ pokemon, setRandom }) {
         alt={pokemon.name}
         className={isMobile === true ? styles.img_mobile : styles.img_desktop}
       />
-      {isMobile !== true && typeImage && (
+      {isMobile === false && typeImage && (
         <img
           src={typeImage.cardBack}
           alt={typeImage.id}
