@@ -54,7 +54,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
         <button
           type="button"
           className={styles.btn_Previous}
-          onClick={handleNext}
+          onClick={handlePrevious}
         >
           <img src={BtnP} alt="icon-btn" className={styles.desktopPrevious} />
         </button>
