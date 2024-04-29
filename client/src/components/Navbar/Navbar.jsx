@@ -33,7 +33,7 @@ function Navbar() {
             {isMobile ? (
               <img src={Home} alt="logo-home" className={styles.logo} />
             ) : (
-              <span className={styles.logo_text}>Pokedex</span>
+              <span className={styles.logo_text}>Pokédex</span>
             )}
           </Link>
           <Link to="/pokecard">
