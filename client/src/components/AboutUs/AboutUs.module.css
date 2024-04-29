@@ -153,9 +153,10 @@
 
   .jessieInfo {
     display: flex;
-    position: relative;
-    top: 160px;
-    right: 70px;
+    position: absolute;
+    top: 240px;
+    align-items: flex-start;
+    padding-left: 25px;
   }
 
   .miaousInfo {
