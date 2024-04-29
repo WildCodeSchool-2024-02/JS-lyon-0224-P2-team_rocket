@@ -12,8 +12,19 @@ function App() {
   const [random, setRandom] = useState(0);
   const [isPokedex, setIsPokedex] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [pokematch, setPokematch] = useState([]);
+
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
+    let count = 0;
+    const poke = [];
+    pokemons.forEach((element) => {
+      if (element.name.toLowerCase().includes(event.target.value) === true) {
+        poke[count] = { name: element.name, id: element.id };
+        count += 1;
+      }
+    });
+    setPokematch(poke);
   };
 
   const searchPokemon = () => {
@@ -41,6 +52,8 @@ function App() {
         random={random}
         isPokedex={isPokedex}
         setIsPokedex={setIsPokedex}
+        setSearchTerm={setSearchTerm}
+        pokematch={pokematch}
       />
       <Outlet
         context={{

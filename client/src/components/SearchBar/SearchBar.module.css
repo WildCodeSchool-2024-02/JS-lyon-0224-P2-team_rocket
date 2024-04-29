@@ -33,3 +33,51 @@
 .none {
   display: none;
 }
+
+.suggest {
+  width: 270px;
+  border-radius: 15px;
+  background-color: rgb(235, 234, 235);
+  border: none;
+}
+li {
+  list-style: none;
+}
+.suggestButton {
+  border: none;
+
+  background-color: rgb(235, 234, 235);
+}
+ul {
+  position: absolute;
+  z-index: 5;
+  top: 44px;
+  padding-left: 20px;
+  min-height: 28px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .suggest {
+    width: 572px;
+    border-radius: 15px;
+    background-color: rgb(235, 234, 235);
+    border: none;
+    font-size: 1.5rem;
+  }
+  li {
+    list-style: none;
+  }
+  .suggestButton {
+    border: none;
+    font-size: 1.3rem;
+    background-color: rgb(235, 234, 235);
+  }
+  ul {
+    position: absolute;
+    z-index: 5;
+    top: 140px;
+  }
+}
