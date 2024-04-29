@@ -47,7 +47,7 @@ function Navbar() {
             <span className={styles.none}>none</span>
           ) : (
             <Link to="/about">
-              <span className={styles.logo_ab}>About us</span>
+              <span className={styles.logo_ab}>A propos</span>
             </Link>
           )}
 
