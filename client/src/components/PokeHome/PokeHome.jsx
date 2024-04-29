@@ -5,6 +5,7 @@ import PokeCard from "../PokeCard/PokeCard";
 import poketype from "../../assets/functions/poketypefunction";
 import "./PokeHome.css";
 import ButtonNextPrev from "../PokeCardMobile/ButtonNextPrev/ButtonNextPrev";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function Pokecard() {
   const pokemonsData = useRouteLoaderData("Pokecard");
@@ -12,25 +13,13 @@ function Pokecard() {
   const { random } = useOutletContext();
   const { setRandom } = useOutletContext();
   const { setIsPokedex } = useOutletContext();
-
   const typeImgUrl = poketype(pokemons, random);
+  const isMobile = useScreenWidth();
 
   useEffect(() => {
     setIsPokedex(false);
   }, [setIsPokedex]);
-  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsmobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div
       id="pokehome"

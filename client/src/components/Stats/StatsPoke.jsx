@@ -1,26 +1,16 @@
 import { useOutletContext, useRouteLoaderData } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import poketype from "../../assets/functions/poketypefunction";
 import styles from "./StatsPoke.module.css";
+
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function StatsPoke() {
   const pokemonsData = useRouteLoaderData("Pokecard");
   const [pokemons] = useState(pokemonsData);
   const { random } = useOutletContext();
   const typeImgUrl = poketype(pokemons, random);
-  const [isMobile, setIsmobile] = useState(window.innerWidth < 800);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsmobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const isMobile = useScreenWidth();
 
   return (
     <div
