@@ -38,6 +38,7 @@ function App() {
     if (event.key === "Enter") {
       searchPokemon();
       navigate("/Pokecard");
+      setSearchTerm("");
     }
   };
 
