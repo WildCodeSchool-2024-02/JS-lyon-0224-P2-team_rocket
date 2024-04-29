@@ -19,7 +19,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   }, [startIndex, pokemons, setDisplayedPokemons, perPage]);
 
   function handlePrevious() {
-    let newIndex = startIndex - (isMobile ? 6 : 9);
+    let newIndex = startIndex - (isMobile === true ? 6 : 9);
     if (newIndex < 0) {
       newIndex = Math.floor(pokemons.length / perPage) * perPage;
     }
@@ -27,7 +27,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   }
 
   function handleNext() {
-    let newIndex = startIndex + (isMobile ? 6 : 9);
+    let newIndex = startIndex + (isMobile === true ? 6 : 9);
     if (newIndex >= pokemons.length) {
       newIndex = 0;
     }
