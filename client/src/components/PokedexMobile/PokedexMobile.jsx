@@ -31,7 +31,7 @@ function PokedexMobile() {
     <div>
       <div
         className={
-          isMobile ? styles.pokedexCard_mobile : styles.pokedexCard_desktop
+          isMobile === true ? styles.pokedexCard_mobile : styles.pokedexCard_desktop
         }
       >
         {displayedPokemons.map((pokemon) => (

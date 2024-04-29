@@ -32,16 +32,18 @@ function Pokemon({ pokemon, setRandom }) {
   return (
     <div
       className={` ${
-        isMobile ? styles.containerInfo_Mobile : styles.containerInfo_Desktop
+        isMobile === true
+          ? styles.containerInfo_Mobile
+          : styles.containerInfo_Desktop
       } ${styles[typePokemonClass]}`}
     >
       {" "}
       <img
         src={pokemon.image}
         alt={pokemon.name}
-        className={isMobile ? styles.img_mobile : styles.img_desktop}
+        className={isMobile === true ? styles.img_mobile : styles.img_desktop}
       />
-      {!isMobile && typeImage && (
+      {!isMobile === true && typeImage && (
         <img
           src={typeImage.cardBack}
           alt={typeImage.id}
@@ -49,7 +51,9 @@ function Pokemon({ pokemon, setRandom }) {
         />
       )}
       <div
-        className={isMobile ? styles.pokeInfo_mobile : styles.pokeInfo_desktop}
+        className={
+          isMobile === true ? styles.pokeInfo_mobile : styles.pokeInfo_desktop
+        }
       >
         {!isMobile && (
           <>
@@ -70,12 +74,14 @@ function Pokemon({ pokemon, setRandom }) {
           </>
         )}
 
-        <div className={isMobile ? styles.btn_mobile : styles.btn_desktop}>
-          {isMobile ? <h1>{pokemon.name}</h1> : null}
+        <div
+          className={isMobile === true ? styles.btn_mobile : styles.btn_desktop}
+        >
+          {isMobile === true ? <h1>{pokemon.name}</h1> : null}
           <Link to="/pokecard">
             <button
               className={
-                isMobile
+                isMobile === true
                   ? styles.btnPokecard_mobile
                   : styles.btnPokecard_desktop
               }
@@ -86,7 +92,9 @@ function Pokemon({ pokemon, setRandom }) {
                 src={Btn}
                 alt="button-fleche"
                 className={
-                  isMobile ? styles.imgBtn_mobile : styles.imgBtn_desktop
+                  isMobile === true
+                    ? styles.imgBtn_mobile
+                    : styles.imgBtn_desktop
                 }
               />
             </button>
