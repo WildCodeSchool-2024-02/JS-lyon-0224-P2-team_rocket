@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import noAccentAndToLower from "../../../assets/functions/noAccentAndToLower";
 import styles from "./PokeTypes.module.css";
@@ -9,7 +8,9 @@ function Poketypes({ pokemons, random }) {
   const isMobile = useScreenWidth();
 
   return (
-    <div className={isMobile ? styles.types_mobile : styles.types_desktop}>
+    <div
+      className={isMobile === true ? styles.types_mobile : styles.types_desktop}
+    >
       {currentPokemon.apiTypes.map((type) => (
         <div
           key={type.name}

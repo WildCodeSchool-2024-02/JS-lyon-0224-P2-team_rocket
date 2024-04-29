@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../../assets/images/logomobile/bars-solid.svg";
 import pokeball from "../../assets/images/logomobile/PokeBall.svg";
@@ -8,11 +7,6 @@ import useScreenWidth from "../../hooks/useScreenWidth";
 
 function Navbar() {
   const isMobile = useScreenWidth();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <div>
@@ -40,11 +34,7 @@ function Navbar() {
             </Link>
           )}
 
-          <button
-            className={styles.burgerButton}
-            type="button"
-            onClick={toggleMenu}
-          >
+          <button className={styles.burgerButton} type="button">
             {isMobile === true ? (
               <Link to="/about">
                 <img
