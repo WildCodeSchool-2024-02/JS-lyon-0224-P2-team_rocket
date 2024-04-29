@@ -35,7 +35,7 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
   }
   return (
     <div className={styles.container_btn}>
-      {isMobile ? (
+      {isMobile === true ? (
         <button type="button" onClick={handlePrevious} id={styles.btn}>
           <img src={BtnPrevious} alt="icon-btn" />
           Prev
@@ -44,13 +44,13 @@ function ButtonPokedexCard({ pokemons, setDisplayedPokemons }) {
         <button
           type="button"
           className={styles.btn_Previous}
-          onClick={handleNext}
+          onClick={handlePrevious}
         >
           <img src={BtnP} alt="icon-btn" className={styles.desktopPrevious} />
         </button>
       )}
 
-      {isMobile ? (
+      {isMobile === true ? (
         <button type="button" onClick={handleNext} id={styles.btn}>
           Next
           <img src={BtnNext} alt="icon-btn" />
