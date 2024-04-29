@@ -30,7 +30,7 @@ function Navbar() {
       <div className={styles.nav_mobileStyle}>
         <nav className={styles.navsection}>
           <Link to="/">
-            {isMobile ? (
+            {isMobile === true ? (
               <img src={Home} alt="logo-home" className={styles.logo} />
             ) : (
               <span className={styles.logo_text}>Pokédex</span>
@@ -43,7 +43,7 @@ function Navbar() {
               className={styles.pokeball}
             />
           </Link>
-          {isMobile ? (
+          {isMobile === true ? (
             <span className={styles.none}>none</span>
           ) : (
             <Link to="/about">
@@ -56,7 +56,7 @@ function Navbar() {
             type="button"
             onClick={toggleMenu}
           >
-            {isMobile ? (
+            {isMobile === true ? (
               <Link to="/about">
                 <img
                   src={Menu}
