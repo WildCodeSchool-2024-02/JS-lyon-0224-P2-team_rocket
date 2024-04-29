@@ -45,7 +45,6 @@ li {
 }
 .suggestButton {
   border: none;
-
   background-color: rgb(235, 234, 235);
 }
 ul {
@@ -73,6 +72,7 @@ ul {
     border: none;
     font-size: 1.3rem;
     background-color: rgb(235, 234, 235);
+    cursor: pointer;
   }
   ul {
     position: absolute;
