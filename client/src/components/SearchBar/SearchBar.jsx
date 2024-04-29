@@ -25,16 +25,16 @@ function SearchBar({
 
   return (
     <div
-      className={`${isMobile ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
+      className={`${isMobile === true ? styles.searchBarMobile : styles.searchBarDesktop} ${isPokedex === true ? "" : typeImgUrl[0].backColor} ${cardMobile === true ? styles.none : ""}`}
     >
       <input
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
-        placeholder="🔎  Search your Pokemon..."
+        placeholder="🔎  Cherchez votre Pokémon ..."
         className={
-          isMobile
+          isMobile === true
             ? styles.input_search_bar_mobile
             : styles.input_search_bar_desktop
         }

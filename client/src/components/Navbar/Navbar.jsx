@@ -19,10 +19,10 @@ function Navbar() {
       <div className={styles.nav_mobileStyle}>
         <nav className={styles.navsection}>
           <Link to="/">
-            {isMobile ? (
+            {isMobile === true ? (
               <img src={Home} alt="logo-home" className={styles.logo} />
             ) : (
-              <span className={styles.logo_text}>Pokedex</span>
+              <span className={styles.logo_text}>Pokédex</span>
             )}
           </Link>
           <Link to="/pokecard">
@@ -32,11 +32,11 @@ function Navbar() {
               className={styles.pokeball}
             />
           </Link>
-          {isMobile ? (
+          {isMobile === true ? (
             <span className={styles.none}>none</span>
           ) : (
             <Link to="/about">
-              <span className={styles.logo_ab}>About us</span>
+              <span className={styles.logo_ab}>A propos</span>
             </Link>
           )}
 
@@ -45,7 +45,7 @@ function Navbar() {
             type="button"
             onClick={toggleMenu}
           >
-            {isMobile ? (
+            {isMobile === true ? (
               <Link to="/about">
                 <img
                   src={Menu}

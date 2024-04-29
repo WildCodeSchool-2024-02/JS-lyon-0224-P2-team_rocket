@@ -6,6 +6,10 @@
   margin-top: 20px;
 }
 
+.none {
+  display: none;
+}
+
 .jessie {
   min-width: 350px;
   width: 350px;
@@ -51,7 +55,13 @@
   width: 300px;
   margin-top: 40px;
 }
-
+.jamesInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin-top: 40px;
+}
 .pStyleMiaous {
   font-size: 2rem;
   font-weight: 100;
@@ -142,11 +152,22 @@
   }
 
   .jessieInfo {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 240px;
+    align-items: flex-start;
+    padding-left: 25px;
   }
 
   .miaousInfo {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 445px;
+  }
+  .jamesInfo {
+    display: flex;
+    position: absolute;
+    top: 685px;
   }
   .jessieImage {
     width: 87%;

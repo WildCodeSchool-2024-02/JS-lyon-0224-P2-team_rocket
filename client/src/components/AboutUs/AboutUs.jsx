@@ -13,6 +13,7 @@ function AboutUs() {
   useEffect(() => {
     setIsPokedex(true);
   }, [setIsPokedex]);
+
   return (
     <div className={styles.container_about}>
       <div className={styles.jessie}>
@@ -61,7 +62,7 @@ function AboutUs() {
         <div style={{ display: "flex", flexDirection: "row-reverse" }}>
           <img src={james} alt="james-team" className={styles.jamesDesktop} />
         </div>
-        <div className={styles.miaousInfo}>
+        <div className={styles.jamesInfo}>
           <p className={styles.pStyle}>James</p>
           <p>
             <i>Alias Joris</i>
