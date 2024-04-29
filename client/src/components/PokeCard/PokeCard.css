@@ -1,0 +1,52 @@
+@media screen and (min-width: 800px) {
+  .pokeCard {
+    display: flex;
+    border-radius: 30px;
+    width: 60vw;
+    min-width: 700px;
+    max-width: 750px;
+    min-height: 400px;
+    height: 50vh;
+    box-shadow: 6px 9px 14px -8px #616161;
+  }
+
+  .nameAndTypes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pokeName {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .pokeName p {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-right: 2rem;
+    font-style: italic;
+  }
+  #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1rem;
+    min-width: 255px;
+  }
+  #pokemonImg {
+    flex-direction: row-reverse;
+  }
+  #pokemon {
+    position: relative;
+    top: 5%;
+    right: 23%;
+    max-width: 60%;
+    min-width: none;
+  }
+  .typeSvg {
+    max-width: 60%;
+  }
+  .types {
+    padding-top: 1rem;
+  }
+}

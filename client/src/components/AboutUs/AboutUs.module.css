@@ -1,0 +1,193 @@
+.container_about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 400px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.none {
+  display: none;
+}
+
+.jessie {
+  min-width: 350px;
+  width: 350px;
+  height: 570px;
+  background-color: #fbbcfc;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.james {
+  min-width: 350px;
+  width: 350px;
+  height: 570px;
+  background-color: #dbd9dc;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  z-index: 4;
+}
+
+.miaouss {
+  min-width: 350px;
+  width: 350px;
+  height: 570px;
+  background-color: #f5e4c7;
+  border-radius: 28px;
+  display: flex;
+  z-index: 4;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.miaousInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin-top: 40px;
+}
+.jamesInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin-top: 40px;
+}
+.pStyleMiaous {
+  font-size: 2rem;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+}
+
+.jessieInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 300px;
+}
+
+.img_elec {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+.img_rock {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+}
+.img_fairy {
+  margin-top: 20px;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+}
+.jamesDesktop {
+  width: 300px;
+  z-index: 4;
+  margin-right: 40px;
+}
+.jessisDesktop {
+  width: 100%;
+}
+
+.miaousImage {
+  width: 280px;
+  z-index: 3;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .container_about {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 760px;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  .james {
+    height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .miaouss {
+    height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .jessie {
+    height: 210px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .jamesDesktop {
+    width: 76%;
+    height: 80%;
+  }
+  .jessisDesktop {
+    width: 80%;
+  }
+
+  .pStyleMiaous {
+    width: 180px;
+    font-size: 1rem;
+  }
+
+  .jessieInfo {
+    display: flex;
+    position: absolute;
+    top: 240px;
+    align-items: flex-start;
+    padding-left: 25px;
+  }
+
+  .miaousInfo {
+    display: flex;
+    position: absolute;
+    top: 445px;
+  }
+  .jamesInfo {
+    display: flex;
+    position: absolute;
+    top: 685px;
+  }
+  .jessieImage {
+    width: 87%;
+    z-index: 4;
+  }
+  .miaousImage {
+    width: 60%;
+    margin-left: 10px;
+  }
+  .img_rock {
+    right: 50%;
+  }
+
+  .img_elec {
+    left: 50%;
+  }
+
+  .img_fairy {
+    right: 50%;
+  }
+}

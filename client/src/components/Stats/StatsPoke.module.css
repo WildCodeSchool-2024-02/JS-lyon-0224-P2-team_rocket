@@ -1,0 +1,55 @@
+#stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  border-radius: 5%;
+  box-shadow: 6px 9px 14px -8px #616161;
+  font-family: var(--font-princpal);
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 1rem 2rem 1rem;
+}
+.stat p {
+  margin: 0;
+}
+.stat h3 {
+  margin: 0;
+}
+
+.desktopColor {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 800px) {
+  #stats {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    height: 40%;
+    min-width: 196px;
+  }
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0rem 2rem 0rem;
+  }
+  .stat p {
+    font-style: italic;
+  }
+  .stat h3 {
+    font-style: italic;
+  }
+  #firstStat {
+    padding-top: 1rem;
+  }
+  #lastStat {
+    padding-bottom: 1rem;
+  }
+}

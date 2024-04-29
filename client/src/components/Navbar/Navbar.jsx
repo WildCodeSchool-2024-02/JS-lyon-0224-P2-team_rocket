@@ -1,45 +1,55 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../../assets/images/logomobile/bars-solid.svg";
 import pokeball from "../../assets/images/logomobile/PokeBall.svg";
 import Home from "../../assets/images/logomobile/home-logo.svg";
-
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const isMobile = useScreenWidth();
 
   return (
-    <main>
-      <div className="navsection">
-          <section className="menuburger">
-            {isMenuOpen && (
-              <ul className="menu_items">
-                <li>PokeFight</li>
-                <li>PokeClicker</li>
-                <li>About us</li>
-              </ul>
-            )}
-          </section>
-        </div>
-      <nav>
-        <div className="logo_mobile">
+    <div>
+      <div className={styles.nav_mobileStyle}>
+        <nav className={styles.navsection}>
           <Link to="/">
-            <img src={Home} alt="logo-home" className="logo" />
+            {isMobile === true ? (
+              <img src={Home} alt="logo-home" className={styles.logo} />
+            ) : (
+              <span className={styles.logo_text}>Pokédex</span>
+            )}
           </Link>
           <Link to="/pokecard">
-            <img src={pokeball} alt="pokeball-logo" className="pokeball" />
+            <img
+              src={pokeball}
+              alt="pokeball-logo"
+              className={styles.pokeball}
+            />
           </Link>
-          <button className="BurgerButton" type="button" onClick={toggleMenu}>
-            <img src={Menu} alt="Menuburger" className="menu_burger" />
+          {isMobile === true ? (
+            <span className={styles.none}>none</span>
+          ) : (
+            <Link to="/about">
+              <span className={styles.logo_ab}>A propos</span>
+            </Link>
+          )}
+
+          <button className={styles.burgerButton} type="button">
+            {isMobile === true ? (
+              <Link to="/about">
+                <img
+                  src={Menu}
+                  alt="Menuburger"
+                  className={styles.menu_burger}
+                />
+              </Link>
+            ) : (
+              <span className={styles.none}>none</span>
+            )}
           </button>
-        </div>
-      </nav>
-    </main>
+        </nav>
+      </div>
+    </div>
   );
 }
 

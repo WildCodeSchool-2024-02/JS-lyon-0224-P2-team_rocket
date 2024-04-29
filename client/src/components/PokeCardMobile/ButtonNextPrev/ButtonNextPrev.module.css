@@ -9,4 +9,20 @@
 
 .imgButton {
   height: 3rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  #next {
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    cursor: pointer;
+  }
+  #prev {
+    position: absolute;
+    top: 50%;
+    right: 90%;
+    cursor: pointer;
+  }
 }

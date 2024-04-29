@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 #btn {
@@ -21,4 +22,37 @@
 #btn:hover {
   -webkit-box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.49);
   box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.49);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .btn_Previous {
+    position: absolute;
+    top: 63%;
+    right: 90%;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .btn_desktop {
+    position: absolute;
+    left: 90%;
+    top: 62%;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .desktopNext {
+    opacity: 0.8;
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  .desktopPrevious {
+    opacity: 0.8;
+    width: 60px;
+    margin-right: 20px;
+  }
 }

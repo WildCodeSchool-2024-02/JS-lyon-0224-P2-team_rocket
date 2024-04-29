@@ -1,0 +1,100 @@
+.logo_mobile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: auto;
+}
+
+.logo_nav {
+  height: 70px;
+  padding: 0 2.5vh 0 2.5vh;
+  width: 55px;
+}
+
+.pokeball {
+  height: 70px;
+  width: 78px;
+}
+
+.menu_burger {
+  height: 70px;
+  width: 40px;
+}
+.burgerButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.navsection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.logo_text {
+  font-size: 2rem;
+  color: black;
+}
+
+.logo_ab {
+  font-size: 2rem;
+  color: black;
+}
+
+nav {
+  position: relative;
+  top: 20%;
+}
+a {
+  text-decoration: none;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .navsection {
+    border-bottom: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    padding: 0;
+    background-color: white;
+    justify-content: flex-start;
+    width: 100vw;
+  }
+  .about_us {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .logo_text {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .leftbox {
+    display: flex;
+    align-items: center;
+  }
+  .logo_ab {
+    position: relative;
+    left: 67vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav_mobileStyle {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-width: 400px;
+  }
+}

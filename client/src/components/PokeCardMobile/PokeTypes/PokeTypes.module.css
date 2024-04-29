@@ -1,0 +1,23 @@
+.types_mobile {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  gap: 1rem;
+}
+
+.types_desktop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  gap: 3px;
+}
+
+.type {
+  border-radius: 100%;
+  background-color: white;
+  height: 1.6rem;
+}
